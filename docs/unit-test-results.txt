@@ -1,0 +1,182 @@
+
+> blast-buster-nemesis-pact@0.1.0 test
+> node --test tests/core.test.js
+
+TAP version 13
+# Subtest: seeded RNG is deterministic, bounded, and seed-sensitive
+ok 1 - seeded RNG is deterministic, bounded, and seed-sensitive
+  ---
+  duration_ms: 3.507946
+  type: 'test'
+  ...
+# Subtest: swept collision detects tunneling and handles stationary segments
+ok 2 - swept collision detects tunneling and handles stationary segments
+  ---
+  duration_ms: 0.233852
+  type: 'test'
+  ...
+# Subtest: all seven contracts have real, distinct modifiers
+ok 3 - all seven contracts have real, distinct modifiers
+  ---
+  duration_ms: 0.550474
+  type: 'test'
+  ...
+# Subtest: invalid difficulty/long seed normalize and invalid contracts do not mutate state
+ok 4 - invalid difficulty/long seed normalize and invalid contracts do not mutate state
+  ---
+  duration_ms: 0.752314
+  type: 'test'
+  ...
+# Subtest: wave plan and upgrade choices are independent of cosmetic/hit RNG consumption
+ok 5 - wave plan and upgrade choices are independent of cosmetic/hit RNG consumption
+  ---
+  duration_ms: 0.722044
+  type: 'test'
+  ...
+# Subtest: normal and diagonal movement share a speed limit; player stays in bounds
+ok 6 - normal and diagonal movement share a speed limit; player stays in bounds
+  ---
+  duration_ms: 5.997092
+  type: 'test'
+  ...
+# Subtest: invalid/negative dt does not advance and huge dt is clamped
+ok 7 - invalid/negative dt does not advance and huge dt is clamped
+  ---
+  duration_ms: 0.276984
+  type: 'test'
+  ...
+# Subtest: dash grants invulnerability, cannot retrigger during cooldown
+ok 8 - dash grants invulnerability, cannot retrigger during cooldown
+  ---
+  duration_ms: 0.405666
+  type: 'test'
+  ...
+# Subtest: perfect parry turns enemy bullet into homing friendly damage and charges energy
+ok 9 - perfect parry turns enemy bullet into homing friendly damage and charges energy
+  ---
+  duration_ms: 0.746979
+  type: 'test'
+  ...
+# Subtest: late parry uses the non-perfect damage window
+ok 10 - late parry uses the non-perfect damage window
+  ---
+  duration_ms: 0.653521
+  type: 'test'
+  ...
+# Subtest: one projectile can graze only once
+ok 11 - one projectile can graze only once
+  ---
+  duration_ms: 0.356977
+  type: 'test'
+  ...
+# Subtest: enemy hits consume hull, damage invulnerability prevents chained hits
+ok 12 - enemy hits consume hull, damage invulnerability prevents chained hits
+  ---
+  duration_ms: 0.140438
+  type: 'test'
+  ...
+# Subtest: glass doubles damage and breach removes both sides of the contract
+ok 13 - glass doubles damage and breach removes both sides of the contract
+  ---
+  duration_ms: 0.33739
+  type: 'test'
+  ...
+# Subtest: nova requires energy, clears bullets and lasers, damages enemies
+ok 14 - nova requires energy, clears bullets and lasers, damages enemies
+  ---
+  duration_ms: 0.335619
+  type: 'test'
+  ...
+# Subtest: sanctuary clears swept enemy bullets but not enemy bodies
+ok 15 - sanctuary clears swept enemy bullets but not enemy bodies
+  ---
+  duration_ms: 0.199558
+  type: 'test'
+  ...
+# Subtest: ceasefire stops both sides firing and hostile motion, not movement
+ok 16 - ceasefire stops both sides firing and hostile motion, not movement
+  ---
+  duration_ms: 0.290965
+  type: 'test'
+  ...
+# Subtest: duel suppresses boss reinforcements while ordinary pact allows them
+ok 17 - duel suppresses boss reinforcements while ordinary pact allows them
+  ---
+  duration_ms: 0.552217
+  type: 'test'
+  ...
+# Subtest: low-hull upgrade choices always offer a full repair
+ok 18 - low-hull upgrade choices always offer a full repair
+  ---
+  duration_ms: 0.216462
+  type: 'test'
+  ...
+# Subtest: upgrades are unique choices and capped upgrades disappear
+ok 19 - upgrades are unique choices and capped upgrades disappear
+  ---
+  duration_ms: 0.181223
+  type: 'test'
+  ...
+# Subtest: hull upgrade raises capacity and heals without overflow
+ok 20 - hull upgrade raises capacity and heals without overflow
+  ---
+  duration_ms: 0.123189
+  type: 'test'
+  ...
+# Subtest: friendly bullets deal damage once per enemy even with piercing
+ok 21 - friendly bullets deal damage once per enemy even with piercing
+  ---
+  duration_ms: 0.206642
+  type: 'test'
+  ...
+# Subtest: death cannot be overwritten by same-frame empty-wave progression
+ok 22 - death cannot be overwritten by same-frame empty-wave progression
+  ---
+  duration_ms: 0.218858
+  type: 'test'
+  ...
+# Subtest: all three sectors progress through six choices to the correct victory ending (fixture)
+ok 23 - all three sectors progress through six choices to the correct victory ending (fixture)
+  ---
+  duration_ms: 4.994304
+  type: 'test'
+  ...
+# Subtest: training is immortal and does not advance campaign
+ok 24 - training is immortal and does not advance campaign
+  ---
+  duration_ms: 4.832674
+  type: 'test'
+  ...
+# Subtest: simulation entity budgets prevent unbounded projectile growth
+ok 25 - simulation entity budgets prevent unbounded projectile growth
+  ---
+  duration_ms: 1.119168
+  type: 'test'
+  ...
+# Subtest: identical input streams produce identical full simulation states
+ok 26 - identical input streams produce identical full simulation states
+  ---
+  duration_ms: 6.997695
+  type: 'test'
+  ...
+# Subtest: report is detached, bounded and JSON serializable
+ok 27 - report is detached, bounded and JSON serializable
+  ---
+  duration_ms: 0.404737
+  type: 'test'
+  ...
+# Subtest: standalone build has no external runtime scripts, styles, or networking calls
+ok 28 - standalone build has no external runtime scripts, styles, or networking calls
+  ---
+  duration_ms: 1.105692
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 155.861018

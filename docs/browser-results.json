@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "browser": "144.0.7559.96",
+  "external_network_requests": 0,
+  "file_url_status": "container policy blocks file and loopback URLs; direct file opening not verified",
+  "storage_status": "storage-denied fallback verified; real persistent reload not verified",
+  "page_errors": [],
+  "browser_playthrough": {
+    "seed": "BROWSER-QA",
+    "difficulty": "assist",
+    "outcome": "won",
+    "seconds": 217.17,
+    "bosses": 3,
+    "damageTaken": 0,
+    "score": 62024
+  },
+  "checks": [
+    "exact standalone HTML loaded in memory; networking disabled",
+    "help/settings",
+    "settings state with storage denied",
+    "difficulty and seeded start",
+    "contract selection via keyboard",
+    "movement and shooting",
+    "dash",
+    "pause freezes simulation",
+    "actual parry collision",
+    "nova",
+    "contract breach",
+    "boss render fixture",
+    "full legal-input bot campaign in browser",
+    "result/retry",
+    "JSON download",
+    "training",
+    "960x600 layout"
+  ]
+}
