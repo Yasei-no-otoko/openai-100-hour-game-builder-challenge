@@ -1,15 +1,18 @@
 {
   "name": "blast-buster-nemesis-pact",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Offline contract-driven bullet-hell arena shooter. No API, no network, no dependencies.",
   "scripts": {
     "start": "node tools/serve.js",
     "build": "node tools/build.js",
-    "test": "node --test tests/core.test.js",
-    "check": "node --check src/core.js && node --check src/game.js && node --check src/audio.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js",
     "test:browser": "python3 tests/browser_test.py",
-    "test:simulation": "node tests/simulate.js"
+    "test:simulation": "node tests/simulate.js",
+    "test:mobile": "python3 tests/mobile_browser_test.py",
+    "start:lan": "node tools/serve.js --lan",
+    "test:portrait": "node tests/portrait-simulate.js"
   },
   "engines": {
     "node": ">=18"

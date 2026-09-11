@@ -1,3 +1,5 @@
+> 以下はv0.1.0のゲーム設計。v0.2.0のモバイル変更は [MOBILE.md](MOBILE.md) を参照。
+
 # NEMESIS PACT / Design notes
 
 ## 核となる問い

@@ -8,7 +8,8 @@ const {World, segmentHit} = require('../src/core.js');
 function pilot(w) {
   const p=w.p, t=w.time;
   // Smooth elliptical strafing, with short-horizon threat repulsion.
-  const a=t*.52, gx=640+Math.sin(a)*405, gy=440+Math.cos(a)*160;
+  const a=t*.52,portrait=w.layout==='portrait';
+  const gx=portrait?w.width/2+Math.sin(a)*w.width*.3:640+Math.sin(a)*405,gy=portrait?w.height*.63+Math.cos(a)*w.height*.2:440+Math.cos(a)*160;
   let mx=(gx-p.x)/110, my=(gy-p.y)/110, danger=0, nearby=0, laser=false;
   for(const b of w.bullets) {
     if(!b.hostile||b.life<=0)continue;
@@ -30,8 +31,8 @@ function pilot(w) {
     nova:p.energy>=w.novaCost()&&(w.enemies.length>2||w.wave===2),
     breach:p.hp<=2&&!w.broken};
 }
-function play(seed,difficulty) {
-  const w=new World(seed,difficulty);let frames=0,peakBullets=0,peakEnemies=0;
+function play(seed,difficulty,viewport={}) {
+  const w=new World(seed,difficulty,false,viewport);let frames=0,peakBullets=0,peakEnemies=0;
   while(!['won','dead'].includes(w.phase)&&frames<120*720) {
     if(w.phase==='pact'){const ids=['mercy','sanctuary','mirror'];w.sign(ids[w.stage]);}
     else if(w.phase==='upgrade'){

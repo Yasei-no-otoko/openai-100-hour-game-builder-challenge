@@ -2,7 +2,7 @@
   "passed": true,
   "browser": "144.0.7559.96",
   "external_network_requests": 0,
-  "file_url_status": "not tested; exact standalone HTML rendered in memory while offline",
+  "file_url_status": "container policy blocks file and loopback URLs; direct file opening not verified",
   "storage_status": "storage-denied fallback verified; real persistent reload not verified",
   "page_errors": [],
   "browser_playthrough": {
