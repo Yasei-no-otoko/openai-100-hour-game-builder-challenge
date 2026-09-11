@@ -1,0 +1,37 @@
+English text layout 320x568
+English text layout 375x667
+English text layout 390x844
+English text layout 393x852
+English text layout 430x932
+English text layout 360x800
+English text layout 844x390
+English text layout 1440x900
+English text layout 960x600
+{
+  "version": "0.2.1-en",
+  "passed": true,
+  "browser": "Chromium 144.0.7559.96",
+  "text_layout_checks": 308,
+  "direct_file_launch_passed": false,
+  "file_launch_note": "Managed browser policy blocks file URLs (ERR_BLOCKED_BY_ADMINISTRATOR); direct-file launch remains unverified.",
+  "normal_startup_passed": true,
+  "javascript_errors": [],
+  "external_network_requests": 0,
+  "scope": [
+    "All 7 pacts and 13 upgrade options",
+    "Three victory endings and defeat",
+    "English visible text, aria labels and placeholders",
+    "Text rectangle clipping, including overflow-hidden cards",
+    "Six portrait sizes, one touch landscape and two desktop sizes",
+    "Complete touch tutorial and fullscreen fallback",
+    "Same English UI when browser locale is ja-JP"
+  ],
+  "limitations": [
+    "Display fixtures are not gameplay-clear evidence.",
+    "Only Linux Chromium; no physical iPhone/Android or Safari/WebKit.",
+    "OS safe areas simulated in CSS.",
+    "No human playability or performance benchmark.",
+    "Managed browser policy blocks file URLs (ERR_BLOCKED_BY_ADMINISTRATOR); direct-file launch remains unverified."
+  ]
+}
+TEST_EXIT_CODE=0

@@ -1,0 +1,4 @@
+
+> blast-buster-nemesis-pact@0.2.1-en check
+> node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js
+

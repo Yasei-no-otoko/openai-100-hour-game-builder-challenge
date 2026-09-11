@@ -1,0 +1,47 @@
+/* English copy is laid out at readable sizes, not scaled down to fit.
+   Physics, portrait geometry, safe areas and control hit targets are unchanged. */
+html[lang="en"] .tagline{letter-spacing:.15px}
+html[lang="en"] .choice-card h3{letter-spacing:-.25px}
+html[lang="en"] .choice-card .en{letter-spacing:1.6px}
+html[lang="en"] .help-grid h3{font-size:15px;letter-spacing:.6px}
+html[lang="en"] .help-grid p{line-height:1.9}
+html[lang="en"] .result-left h2{font-size:58px;letter-spacing:-1.8px}
+html[lang="en"] .result-pact{gap:12px}
+html[lang="en"] .result-pact small{flex-shrink:0}
+html[lang="en"] .mobile-ui .tagline{font-size:clamp(23px,6.6vw,28px);line-height:1.22;letter-spacing:-.5px}
+html[lang="en"] .mobile-ui .title-desc{line-height:1.75}
+html[lang="en"] .mobile-ui .mobile-pitch{font-size:9px;gap:6px;letter-spacing:.3px}
+html[lang="en"] .mobile-ui .mobile-pitch>span{font-size:9px}
+html[lang="en"] .mobile-ui .title-top{letter-spacing:.5px}
+html[lang="en"] .mobile-ui .title-top>span{white-space:nowrap}
+html[lang="en"] .mobile-ui .title-links{gap:6px}
+html[lang="en"] .mobile-ui .choice-card .en{letter-spacing:1px}
+html[lang="en"] .mobile-ui .choice-card h3{line-height:1.28}
+html[lang="en"] .mobile-ui .choice-gift{line-height:1.55}
+html[lang="en"] .mobile-ui .choice-cost{line-height:1.55}
+html[lang="en"] .mobile-ui .choices-header p{line-height:1.6}
+html[lang="en"] .mobile-ui .choices-footer{padding-top:12px}
+html[lang="en"] .mobile-ui .choice-confirmation small{overflow-wrap:anywhere}
+html[lang="en"] .mobile-ui .touch-action>b{letter-spacing:.8px}
+html[lang="en"] .mobile-ui .nova-label{letter-spacing:1px}
+html[lang="en"] .mobile-ui .setting-row>span{min-width:0;flex:1}
+html[lang="en"] .mobile-ui .setting-row input{flex-shrink:0}
+html[lang="en"] .mobile-ui .touch-help b{letter-spacing:.4px;font-size:14px}
+html[lang="en"] .mobile-ui .touch-help p{line-height:1.8}
+html[lang="en"] .mobile-ui #tutorial-hud h3{font-size:15px;letter-spacing:.3px}
+html[lang="en"] .mobile-ui #tutorial-hud p{line-height:1.6}
+html[lang="en"] .mobile-ui .result-left h2{font-size:clamp(30px,8.5vw,43px);letter-spacing:-.9px;line-height:1.15}
+html[lang="en"] .mobile-ui .result-left>p{line-height:1.8}
+html[lang="en"] .mobile-ui #confirm-title{font-size:32px}
+html[lang="en"] .mobile-ui .brand-mini small{letter-spacing:0}
+@media(max-width:359px){
+ html[lang="en"] .mobile-ui .mobile-pitch{font-size:8px;gap:5px;letter-spacing:0}
+ html[lang="en"] .mobile-ui .mobile-pitch>span{font-size:8px}
+ html[lang="en"] .mobile-ui .title-links .text-button{font-size:11px}
+ html[lang="en"] .mobile-ui .brand-mini small{font-size:9px}
+ html[lang="en"] .mobile-ui #pact-hud strong{font-size:10px}
+ html[lang="en"] .mobile-ui #pact-hud small{font-size:9px}
+}
+@media(max-height:740px) and (orientation:portrait){
+ html[lang="en"] .mobile-ui .tagline{font-size:23px}
+}
