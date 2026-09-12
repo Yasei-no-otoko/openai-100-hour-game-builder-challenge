@@ -1,8 +1,8 @@
 {
   "name": "blast-buster-nemesis-pact",
-  "version": "0.3.0-recovery.1",
+  "version": "0.3.1",
   "private": true,
-  "description": "Recovery build: 2D mechanics and portrait touch controls with WebGL2/WebGPU 3D meshes and WebGPU compute post effects.",
+  "description": "Expanded scenic 3D build: deeper procedural architecture with seed-reactive scenery, WebGL2/WebGPU 3D meshes, and WebGPU compute post effects.",
   "scripts": {
     "start": "node tools/serve.js",
     "build": "node tools/build.js",
