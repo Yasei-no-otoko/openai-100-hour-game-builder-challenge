@@ -36,7 +36,7 @@ YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éí÷};N‹Z–‹­¦ëeŠw¬Ô¼¨95M%LAPƒŠP‘•Ñ•Éµ¥¹¥ÍÑ¥Œ°
         }
       }
     }
-    report(){return {version:'0.3.2',layout:this.layout,arena:{width:this.width,height:this.height},seed:this.seed,difficulty:this.difficulty,outcome:this.phase,score:this.score,seconds:+this.time.toFixed(2),kills:this.kills,bosses:this.bossKills,parries:this.parries,grazes:this.grazes,damageTaken:this.damageTaken,breaches:this.breaches,contracts:this.contracts.map(c=>({...c})),upgrades:{...this.upgrades},timeline:this.log.slice(-256)};}
+    report(){return {version:'0.3.3',layout:this.layout,arena:{width:this.width,height:this.height},seed:this.seed,difficulty:this.difficulty,outcome:this.phase,score:this.score,seconds:+this.time.toFixed(2),kills:this.kills,bosses:this.bossKills,parries:this.parries,grazes:this.grazes,damageTaken:this.damageTaken,breaches:this.breaches,contracts:this.contracts.map(c=>({...c})),upgrades:{...this.upgrades},timeline:this.log.slice(-256)};}
   }
   return {World,W,H,TAU,CONTRACTS,UPGRADES,BOSSES,SECTORS,modifiers,clamp,dist,angle,hash,rng,segmentHit};
 });
