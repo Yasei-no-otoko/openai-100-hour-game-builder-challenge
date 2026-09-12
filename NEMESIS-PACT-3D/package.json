@@ -1,6 +1,6 @@
 {
   "name": "blast-buster-nemesis-pact",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "description": "Expanded scenic 3D build: deeper procedural architecture with seed-reactive scenery, WebGL2/WebGPU 3D meshes, and WebGPU compute post effects.",
   "scripts": {

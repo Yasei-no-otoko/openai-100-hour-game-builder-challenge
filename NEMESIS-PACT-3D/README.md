@@ -1,6 +1,6 @@
 # BLAST BUSTER: NEMESIS PACT — 3D recovery build
 
-**Build: 0.3.3 · English · portrait touch + desktop · offline runtime**
+**Build: 0.3.4 · English · portrait touch + desktop · offline runtime**
 
 ## Why this build exists
 
