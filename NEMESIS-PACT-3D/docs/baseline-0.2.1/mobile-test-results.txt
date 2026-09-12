@@ -1,0 +1,14 @@
+viewport 320 568 False
+viewport 375 667 False
+viewport 390 844 False
+viewport 393 852 True
+viewport 430 932 True
+viewport 360 800 False
+{
+  "passed": true,
+  "viewports": 6,
+  "checks": 21,
+  "javascript_errors": [],
+  "external_network_requests": 0
+}
+TEST_EXIT_CODE=0

@@ -1,0 +1,5 @@
+/* The transparent interaction canvas remains above the GPU surface. */
+.gpu-canvas{position:absolute;display:block;z-index:0;pointer-events:none}
+#canvas{position:relative;z-index:1}
+#ui{z-index:2}
+.renderer-status{color:#78e8d0;font:11px/1.6 monospace;letter-spacing:1px;padding:8px 0}

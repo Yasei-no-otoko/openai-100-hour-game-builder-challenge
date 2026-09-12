@@ -1,0 +1,22 @@
+{
+  "name": "blast-buster-nemesis-pact",
+  "version": "0.3.0-recovery.1",
+  "private": true,
+  "description": "Recovery build: 2D mechanics and portrait touch controls with WebGL2/WebGPU 3D meshes and WebGPU compute post effects.",
+  "scripts": {
+    "start": "node tools/serve.js",
+    "build": "node tools/build.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js && node --check src/meshes3d.js && node --check src/renderer3d.js",
+    "test:browser": "python3 tests/browser_test.py",
+    "test:simulation": "node tests/simulate.js",
+    "test:mobile": "python3 tests/mobile_browser_test.py",
+    "start:lan": "node tools/serve.js --lan",
+    "test:portrait": "node tests/portrait-simulate.js",
+    "test:english": "python3 tests/english_browser_test.py",
+    "test:gpu": "python3 tests/gpu_browser_test.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

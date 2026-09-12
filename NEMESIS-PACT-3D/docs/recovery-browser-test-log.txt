@@ -1,0 +1,79 @@
+{
+  "build": "0.3.0-recovery.1",
+  "browser": "144.0.7559.96",
+  "adapter": "ANGLE / SwiftShader software rendering",
+  "checks": [
+    "single-file memory load",
+    "WebGL2 shader compilation and rendering",
+    "desktop and two portrait sizes",
+    "read-only renderer",
+    "unchanged 2D movement",
+    "three boss fixtures",
+    "WebGL error flags",
+    "WebGL RGBA8 fallback",
+    "context loss/restoration",
+    "rotation",
+    "network-disabled runtime"
+  ],
+  "webgpu_execution": "NOT TESTED: no secure browser context in this sandbox",
+  "file_url_delivery": "NOT TESTED: browser navigation policy blocks file and local HTTP URLs",
+  "results": [
+    {
+      "viewport": "desktop",
+      "size": [
+        1280,
+        800
+      ],
+      "backend": {
+        "build": "0.3.0-recovery.1",
+        "backend": "WEBGL2 / PBR",
+        "frames": 55,
+        "computeDispatches": 0,
+        "instances": 247,
+        "draws": 5,
+        "hdr": true,
+        "errors": []
+      },
+      "page_errors": [],
+      "external_network_requests": 0
+    },
+    {
+      "viewport": "portrait",
+      "size": [
+        390,
+        844
+      ],
+      "backend": {
+        "build": "0.3.0-recovery.1",
+        "backend": "WEBGL2 / PBR",
+        "frames": 76,
+        "computeDispatches": 0,
+        "instances": 221,
+        "draws": 5,
+        "hdr": true,
+        "errors": []
+      },
+      "page_errors": [],
+      "external_network_requests": 0
+    },
+    {
+      "viewport": "small",
+      "size": [
+        320,
+        568
+      ],
+      "backend": {
+        "build": "0.3.0-recovery.1",
+        "backend": "WEBGL2 / PBR",
+        "frames": 116,
+        "computeDispatches": 0,
+        "instances": 181,
+        "draws": 5,
+        "hdr": true,
+        "errors": []
+      },
+      "page_errors": [],
+      "external_network_requests": 0
+    }
+  ]
+}

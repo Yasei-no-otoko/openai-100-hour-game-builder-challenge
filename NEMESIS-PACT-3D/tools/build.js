@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+let html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+html=html.replace(/<link rel="stylesheet" href="(src\/[^"<>]+)">/g,(_,name)=>'<style>\n'+fs.readFileSync(path.join(root,name),'utf8')+'\n</style>');
+html=html.replace(/<script src="(src\/[^"<>]+)"><\/script>/g,(_,name)=>'<script>\n'+fs.readFileSync(path.join(root,name),'utf8').replace(/<\/script/gi,'<\\/script')+'\n</script>');
+fs.mkdirSync(path.join(root,'dist'),{recursive:true});
+fs.writeFileSync(path.join(root,'dist','NEMESIS-PACT.html'),html);
+console.log('Built dist/NEMESIS-PACT.html ('+Buffer.byteLength(html)+' bytes, no external assets)');
+const shaders=require('../src/renderer3d.js');
+const names={GL_VERTEX:'mesh.vert',GL_FRAGMENT:'mesh.frag',GL_QUAD:'fullscreen.vert',GL_BLUR:'bloom.frag',GL_COMPOSITE:'composite.frag',WG_MESH:'mesh.wgsl',WG_BLUR:'bloom.compute.wgsl',WG_COMPOSITE:'composite.compute.wgsl',WG_PRESENT:'present.wgsl'};
+fs.mkdirSync(path.join(root,'shaders'),{recursive:true});
+for(const [key,file]of Object.entries(names))fs.writeFileSync(path.join(root,'shaders',file),shaders[key]);

@@ -1,0 +1,4 @@
+
+> blast-buster-nemesis-pact@0.3.0-recovery.1 check
+> node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js && node --check src/meshes3d.js && node --check src/renderer3d.js
+

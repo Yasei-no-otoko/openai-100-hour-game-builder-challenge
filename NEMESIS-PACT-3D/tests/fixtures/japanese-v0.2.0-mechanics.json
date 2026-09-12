@@ -1,0 +1,9 @@
+{
+  "baseline": "Japanese portrait build v0.2.0",
+  "source_archive_sha256": "ff6244bc41901800d8dc0021f47a78153f0f5f9712049048a03f3aaf12285f65",
+  "normalized_core_sha256": "98358dc2de75bf733637b7d144b490de253b4bff03cc2d2e6e85b2318749c4cc",
+  "unchanged_source_sha256": {
+    "touch.js": "2932bb5229315edd934b44d8d92efcf108fd8581b1798cad58ef160beafd6b6e",
+    "audio.js": "931baa8c8fd45ce308a2c8a9bb8ca7aeb36ecd2e88ba87739ce0f5b44220d8a5"
+  }
+}
