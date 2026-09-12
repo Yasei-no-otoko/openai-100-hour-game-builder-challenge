@@ -4,7 +4,8 @@ struct In { @location(0) pos:vec3f,@location(1) norm:vec3f,@location(2) a:vec4f,
 struct Out { @builtin(position) clip:vec4f,@location(0) norm:vec3f,@location(1) pos:vec3f,@location(2) c:vec4f,@location(3) p:vec4f,@location(4) cls:f32 };
 @vertex fn vs(v:In)->Out {let cs=cos(v.a.w);let sn=sin(v.a.w);let ct=cos(v.p.w);let st=sin(v.p.w);var p=v.pos*v.s.xyz;let yz=mat2x2f(ct,st,-st,ct)*p.yz;p=vec3f(p.x,yz);let xy=mat2x2f(cs,sn,-sn,cs)*p.xy;p=vec3f(xy,p.z);
  var n=v.norm/max(v.s.xyz,vec3f(.001));let nyz=mat2x2f(ct,st,-st,ct)*n.yz;n=vec3f(n.x,nyz);n=vec3f(mat2x2f(cs,sn,-sn,cs)*n.xy,n.z);let world=p+v.a.xyz;let loc=world.xy+f.shake.xy-vec2f(0.,p.z*.22);
- var o:Out;o.clip=vec4f(loc.x/f.arena.x*2.-1.,1.-loc.y/f.arena.y*2.,.5-world.z/1200.,1.);o.norm=normalize(n);o.pos=world;o.c=v.c;o.p=v.p;o.cls=v.s.w;return o;}
+ let layerHeight=clamp(v.s.w,0.,1.)*220.;let depthHeight=world.z+layerHeight+world.y*.03;
+ var o:Out;o.clip=vec4f(loc.x/f.arena.x*2.-1.,1.-loc.y/f.arena.y*2.,-depthHeight/700.,1.);o.norm=normalize(n);o.pos=world;o.c=v.c;o.p=v.p;o.cls=v.s.w;return o;}
 fn fresnel(c:f32,f0:vec3f)->vec3f{return f0+(vec3f(1.)-f0)*pow(1.-c,5.);}
 @fragment fn fs(v:Out)->@location(0) vec4f {let N=normalize(v.norm);let V=normalize(vec3f(0.,-.25,1.));let L=normalize(vec3f(-.45,-.5,.85));let H=normalize(V+L);
  let rough=clamp(v.c.w,.14,.94);let metal=v.p.x;let grain=fract(sin(dot(floor(v.pos.xy*2.),vec2f(12.9898,78.233)))*43758.5453);let base=v.c.rgb*(.97+grain*.06);
