@@ -1,4 +1,4 @@
-# Verification record — 0.3.4
+# Verification record — 0.3.6
 
 Date: 2026-09-12. This record supersedes earlier v0.3.0 claims for the reconstructed delivery only.
 

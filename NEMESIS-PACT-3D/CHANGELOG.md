@@ -1,4 +1,4 @@
-# 0.3.4 — 2026-09-12
+# 0.3.6 — 2026-09-12
 
 Reconstructed missing 3D delivery from the retained English v0.2.1 source. Added native WebGL2 and WebGPU backends, procedural 3D meshes, metallic/emissive materials, bloom, background-masked shockwave and WebGPU compute composite. Preserved 2D game mechanics and touch/audio source. This is not identical to the missing original v0.3.0.
 
