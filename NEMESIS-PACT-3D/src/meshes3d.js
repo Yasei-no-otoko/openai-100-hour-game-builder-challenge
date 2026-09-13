@@ -1,4 +1,4 @@
-/* NEMESIS PACT 0.3.6 — procedural mesh scene; no simulation mutations.
+/* NEMESIS PACT 0.3.6.1 — procedural mesh scene; no simulation mutations.
  * 2D mechanics are unchanged. 3D scenery uses seeded pass-height layers, projected shadows,
  * stronger stage-specific architecture, boss-specific background motifs, and configurable ambient animation.
  */
@@ -20,15 +20,15 @@
   hull:extrude([[1.15,0],[-.60,.55],[-.95,0],[-.60,-.55]]),
   hex:extrude(Array.from({length:6},(_,i)=>[Math.cos(i*TAU/6),Math.sin(i*TAU/6)])),ring:torus(),orb:sphere()};
  const colors={mint:[.28,.93,.76],red:[1,.23,.12],violet:[.55,.29,1],gold:[1,.65,.20],steel:[.18,.25,.29],silver:[.61,.71,.73],dark:[.026,.044,.059]};
- const LAYER={GROUND:.02,TRIM:.08,LOW:.18,MID:.30,HIGH:.44,FLIGHT:.58,FLIGHT_HIGH:.66,TALL:.74,SKY:.86,SHADOW:.04};
- const SHADOW_A=[.016,.020,.028],SHADOW_B=[.040,.048,.058];
+ const LAYER={GROUND:.02,TRIM:.08,LOW:.18,MID:.30,HIGH:.44,FLIGHT:.58,FLIGHT_HIGH:.66,TALL:.74,SKY:.86,SHADOW:-1};
+ const SHADOW_A=[.007,.010,.015],SHADOW_B=[.012,.017,.024];
  class Scene{
   constructor(){this.groups={};this.count=0;this.staticKey='';this.staticGroups=null;this.theme=0;for(const k in shapes)this.groups[k]=[];}
-  add(mesh,x,y,z,sx,sy,sz,angle=0,c=colors.steel,rough=.36,metal=.7,emit=0,cls=1,hit=0,tilt=0){if(this.count++>3800)return;this.groups[mesh].push(x,y,z,angle,sx,sy,sz,cls,...c,rough,metal,emit,hit,tilt);}
+  add(mesh,x,y,z,sx,sy,sz,angle=0,c=colors.steel,rough=.36,metal=.7,emit=0,cls=1,hit=0,tilt=0){if(this.count>=3800)return;this.count++;if(mesh==='ring'&&cls>=0&&!(cls>=.5&&cls<.7)&&sx>50&&Math.max(...c)>.5)c=c.map(v=>v*.32);this.groups[mesh].push(x,y,z,angle,sx,sy,sz,cls,...c,rough,metal,emit,hit,tilt);}
   box(x,y,z,sx,sy,sz,a,c,rough=.38,metal=.75,emission=0,cls=1){this.add('box',x,y,z,sx,sy,sz,a,c,rough,metal,emission,cls);}
-  shadow(mesh,x,y,a,sx,sy,sz=2.1,lift=18,spread=1,cls=LAYER.SHADOW){const ox=lift*.18,oy=lift*.22;this.add(mesh,x+ox*1.10,y+oy*1.10,-60,sx*spread*1.22,sy*spread*1.12,Math.max(.8,sz*.75),a,SHADOW_B,.94,0,0,cls);this.add(mesh,x+ox,y+oy,-58,sx*spread,sy*spread,sz,a,SHADOW_A,.94,0,0,cls);}
-  shipShadow(x,y,a,s=1,lift=24){this.shadow('hull',x,y,a,26*s,18*s,2.2, lift,1.05);this.shadow('hull',x-5*Math.cos(a)*s,y-5*Math.sin(a)*s,a,17*s,11*s,1.6,lift*.82,1.0);}
-  bossShadow(x,y,s=1,lift=34){this.shadow('ring',x,y,0,88*s,88*s,2.2,lift,1.0,.06);this.shadow('hex',x,y,0,62*s,62*s,2.6,lift*.92,1.05,.06);}
+  shadow(mesh,x,y,a,sx,sy,sz=2.1,lift=18,spread=1,cls=LAYER.SHADOW){const ox=lift*.18,oy=lift*.22;this.add(mesh,x+ox*1.10,y+oy*1.10,-37,sx*spread*1.22,sy*spread*1.12,Math.max(.8,sz*.75),a,SHADOW_B,.94,0,0,cls);this.add(mesh,x+ox,y+oy,-35,sx*spread,sy*spread,sz,a,SHADOW_A,.94,0,0,cls);}
+  shipShadow(x,y,a,s=1,lift=96){this.shadow('hull',x,y,a,26*s,18*s,2.2, lift,1.05);this.shadow('hull',x-5*Math.cos(a)*s,y-5*Math.sin(a)*s,a,17*s,11*s,1.6,lift*.82,1.0);}
+  bossShadow(x,y,s=1,lift=110){this.shadow('ring',x,y,0,88*s,88*s,2.2,lift,1.0,LAYER.SHADOW);this.shadow('hex',x,y,0,62*s,62*s,2.6,lift*.92,1.05,LAYER.SHADOW);}
   enemyShadow(type,x,y,a){if(type==='chaser'||type==='lancer'){this.shadow('hull',x,y,a,18,12,1.8,14,1.0);}else if(type==='spinner'||type==='turret'){this.shadow('hex',x,y,a,17,17,1.6,12,1.0);}else this.shadow('hex',x,y,a,22,22,1.9,16,1.0);} 
   dynamicScenery(w,h,stage=0,seed='TITLE',t=0,bossFx=0,bgAnim=1){
    const accent=[colors.mint,colors.violet,colors.gold][stage];
@@ -194,13 +194,13 @@
     if((i+theme)%2===0)this.box(x,y,h0*.56,w0*.16,d0*.16,4,a,accent,.2,.12,2.0,TALL);
    }
   }
-  ship(x,y,a,s=1,t=0,dash=false,ghost=false){const c=ghost?[.15,.42,.47]:colors.silver,cls=ghost?LAYER.FLIGHT:LAYER.FLIGHT_HIGH;this.shipShadow(x,y,a,s,ghost?16:24);
+  ship(x,y,a,s=1,t=0,dash=false,ghost=false){const c=ghost?[.15,.42,.47]:colors.silver,cls=ghost?LAYER.FLIGHT:LAYER.FLIGHT_HIGH;if(!ghost)this.shipShadow(x,y,a,s,96);
    this.add('hull',x,y,14,21*s,20*s,13*s,a,c,.24,.80,ghost?.35:0,cls,0,Math.sin(t*2)*.04);
    const part=(dx,dy,z,mesh,sx,sy,sz,col,em=0,rot=0)=>this.add(mesh,x+(dx*Math.cos(a)-dy*Math.sin(a))*s,y+(dx*Math.sin(a)+dy*Math.cos(a))*s,z,sx*s,sy*s,sz*s,a+rot,col,.23,.76,em,cls);
    for(const side of [-1,1]){part(-8,side*13,8,'hull',18,9,5,colors.steel,0,-side*.21);part(-12,side*17,12,'box',12,2.5,3,colors.mint,2);part(-15,side*10,10,'hex',4,4,7,colors.steel);part(-20,side*10,10,'hull',dash?30:10+Math.sin(t*40)*2,3,3,colors.mint,3,Math.PI);}   
    part(1,0,23,'hull',9,8,6,[.08,.40,.43],.7);part(2,0,27,'orb',2.7,2.7,2.7,[.9,1,.93],2.0);
   }
-  boss(e,stage=0,t=0,s=1){const color=[colors.red,colors.violet,colors.gold][stage],x=e.x,y=e.y,a=e.rot??t*.15,n=stage===0?6:stage===1?4:8,cls=LAYER.FLIGHT_HIGH;this.bossShadow(x,y,s,34*s);
+  boss(e,stage=0,t=0,s=1){const color=[colors.red,colors.violet,colors.gold][stage],x=e.x,y=e.y,a=e.rot??t*.15,n=stage===0?6:stage===1?4:8,cls=LAYER.FLIGHT_HIGH;this.bossShadow(x,y,s,110);
    this.add('hex',x,y,9,40*s,40*s,24*s,-a*.4,colors.dark,.26,.82,0,cls);
    this.add('ring',x,y,16,48*s,48*s,18*s,a,colors.silver,.22,.9,0,cls);
    this.add('ring',x,y,28,32*s,32*s,5*s,-a,color,.22,.6,.9,cls);
@@ -222,11 +222,11 @@
    const seedKey=title?'TITLE':String(world.seed||'SEEDLESS');
    const stage=world?Math.min(world.stage,2):0;
    const key=[w,h,stage,seedKey].join(':');
-   if(this.staticKey!==key){this.floor(w,h,stage,seedKey);this.staticGroups={};for(const k in this.groups)this.staticGroups[k]=this.groups[k].slice();this.staticKey=key;}else for(const k in this.groups)this.groups[k].push(...this.staticGroups[k]);
-   const bossEntity=world&&world.enemies?world.enemies.find(e=>e.type==='boss'&&e.spawn<=0):null;
+   if(this.staticKey!==key){this.floor(w,h,stage,seedKey);this.staticGroups={};for(const k in this.groups)this.staticGroups[k]=this.groups[k].slice();this.staticKey=key;}else{for(const k in this.groups)this.groups[k].push(...this.staticGroups[k]);this.count=Object.values(this.groups).reduce((n,a)=>n+a.length/STRIDE,0);}
+   const bossEntity=world&&world.enemies?world.enemies.find(e=>e.type==='boss'&&e.spawn<=0&&e.hp>0):null;
    const bossFx=bossEntity?clamp(0.45+(1-bossEntity.hp/Math.max(1,bossEntity.maxHp||bossEntity.hp))*0.55,0,1):0;
-   const bgAnim=frame.bgAnim??1;
-   this.dynamicScenery(w,h,stage,seedKey,t,bossFx,bgAnim);
+   const bgAnim=frame.reduced?0:(frame.bgAnim??1);
+   this.dynamicScenery(w,h,stage,seedKey,frame.backgroundTime??t,bgAnim===0?0:bossFx,bgAnim);
    if(title){const s=frame.mobile?1.9:2.15,x=frame.mobile?w*.52:w*.72,y=frame.mobile?h*.40:h*.46;this.boss({x,y,rot:t*.15,phase:1},0,t,s);this.ship(frame.mobile?w*.49:w*.715,frame.mobile?h*.79:h*.81,-Math.PI/2+.12,frame.mobile?1.5:1,t);} 
    else{for(const e of world.enemies)if(e.type==='boss')this.boss(e,Math.min(world.stage,2),t);else this.enemy(e,t,world.p);
     if(world.upgrades.echo)for(let j=1;j<=world.upgrades.echo;j++){const hist=world.history.find(v=>v.t>=world.time-j*.55);if(hist)this.ship(hist.x,hist.y,hist.a,1,t,false,true);}    

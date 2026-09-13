@@ -1,7 +1,9 @@
-# Recovery delivery
+# Delivery
 
-Standalone: `dist/NEMESIS-PACT.html`.
-Version: `0.3.6`.
-Source provenance and limitations: `README.md` and `docs/VALIDATION.md`.
+Game build: `0.3.6.1`.
 
-The original v0.3.0 attachments were missing; this is a newly rebuilt replacement. No prior 0.3.0 file hash is available for comparison. This build has not been pushed to GitHub.
+`dist/NEMESIS-PACT.html` is the standalone release file. The separately delivered
+HTML has exactly the same bytes. Rebuild with `npm run build` using only Node.js.
+`docs/checksums.json` covers the implementation, exported shaders and distribution.
+ZIP CRC and final artifact hashes are recorded in the external delivery receipt.
+No GitHub push is included in this delivery.

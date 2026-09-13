@@ -1,8 +1,8 @@
 {
   "name": "blast-buster-nemesis-pact",
-  "version": "0.3.6",
+  "version": "0.3.6.1",
   "private": true,
-  "description": "Expanded scenic 3D build: deeper procedural architecture with seed-reactive scenery, WebGL2/WebGPU 3D meshes, and WebGPU compute post effects.",
+  "description": "Black-screen hotfix: valid WebGPU depth, explicit shadow material, readable ground and protected flight layer.",
   "scripts": {
     "start": "node tools/serve.js",
     "build": "node tools/build.js",
@@ -14,7 +14,7 @@
     "start:lan": "node tools/serve.js --lan",
     "test:portrait": "node tests/portrait-simulate.js",
     "test:english": "python3 tests/english_browser_test.py",
-    "test:gpu": "python3 tests/gpu_browser_test.py"
+    "test:gpu": "python3 tests/visibility_browser_test.py"
   },
   "engines": {
     "node": ">=18"

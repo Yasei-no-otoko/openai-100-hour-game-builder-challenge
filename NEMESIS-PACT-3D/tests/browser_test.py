@@ -1,31 +1,126 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíÛµN‹Z–‹­¦ëeŠw¬Ôˆˆ‰=™™±¥¹”‰É½İÍ•ÈÉ•É•ÍÍ¥½¸Ñ•ÍÑÌ¸Q•ÍĞ‘•Á•¹‘•¹ä½¹±äèÁ±…åİÉ¥¡Ğ€¬¡É½µ¥Õ´¸)IÕ¸èÁåÑ¡½¸ÌÑ•ÍÑÌ½‰É½İÍ•É}Ñ•ÍĞ¹Áäl´µ‰É½İÍ•È€½ÕÍÈ½‰¥¸½¡É½µ¥Õµt(ˆˆˆ)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉĞA…Ñ )¥µÁ½ÉĞ…ÉÁ…ÉÍ”°©Í½¸°ÍÕ‰ÁÉ½•ÍÌ)™É½´Á±…åİÉ¥¡Ğ¹Íå¹}…Á¤¥µÁ½ÉĞÍå¹}Á±…åİÉ¥¡Ğ)I==P€ôA…Ñ ¡}}™¥±•}|¤¹É•Í½±Ù” ¤¹Á…É•¹ÑÍlÅt)À€ô…ÉÁ…ÉÍ”¹ÉÕµ•¹ÑA…ÉÍ•È ¤)À¹…‘‘}…ÉÕµ•¹Ğ œ´µ‰É½İÍ•Èœ°‘•™…Õ±Ğôœ½ÕÍÈ½‰¥¸½¡É½µ¥Õ´œ¤)…ÉÌ€ôÀ¹Á…ÉÍ•}…ÉÌ ¤)Í¡½ÑÌ€ôI==P€¼€‘½Ìœ€¼€ÍÉ••¹Í¡½ÑÌœ)Í¡½ÑÌ¹µ­‘¥È¡Á…É•¹ÑÌõQÉÕ”°•á¥ÍÑ}½¬õQÉÕ”¤)¡Ñµ°€ô€¡I==P¼‘¥ÍĞœ¼95M%LµAP¹¡Ñµ°œ¤¹É•…‘}Ñ•áĞ ¤)İ¥Ñ Íå¹}Á±…åİÉ¥¡Ğ ¤…ÌÁÜè(€€€‰É½İÍ•È€ôÁÜ¹¡É½µ¥Õ´¹±…Õ¹ ¡•á•ÕÑ…‰±•}Á…Ñ õ…ÉÌ¹‰É½İÍ•È°¡•…‘±•ÍÌõQÉÕ”°…ÉÌõlœ´µ¹¼µÍ…¹‘‰½àœ°€œ´µ‘¥Í…‰±”µ‘•ØµÍ¡´µÕÍ…”t¤(€€€½¹Ñ•áĞ€ô‰É½İÍ•È¹¹•İ}½¹Ñ•áĞ¡Ù¥•İÁ½ÉĞõìİ¥‘Ñ œèÄĞĞÀ°¡•¥¡ĞœèäÀÁô°‘•Ù¥•}Í…±•}™…Ñ½ÈôÄ°½™™±¥¹”õQÉÕ”¤(€€€Á…”€ô½¹Ñ•áĞ¹¹•İ}Á…” ¤(€€€•ÉÉ½ÉÌ°¹•Ñİ½É¬€ômt°mt(€€€Á…”¹½¸ Á…••ÉÉ½Èœ°±…µ‰‘„”è•ÉÉ½ÉÌ¹…ÁÁ•¹¡ÍÑÈ¡”¤¤¤(€€€Á…”¹½¸ É•ÅÕ•ÍĞœ°±…µ‰‘„Èè¹•Ñİ½É¬¹…ÁÁ•¹¡È¹ÕÉ°¤¥˜È¹ÕÉ°¹ÍÑ…ÉÑÍİ¥Ñ   ¡ÑÑÀèœ°€¡ÑÑÁÌèœ°€İÌèœ°€İÍÌèœ¤¤•±Í”9½¹”¤(€€€€ŒI•¹‘•ÈÑ¡”•á…ĞÍ¥¹±”µ™¥±”‰Õ¥±¥¸µ•µ½Éä°İ¥Ñ ¹•Ñİ½É­¥¹œ‘¥Í…‰±•(€€€€Œ™É½´¥¹•ÁÑ¥½¸¸¥±”µUI0¹…Ù¥…Ñ¥½¸…¹!QQ@‘•±¥Ù•Éä…É”¹½ĞÑ¡¥ÌÑ•ÍĞ¸(€€€Á…”¹•Ù…±Õ…Ñ” İ¥¹‘½Ü¹}}AQ}QMQ}5=}|€ôÑÉÕ”œ¤(€€€Á…”¹Í•Ñ}½¹Ñ•¹Ğ¡¡Ñµ°¤(€€€Á…”¹İ…¥Ñ}™½É}Ñ¥µ•½ÕĞ ÔÀÀ¤(€€€…ÍÍ•ÉĞÁ…”¹±½…Ñ½È œµ•¹Ôœ¤¹¥Í}Ù¥Í¥‰±” ¤(€€€Á…”¹ÍÉ••¹Í¡½Ğ¡Á…Ñ õÍÑÈ¡Í¡½ÑÌ¼œÀÄµÑ¥Ñ±”¹Á¹œœ¤¤(€€€Á…”¹±¥¬ œ¡•±Àœ¤(€€€…ÍÍ•ÉĞÁ…”¹±½…Ñ½È œ¡•±ÀµÍÉ••¸œ¤¹¥Í}Ù¥Í¥‰±” ¤(€€€Á…”¹±¥¬ œ¡•±Àµ±½Í”œ¤(€€€Á…”¹±¥¬ œÍ•ÑÑ¥¹Ìœ¤(€€€Á…”¹¡•¬ œÉ•‘Õ•œ¤(€€€Á…”¹±½…Ñ½È œÙ½±Õµ”œ¤¹•Ù…±Õ…Ñ” œ¡•°¤€ôø•°¹Ù…±Õ”ôÌÔœ¤(€€€Á…”¹±½…Ñ½È œÙ½±Õµ”œ¤¹‘¥ÍÁ…Ñ¡}•Ù•¹Ğ ¥¹ÁÕĞœ¤(€€€Á…”¹±¥¬ œÍ•ÑÑ¥¹Ìµ±½Í”œ¤(€€€Á…”¹±¥¬ œÍÑ…ÉĞœ¤(€€€Á…”¹±¥¬ m‘…Ñ„µ‘¥™™¥Õ±Ñäô‰…ÍÍ¥ÍĞ‰tœ¤(€€€Á…”¹™¥±° œÍ••œ°	I=]MHµEœ¤(€€€Á…”¹±¥¬ œ±…Õ¹ œ¤(€€€…ÍÍ•ÉĞÁ…”¹±½…Ñ½È œ¡½¥•Ìœ¤¹¥Í}Ù¥Í¥‰±” ¤(€€€Á…”¹ÍÉ••¹Í¡½Ğ¡Á…Ñ õÍÑÈ¡Í¡½ÑÌ¼œÀÈµ½¹ÑÉ…ÑÌ¹Á¹œœ¤¤(€€€Á…”¹­•å‰½…É¹ÁÉ•ÍÌ œÄœ¤(€€€Á…”¹­•å‰½…É¹‘½İ¸ -•åœ¤(€€€Á…”¹­•å‰½…É¹‘½İ¸ -•å(œ¤(€€€Á…”¹İ…¥Ñ}™½É}Ñ¥µ•½ÕĞ àÀÀ¤(€€€Á…”¹­•å‰½…É¹ÕÀ -•åœ¤(€€€Á…”¹­•å‰½…É¹ÕÀ -•å(œ¤(€€€…ÍÍ•ÉĞÁ…”¹•Ù…±Õ…Ñ” }}AQ}QMQ}|¹İ½É±¹À¹àœ¤€ø€ÜÀÀ(€€€Á…”¹­•å‰½…É¹ÁÉ•ÍÌ MÁ…”œ¤(€€€Á…”¹İ…¥Ñ}™½É}Ñ¥µ•½ÕĞ ÄÀÀ¤(€€€Á…”¹­•å‰½…É¹ÁÉ•ÍÌ Í…Á”œ¤(€€€…ÍÍ•ÉĞÁ…”¹±½…Ñ½È œÁ…ÕÍ”œ¤¹¥Í}Ù¥Í¥‰±” ¤(€€€‰•™½É”€ôÁ…”¹•Ù…±Õ…Ñ” }}AQ}QMQ}|¹İ½É±¹Ñ¥µ”œ¤(€€€Á…”¹İ…¥Ñ}™½É}Ñ¥µ•½ÕĞ ÌÀÀ¤(€€€…ÍÍ•ÉĞÁ…”¹•Ù…±Õ…Ñ” }}AQ}QMQ}|¹İ½É±¹Ñ¥µ”œ¤€ôô‰•™½É”(€€€Á…”¹±¥¬ œÉ•ÍÕµ”œ¤(€€€€Œá•É¥Í”É•…°Á…ÉÉä½±±¥Í¥½¸…Ğ„½¹ÑÉ½±±•°É•ÁÉ½‘Õ¥‰±”ÍÑ…Ñ”¸(€€€Á…”¹•Ù…±Õ…Ñ” œœœ ¤€ôøí½¹ÍĞÜõ}}AQ}QMQ}|¹İ½É±íÜ¹À¹Á…ÉÉåôÀíÜ¹À¹¥¹ØôÀíÜ¹‰Õ±±•Ğ¡Ü¹À¹à¬ĞÀ±Ü¹À¹ä±5…Ñ ¹A$°ÄÌÀ±ÑÉÕ”¤íÜ¹ÍÑ•À Ä¼ÄÈÀ±íÁ…ÉÉäéÑÉÕ•ô¤íôœœœ¤(€€€…ÍÍ•ÉĞÁ…”¹•Ù…±Õ…Ñ” }}AQ}QMQ}|¹İ½É±¹Á…ÉÉ¥•Ìœ¤€øô€Ä(€€€Á…”¹•Ù…±Õ…Ñ” œœœ ¤€ôøí½¹ÍĞÜõ}}AQ}QMQ}|¹İ½É±íÜ¹À¹•¹•ÉäôÄÀÀíôœœœ¤(€€€Á…”¹­•å‰½…É¹ÁÉ•ÍÌ -•åœ¤(€€€Á…”¹İ…¥Ñ}™½É}Ñ¥µ•½ÕĞ ÄÀÀ¤(€€€…ÍÍ•ÉĞÁ…”¹•Ù…±Õ…Ñ” }}AQ}QMQ}|¹İ½É±¹À¹•¹•Éçµ¶‰ËkºwµçWÕTÕ×ÎØKœÛİ[™œÙ][™ÜÊ˜[ÙKYJNØKœİ\
-˜[ÙK	Ğ”“ÕÔÑT‹TPIÊNÂˆ]œ˜[Y\ÏLÂˆÚ[JVÉİÛÛ‰Ë	ÙXY	×Kš[˜ÛY\ÊKÛÜ›œ\ÙJI‰™œ˜[Y\ÏLŒ
-ÌŒ
-^ÂˆÛÛœİÏXKÛÜ›ÂˆYŠËœ\ÙOOOIÜXİ	ÊXK˜ÚÛÜÙJÉÛY\˜ŞIË	ÜØ[˜İX\IË	ÛZ\œ›Ü‰×VİËœİYÙWJNÂˆ[ÙHYŠËœ\ÙOOOIİ\Ü˜YIÊ^ÂˆÛÛœİÙZYÚ^ÜØØ]\Ë˜\YËÜ˜š]KÛZ[™Î˜Z[Ë\œN‹XYÛ™]ŒË[KYXÚËXÚÎË˜^›ÜŒ‹›İ˜N™\Z\ËœšLÏÌŒŒNÂˆÛÛœİÚÚXÙOVË‹‹Ë›Ù™™\œ×KœÛÜ
+"""Offline browser regression tests. Test dependency only: playwright + Chromium.
+Run: python3 tests/browser_test.py [--browser /usr/bin/chromium]
+"""
+from pathlib import Path
+import argparse, json, subprocess
+from playwright.sync_api import sync_playwright
+ROOT = Path(__file__).resolve().parents[1]
+p = argparse.ArgumentParser()
+p.add_argument('--browser', default='/usr/bin/chromium')
+args = p.parse_args()
+shots = ROOT / 'docs' / 'screenshots'
+shots.mkdir(parents=True, exist_ok=True)
+html = (ROOT/'dist'/'NEMESIS-PACT.html').read_text()
+with sync_playwright() as pw:
+    browser = pw.chromium.launch(executable_path=args.browser, headless=True, args=['--no-sandbox', '--disable-dev-shm-usage'])
+    context = browser.new_context(viewport={'width':1440,'height':900}, device_scale_factor=1, offline=True)
+    page = context.new_page()
+    errors, network = [], []
+    page.on('pageerror', lambda e: errors.append(str(e)))
+    page.on('request', lambda r: network.append(r.url) if r.url.startswith(('http:', 'https:', 'ws:', 'wss:')) else None)
+    # Render the exact single-file build in memory, with networking disabled
+    # from inception. File-URL navigation and HTTP delivery are not this test.
+    page.evaluate('window.__PACT_TEST_MODE__ = true')
+    page.set_content(html)
+    page.wait_for_timeout(500)
+    assert page.locator('#menu').is_visible()
+    page.screenshot(path=str(shots/'01-title.png'))
+    page.click('#help')
+    assert page.locator('#help-screen').is_visible()
+    page.click('#help-close')
+    page.click('#settings')
+    page.check('#reduced')
+    page.locator('#volume').evaluate('(el) => el.value=35')
+    page.locator('#volume').dispatch_event('input')
+    page.click('#settings-close')
+    page.click('#start')
+    page.click('[data-difficulty="assist"]')
+    page.fill('#seed','BROWSER-QA')
+    page.click('#launch')
+    assert page.locator('#choices').is_visible()
+    page.screenshot(path=str(shots/'02-contracts.png'))
+    page.keyboard.press('1')
+    page.keyboard.down('KeyD')
+    page.keyboard.down('KeyJ')
+    page.wait_for_timeout(800)
+    page.keyboard.up('KeyD')
+    page.keyboard.up('KeyJ')
+    assert page.evaluate('__PACT_TEST__.world.p.x') > 700
+    page.keyboard.press('Space')
+    page.wait_for_timeout(100)
+    page.keyboard.press('Escape')
+    assert page.locator('#pause').is_visible()
+    before = page.evaluate('__PACT_TEST__.world.time')
+    page.wait_for_timeout(300)
+    assert page.evaluate('__PACT_TEST__.world.time') == before
+    page.click('#resume')
+    # Exercise real parry collision at a controlled, reproducible state.
+    page.evaluate('''() => {const w=__PACT_TEST__.world;w.p.parryCd=0;w.p.inv=0;w.bullet(w.p.x+40,w.p.y,Math.PI,130,true);w.step(1/120,{parry:true});}''')
+    assert page.evaluate('__PACT_TEST__.world.parries') >= 1
+    page.evaluate('''() => {const w=__PACT_TEST__.world;w.p.energy=100;}''')
+    page.keyboard.press('KeyF')
+    page.wait_for_timeout(100)
+    assert page.evaluate('__PACT_TEST__.world.p.energy') < 100
+    page.keyboard.press('KeyQ')
+    page.wait_for_timeout(100)
+    assert page.evaluate('__PACT_TEST__.world.broken')
+    # Visual boss fixture. This is not a claim of a human gameplay clear.
+    page.evaluate('''() => {const a=__PACT_TEST__,w=a.world;w.stage=1;w.wave=2;w.pact='silence';w.broken=false;w.mods=PactCore.modifiers('silence');w.upgrades={scatter:1,orbit:2,rail:1};w.p.hp=w.p.maxHp;w.startWave();w.p.inv=100;w.enemies[0].hp*=.58;w.enemies[0].phase=1;a.consumeEvents();}''')
+    page.wait_for_timeout(6200)
+    page.keyboard.press('Escape')
+    page.evaluate("document.getElementById('pause').hidden=true;__PACT_TEST__.updateHUD();__PACT_TEST__.render();")
+    page.screenshot(path=str(shots/'03-battle.png'))
+    page.evaluate("document.getElementById('pause').hidden=false")
+    page.click('#resume')
+    # Full browser playthrough with legal bot inputs (no combat state cheats).
+    # The preceding screenshot is a visual fixture; this fresh run is not.
+    pilot = subprocess.check_output(['node','-e',
+      "console.log(require('./tests/simulate.js').pilot.toString())"], cwd=ROOT, text=True)
+    # A script tag avoids eval, which the game's CSP deliberately forbids.
+    page.add_script_tag(content='window.__QA_PILOT__ = (() => {const segmentHit=PactCore.segmentHit;return '+pilot+';})();')
+    browser_run = page.evaluate("""() => {
+      const a=__PACT_TEST__;a.sound.settings(0,false,true);a.start(false,'BROWSER-QA');
+      let frames=0;
+      while(!['won','dead'].includes(a.world.phase)&&frames<120*720){
+        const w=a.world;
+        if(w.phase==='pact')a.choose(['mercy','sanctuary','mirror'][w.stage]);
+        else if(w.phase==='upgrade'){
+          const weight={scatter:7,rapid:7,orbit:9,homing:8,rail:7,parry:6,magnet:3,hull:9,leech:7,echo:7,razor:2,nova:4,repair:w.p.hp<=3?20:0};
+          const choice=[...w.offers].sort((x,y)=>weight[y.id]-weight[x.id])[0];a.choose(choice.id);
+        }else{
+          for(let i=0;i<120&&w.phase==='combat';i++){w.step(1/120,__QA_PILOT__(w));frames++;}
+          a.advance(0);
+        }
+      }
+      a.results();a.render();return a.world.report();
+    }""")
+    assert browser_run['outcome']=='won', browser_run
+    assert browser_run['bosses']==3
+    page.screenshot(path=str(shots/'04-ending.png'))
+    assert page.locator('#result').is_visible()
+    with page.expect_download() as download:
+        page.click('#export')
+    data = json.loads(Path(download.value.path()).read_text())
+    assert data['seed']=='BROWSER-QA' and data['outcome']=='won'
+    page.click('#retry')
+    assert page.locator('#choices').is_visible()
+    assert page.evaluate('__PACT_TEST__.world.time') == 0
+    # about:blank storage is unavailable: the real fallback must not crash.
+    page.evaluate('__PACT_TEST__.show("menu")')
+    assert page.evaluate('__PACT_TEST__.options.reduced') is True
+    assert abs(page.evaluate('__PACT_TEST__.options.volume')-.35) < .01
+    page.click('#train')
+    assert page.locator('#tutorial-hud').is_visible()
+    page.click('#training-exit')
+    assert page.locator('#menu').is_visible()
+    # Small desktop viewport; logical canvas and UI share a single transform.
+    page.set_viewport_size({'width':960,'height':600})
+    page.click('#start')
+    assert page.locator('#launch').bounding_box()['x'] >= 0
+    assert not errors, errors
+    assert not network, network
+    result={'passed':True,'browser':browser.version,'external_network_requests':len(network),'file_url_status':'not tested; exact standalone HTML rendered in memory while offline','storage_status':'storage-denied fallback verified; real persistent reload not verified','page_errors':errors,'browser_playthrough':{k:browser_run[k] for k in ['seed','difficulty','outcome','seconds','bosses','damageTaken','score']},'checks':['exact standalone HTML loaded in memory; networking disabled','help/settings','settings state with storage denied','difficulty and seeded start','contract selection via keyboard','movement and shooting','dash','pause freezes simulation','actual parry collision','nova','contract breach','boss render fixture','full legal-input bot campaign in browser','result/retry','JSON download','training','960x600 layout']}
+    (ROOT/'docs'/'browser-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+    browser.close()
 
-JOOÙZYÚŞKšYK]ÙZYÚŞšYJVÌNØK˜ÚÛÜÙJÚÚXÙKšY
-NÂˆY[Ù^Âˆ›ÜŠ]OLÚOLŒ	‰Ëœ\ÙOOOIØÛÛX˜]	ÎÚJÊÊ^İËœİ\
-KÌLŒ×ÔPWÔSÕ×ÊÊJNÙœ˜[Y\ÊÊÎßBˆK˜Y˜[˜ÙJ
-NÂˆBˆBˆKœ™\İ[Ê
-NØKœ™[™\Š
-NÜ™]\›ˆKÛÜ›œ™\Ü
-
-NÂˆHˆˆŠBˆ\ÜÙ\œ›İÜÙ\—Ü[–ÉÛİ]ÛÛYI×OOIİÛÛ‰Ëœ›İÜÙ\—Ü[‚ˆ\ÜÙ\œ›İÜÙ\—Ü[–ÉØ›ÜÜÙ\É×OOLÂˆYÙKœØÜ™Y[œÚİ
-]\İŠÚİËÉÌY[™[™Ëœ™ÉÊJBˆ\ÜÙ\YÙK›ØØ]ÜŠ	ÈÜ™\İ[	ÊKš\×İš\ÚX›J
-BˆÚ]YÙK™^XİÙİÛ›ØY
-
-H\ÈİÛ›ØY‚ˆYÙK˜ÛXÚÊ	ÈÙ^Ü	ÊBˆ]HHœÛÛ‹›ØYÊ]
-İÛ›ØY˜[YKœ]
-
-JKœ™XYİ^
-
-JBˆ\ÜÙ\]VÉÜÙYY	×OOIĞ”“ÕÔÑT‹TPIÈ[™]VÉÛİ]ÛÛYI×OOIİÛÛ‰ÂˆYÙK˜ÛXÚÊ	ÈÜ™]IÊBˆ\ÜÙ\YÙK›ØØ]ÜŠ	ÈØÚÚXÙ\ÉÊKš\×İš\ÚX›J
-Bˆ\ÜÙ\YÙK™]˜[X]J	××ÔPÕÕTÕ×ËÛÜ›[YIÊHOHˆÈX›İ]˜›[šÈİÜ˜YÙH\È[˜]˜Z[X›NˆH™X[˜[˜XÚÈ]\İ›İÜ˜\Ú‚ˆYÙK™]˜[X]J	××ÔPÕÕTÕ×ËœÚİÊ›Y[HŠIÊBˆ\ÜÙ\YÙK™]˜[X]J	××ÔPÕÕTÕ×Ë›Ü[ÛœËœ™YXÙY	ÊH\ÈYBˆ\ÜÙ\XœÊYÙK™]˜[X]J	××ÔPÕÕTÕ×Ë›Ü[ÛœË›Û[YIÊKKŒÍJHŒBˆYÙK˜ÛXÚÊ	Èİ˜Z[‰ÊBˆ\ÜÙ\YÙK›ØØ]ÜŠ	Èİ]ÜšX[ZY	ÊKš\×İš\ÚX›J
-BˆYÙK˜ÛXÚÊ	Èİ˜Z[š[™ËY^]	ÊBˆ\ÜÙ\YÙK›ØØ]ÜŠ	ÈÛY[IÊKš\×İš\ÚX›J
-BˆÈÛX[\ÚİÜšY]ÜÜÈÙÚXØ[Ø[˜\È[™RHÚ\™HHÚ[™ÛH˜[œÙ›Ü›K‚ˆYÙKœÙ]İšY]ÜÜÜÚ^™JÉİÚY	ÎMŒ	ÚZYÚ	ÎŒJBˆYÙK˜ÛXÚÊ	ÈÜİ\	ÊBˆ\ÜÙ\YÙK›ØØ]ÜŠ	ÈÛ][˜Ú	ÊK˜›İ[™[™×Ø›Ş
-
-VÉŞ	×HHˆ\ÜÙ\›İ\œ›ÜœË\œ›ÜœÂˆ\ÜÙ\›İ™]ÛÜšË™]ÛÜšÂˆ™\İ[^ÉÜ\ÜÙY	Î•YK	Øœ›İÜÙ\‰Î˜œ›İÜÙ\‹™\œÚ[Û‹	Ù^\›˜[Û™]ÛÜš×Ü™\]Y\İÉÎ›[Š™]ÛÜšÊK	Ùš[Wİ\›Üİ]\ÉÎ‰Û›İ\İYÈ^Xİİ[™[Û™HS™[™\™Y[ˆY[[ÜHÚ[HÙ™›[™IË	ÜİÜ˜YÙWÜİ]\ÉÎ‰ÜİÜ˜YÙKY[šYY˜[˜XÚÈ™\šYšYYÈ™X[\œÚ\İ[™[ØY›İ™\šYšYY	Ë	ÜYÙWÙ\œ›ÜœÉÎ™\œ›ÜœË	Øœ›İÜÙ\—Ü^]›İYÚ	ÎÚÎ˜œ›İÜÙ\—Ü[–Ú×H›ÜˆÈ[ˆÉÜÙYY	Ë	ÙY™šXİ[IË	Ûİ]ÛÛYIË	ÜÙXÛÛ™ÉË	Ø›ÜÜÙ\ÉË	Ù[XYÙUZÙ[‰Ë	ÜØÛÜ™I×_K	ØÚXÚÜÉÎ–ÉÙ^Xİİ[™[Û™HSØYY[ˆY[[ÜNÈ™]ÛÜšÚ[™È\ØX›Y	Ë	Ú[ÜÙ][™ÜÉË	ÜÙ][™ÜÈİ]HÚ]İÜ˜YÙH[šYY	Ë	ÙY™šXİ[H[™ÙYYYİ\	Ë	ØÛÛ˜XİÙ[Xİ[ÛˆšXHÙ^X›Ø\™	Ë	Û[İ™[Y[[™ÚÛİ[™ÉË	Ù\Ú	Ë	Ü]\ÙHœ™Y^™\ÈÚ[][][Û‰Ë	ØXİX[\œHÛÛ\Ú[Û‰Ë	Û›İ˜IË	ØÛÛ˜Xİœ™XXÚ	Ë	Ø›ÜÜÈ™[™\ˆš^\™IË	Ù[YØ[Z[œ]›İØ[\ZYÛˆ[ˆœ›İÜÙ\‰Ë	Ü™\İ[Ü™]IË	Ò”ÓÓˆİÛ›ØY	Ë	İ˜Z[š[™ÉË	ÎMŒŒ^[İ]	×_Bˆ
-“ÓÕÉÙØÜÉËÉØœ›İÜÙ\‹\™\İ[ËšœÛÛ‰ÊKÜš]Wİ^
-œÛÛ‹™[\Ê™\İ[[œİ\™WØ\ØÚZOQ˜[ÙK[™[LŠJBˆš[
-œÛÛ‹™[\Ê™\İ[[œİ\™WØ\ØÚZOQ˜[ÙK[™[LŠJBˆœ›İÜÙ\‹˜ÛÜÙJ
-B‚

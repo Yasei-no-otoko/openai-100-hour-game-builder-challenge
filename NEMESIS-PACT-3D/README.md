@@ -1,46 +1,64 @@
-# BLAST BUSTER: NEMESIS PACT — 3D recovery build
+# BLAST BUSTER: NEMESIS PACT — 3D v0.3.6.1
 
-**Build: 0.3.6 · English · portrait touch + desktop · offline runtime**
-
-## Why this build exists
-
-The previously linked v0.3.0 HTML and ZIP were not present in the delivery filesystem. This is a newly reconstructed 3D build based on the preserved v0.2.1 English source, **not a bit-identical recovery of the missing v0.3.0 source**. The original v0.3.0 screenshots are not evidence for this build. Current screenshots and test results are under `docs/recovery-*`.
-
-The 2D simulation is unchanged except for its report version. `src/touch.js` and `src/audio.js` are byte-identical to the preserved baseline. Renderer changes are confined to presentation, a read-only mesh scene builder, and visual event forwarding.
+English / portrait touch and desktop / offline runtime / black-screen hotfix.
 
 ## Play
 
-Open `dist/NEMESIS-PACT.html` in a browser, or use the separately delivered standalone HTML. No package installation, API key, model, downloaded texture, external font, or server-side game service is needed by the runtime.
+Open `dist/NEMESIS-PACT.html` in a compatible desktop browser, or use the separately
+supplied `NEMESIS-PACT-3D-EN-v0.3.6.1.html`. Runtime assets and code are embedded;
+no API key, external engine, model or asset download is required.
 
-For local development or testing, Node.js 18+ is sufficient:
+For a local server (Node.js 18+):
 
 ```sh
 npm start
+# Phone on the same trusted local network:
+npm run start:lan
 ```
 
-Open the local URL printed by the server. `npm run start:lan` explicitly enables serving to other devices on a trusted local network. The server is otherwise bound to loopback. WebGPU generally needs a secure context: use localhost on the computer, or an HTTPS-hosted copy for a phone. Plain LAN HTTP can use WebGL2 where supported; it should not be taken as a WebGPU test.
+WebGPU requires a supported secure context. A phone using a plain LAN HTTP URL
+normally uses WebGL2. Runtime status is shown in Settings as `0.3.6.1 / <backend>`.
+The renderer also accepts `?renderer=webgl2` or `?renderer=webgpu`; unsupported
+WebGPU falls back to WebGL2, then Canvas 2D. The status, not the query, identifies
+the backend actually in use.
 
-## Controls
+## What was wrong, and what changed
 
-Desktop: WASD/arrows move; mouse + left-click aim/fire; J auto-aim/fire; E/right-click parry; Space/Shift dash; F Nova; Q break pact; Escape pause.
+v0.3.6 passed JavaScript/logic tests but had rendering bugs those tests did not
+exercise. Its WebGPU vertex shader emitted a negative normalized Z for aircraft,
+so they were clipped despite a successfully created render pipeline. Its shadow
+heuristic also classified the ground as shadow, multiplying the entire floor
+color by 0.12. Fog then washed out the remaining lit materials.
 
-Touch: drag the movement pad or battlefield; aiming/firing are automatic; PARRY, DASH and NOVA buttons support a second finger. Use Pause → Break pact for the destructive pact choice. Portrait layout, left-handed mode, reduced effects and rotation pause are retained.
+v0.3.6.1 fixes the actual renderer, not the user's monitor brightness:
 
-## Rendering
+- Shared normalized depth calculation; WebGPU uses 0..1 and WebGL2 uses the
+  corresponding -1..1 conversion.
+- Separated, nonoverlapping flight/scenery depth bands. Even the tallest scenery
+  cannot overwrite player/enemy/boss pixels. X/Y controls and hitboxes are unchanged.
+- Explicit negative shadow-material tag instead of a numeric threshold that also
+  matched floor tiles. Shadow silhouettes are placed above the floor surface.
+- Rebalanced ambient fill; fog is limited to scenery and capped, leaving craft
+  crisp. Small emissive highlights and bloom remain available.
+- Binary foreground mask for shockwave/chromatic offsets, with protection at
+  each resampled location. Graphics OFF does not disable essential tone mapping.
+- Settings are scrollable at desktop size and fit 320px portrait viewports.
+- Background timing freezes with the simulation during pause. Existing effect
+  settings and saved scores retain their original storage keys.
 
-- Native WebGL2 / GLSL ES 3.00 and native WebGPU / WGSL; no engine library.
-- Procedural beveled hulls, metallic boss assemblies, 3D floor tiles, rails and reactor rings. Render-only Z never participates in gameplay.
-- Instanced meshes, inverse-scale normal transformation, GGX/Smith/Schlick direct-light material, roughness/metalness, analytic environment fill, emissive materials and ACES-style tone mapping. This is not a claim of measured physical lighting accuracy or a full image-based-lighting pipeline.
-- WebGL2: RGBA16F scene target when `EXT_color_buffer_float` is supported; RGBA8 fallback; two bloom fragment passes and final composite.
-- WebGPU: RGBA16F raster target; compute bright extraction/horizontal blur; compute vertical blur; full-resolution compute composite to an RGBA8 storage texture; presentation pass. Three compute dispatches per rendered frame, each bounded for non-multiple-of-eight resolutions.
-- Nova/pact-break shockwave and WebGPU chromatic offsets are masked to background-class pixels. Collision-critical bullets, reticles and HUD use an undistorted transparent Canvas/DOM overlay.
-- The orthographic gameplay plane matches the existing 2D coordinates. Local mesh depth is projected with a small oblique component to show thickness; hit centers remain marked at the simulation coordinates.
+## Preserved features
 
-WebGPU is attempted automatically in a supported secure context; initialization/device errors fall back to WebGL2. An explicit final Canvas 2D fallback keeps the game playable when neither GPU backend works. The active backend is shown in Settings and through `NEMESIS_RENDERER.stats()` in browser developer tools.
+Three sectors with seed-dependent architecture and stage-specific ambient colors;
+boss-specific background motifs; animated rings/pillars/light routes; procedural
+3D meshes, metalness/roughness/GGX shading, emissive surfaces; WebGL2 raster bloom
+and tone mapping; WebGPU compute bloom and compositing. Settings retain independent
+Post FX, Bloom and Background Animation OFF / STANDARD / HIGH values.
 
-`?renderer=webgl2` skips the WebGPU attempt. `?renderer=webgpu` requests WebGPU but still uses a fallback on failure; the status label, not the query parameter, is the source of truth.
+Controls: WASD/arrows move, mouse + left-click aim/fire, J automatic aim/fire,
+E/right-click parry, Space/Shift dash, F Nova, Q break pact, Escape pause.
+Touch: slide to move; automatic aim/fire; independent PARRY, DASH and NOVA buttons.
 
-## Build / tests
+## Verification
 
 ```sh
 npm run build
@@ -48,32 +66,21 @@ npm run check
 npm test
 npm run test:simulation
 npm run test:portrait
-# Test-only dependencies: Python + Playwright + Chromium.
-# This Linux image also needs a running X server for ANGLE:
-xvfb-run -a python3 tests/gpu_browser_test.py
+# Test-only Python/Playwright/Chromium; this Linux image needs an X server:
+xvfb-run -a npm run test:gpu
 ```
 
-`npm run build` creates the self-contained `dist/NEMESIS-PACT.html` and exported shader inspection copies under `shaders/`. No npm runtime dependencies are used.
+76 Node tests passed, including 4,438,944 transformed-vertex checks over the
+specified scene fixtures. Actual WebGL2 raster/fragment/post processing was tested
+with Chromium 144 + ANGLE/SwiftShader at 1280x800, 390x844 and 320x568. The pixel
+regressions verify lit floor output and unchanged aircraft masks when a tall tower
+is added. All 9 desktop and 27 portrait bot campaigns completed.
 
-Current verification: 63 Node tests passed; 9 desktop and 27 portrait legal-input full-state bot runs reached the end. Those runs are correctness checks, not human difficulty studies or frame-rate measurements. WebGL2 rendering, RGBA8 fallback, context loss/restoration, portrait rotation and no-network runtime were checked in Chromium/ANGLE/SwiftShader.
+**Native WebGPU WGSL/compute execution, physical GPU/browser performance,
+physical phones and Safari have not been verified for this hotfix.** WebGPU depth
+math and emitted-vertex ranges are verified, which is not equivalent to native
+execution. See `docs/VALIDATION.md` for the exact scope. No FPS target is claimed.
 
-**WebGPU shader compilation/dispatch on an actual WebGPU device was not verified in this sandbox. Physical iPhone/Android/Safari performance, heat, battery use, and direct file-URL navigation are also not verified.** See `docs/VALIDATION.md` for exact scope.
-
-## Source layout
-
-- `src/core.js`: preserved 2D simulation, only report version changed.
-- `src/touch.js`, `src/audio.js`: preserved controls/audio.
-- `src/game.js`: existing UI + transparent-overlay integration.
-- `src/meshes3d.js`: mesh construction and read-only scene assembly.
-- `src/renderer3d.js`: both GPU backends and embedded GLSL/WGSL.
-- `src/renderer3d.css`: canvas stacking and backend status.
-- `tests/`: original mechanics/localization tests and new mesh/GPU regression tests.
-- `docs/baseline-0.2.1/`: clearly archived evidence from the earlier build, not new test results.
-
-## References used for API/source review
-
-- WebGL 2.0 specification: https://registry.khronos.org/webgl/specs/latest/2.0/
-- WGSL specification: https://www.w3.org/TR/WGSL/
-- WebGPU specification: https://www.w3.org/TR/webgpu/
-
-No repository writes or GitHub pushes were performed as part of this recovery.
+Current evidence: `docs/hotfix-0.3.6.1/`. Historical evidence: `docs/history/`.
+The original v0.3.6 HTML/ZIP was the input; this is not a reconstruction from an
+older unrelated source. No GitHub push was performed.

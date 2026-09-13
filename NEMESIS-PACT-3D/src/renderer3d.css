@@ -3,3 +3,12 @@
 #canvas{position:relative;z-index:1}
 #ui{z-index:2}
 .renderer-status{color:#78e8d0;font:11px/1.6 monospace;letter-spacing:1px;padding:8px 0}
+
+/* 0.3.6.1: the enlarged settings form must be scrollable, not clipped. */
+.settings-panel{max-height:740px;overflow-y:auto;overscroll-behavior:contain;padding:28px 34px}
+.settings-panel .setting-row{gap:16px}
+.settings-panel .setting-row>span:first-child{min-width:0}
+.mobile-ui .settings-panel{max-height:none;overflow:visible}
+.mobile-ui .setting-control{min-width:112px;width:112px;flex-shrink:0;flex-direction:column;gap:5px}
+.mobile-ui .setting-control input[type=range]{width:112px;min-height:32px}
+.mobile-ui .setting-control .setting-value{text-align:center}

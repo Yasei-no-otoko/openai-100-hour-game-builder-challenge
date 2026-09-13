@@ -5,7 +5,7 @@
   const {TAU,clamp,BOSSES,CONTRACTS,UPGRADES,SECTORS}=C;
   let W=C.W,H=C.H;
   let gpuActive=false;
-  const gpu=new window.PactGPU.Renderer($('stage'),{onStatus:s=>{const el=$('renderer-status');if(el)el.textContent=s.backend;}});
+  const gpu=new window.PactGPU.Renderer($('stage'),{onStatus:s=>{const el=$('renderer-status');if(el)el.textContent=s.build+' / '+s.backend;}});
   window.NEMESIS_RENDERER=gpu;
   const sound=new window.PactSound(),keys=new Set(),pressed=new Set();
   const mouse={x:W/2,y:240,down:false},screens=['menu','loadout','choices','pause','help-screen','settings-screen','result','confirm-screen'];
@@ -337,7 +337,7 @@
   function render(t=clock){
     const dx=canvas.width/view.width,dy=canvas.height/view.height;ctx.setTransform(dx,0,0,dy,0,0);ctx.globalAlpha=1;
     const shakeX=shake>0&&!opts.reduced?(Math.random()-.5)*shake:0,shakeY=shake>0&&!opts.reduced?(Math.random()-.5)*shake:0;
-    gpuActive=gpu.draw({world,w:W,h:H,t:opts.reduced?0:t,mobile,view,reduced:opts.reduced,shakeX,shakeY,postFX:opts.postfx,bloom:opts.bloom,bgAnim:opts.bganim});
+    gpuActive=gpu.draw({world,w:W,h:H,t:world?world.time:t,backgroundTime:opts.reduced?0:(world?world.time:t),mobile,view,reduced:opts.reduced,shakeX,shakeY,postFX:opts.postfx,bloom:opts.bloom,bgAnim:opts.bganim});
     canvas.style.background=gpuActive?'transparent':'#08121c';
     if(gpuActive)ctx.clearRect(0,0,view.width,view.height);else{ctx.fillStyle='#08121c';ctx.fillRect(0,0,view.width,view.height);}
     if(mobile&&!world){renderMobileTitle(opts.reduced?0:t);renderFrames++;return;}

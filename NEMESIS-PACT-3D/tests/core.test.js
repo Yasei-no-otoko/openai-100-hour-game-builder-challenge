@@ -1,4 +1,125 @@
-Yช็x-ฎ้Üjืข๋iบฺ+งj[h‘้Üข้ํ฿:NZ–ญฆ๋ewฌิีอ”อัษฅะ์)ฝนอะั•อะ€๔ษ•ลีฅษ” นฝ‘”้ั•อะค์)ฝนอะ…ออ•ษะ€๔ษ•ลีฅษ” นฝ‘”้…ออ•ษะฝอัษฅะค์)ฝนอะฬ€๔ษ•ลีฅษ” นฝ‘”้ฬค์)ฝนอะม…ั €๔ษ•ลีฅษ” นฝ‘”้ม…ั ค์)ฝนอะํ]ฝษฑฐษนฐตฝ‘ฅฅ•ษฬฐอ•ต•นั!ฅะฐUAILฐ=9QIQM๔€๔ษ•ลีฅษ” ธธฝอษฝฝษ”นฉฬค์)ฝนอะ‘ะ€๔€ฤ€ผ€ฤศภ์)ีนัฅฝธ…ษ•นกม…ะ€๔€ต•ษไค์(€ฝนอะÜ€๔น•Ü]ฝษฑ U9%PตQMPค์(€Üนอฅธกม…ะค์ÜนÝ…ู•Aฑ…ธ€๔mt์Üนมฑ…น%น‘•เ€๔€ภ์(€Üนภนฅนุ€๔€ภ์(€ษ•ัีษธÜ์)๔)ีนัฅฝธษีธกÜฐษ…ต•ฬฐฅนมีะ€๔ํ๔ค์ฝศ€กฑ•ะค๔ภ์ค๑ษ…ต•ฬ์คฌฌค์Üนอั•ภก‘ะฐฅนมีะค์Üนั…ญ•ู•นัฬ ค์๔๔)ีนัฅฝธั…ษ•ะกÜฐัๅม”๔ัีษษ•ะฐเ๔ุะภฐไ๔ศฤภค์ฝนอะ”๕Üนอม…Ýธกัๅม”ฑเฑไค์”นอม…Ýธ๔ภ์”นฅษ”๔ฤภภ์ษ•ัีษธ”์๔()ั•อะ อ••‘•I9ฅฬ‘•ั•ษตฅนฅอัฅฐฝีน‘•ฐ…นอ••ตอ•นอฅัฅู”ฐ€ ค€๔๘์(€ฝนอะ๕ษน 1A!คฐ๕ษน 1A!คฐ๕ษน 	Qค์(€ฝนอะเ๕ษษ…ไนษฝดกํฑ•นั ่ศิู๔ฑคฐไ๕ษษ…ไนษฝดกํฑ•นั ่ศิู๔ฑคฐ่๕ษษ…ไนษฝดกํฑ•นั ่ศิู๔ฑค์(€…ออ•ษะน‘••มลี…ฐกเฑไค์…ออ•ษะนนฝั••มลี…ฐกเฑ่ค์…ออ•ษะนฝฌกเน•ู•ษไกุ๔๙ุ๘๔ภุ๐ฤคค์)๔ค์)ั•อะ อÝ•มะฝฑฑฅอฅฝธ‘•ั•ัฬัีนน•ฑฅน…นก…น‘ฑ•ฬอั…ัฅฝน…ษไอ•ต•นัฬฐ€ ค€๔๘์(€…ออ•ษะนฝฌกอ•ต•นั!ฅะ ภฐภฐฤภภฐภฐิภฐภฐศคค์(€…ออ•ษะนฝฌ …อ•ต•นั!ฅะ ภฐภฐฤภภฐภฐิภฐฤภฐศคค์(€…ออ•ษะนฝฌกอ•ต•นั!ฅะ ฤฐฤฐฤฐฤฐฤฐฤฐฤคค์(€…ออ•ษะนฝฌ …อ•ต•นั!ฅะ ฤฐฤฐฤฐฤฐิฐิฐฤคค์)๔ค์)ั•อะ …ฑฐอ•ู•ธฝนัษ…ัฬก…ู”ษ•…ฐฐ‘ฅอัฅนะตฝ‘ฅฅ•ษฬฐ€ ค€๔๘์(€…ออ•ษะน•ลี…ฐก=9QIQLนฑ•นั ฐÜค์(€…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ต•ษไคนอม••ฐธÜค์…ออ•ษะนฝฌกตฝ‘ฅฅ•ษฬ ต•ษไคน•แัษค์(€…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ตฅษษฝศคนษ•ฑ•ะฐศธศค์…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ตฅษษฝศคนีธฐธÜิค์(€…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ฑ…อฬคน‘…ต…”ฐศค์…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ฑ…อฬคนกภฐธÜค์(€…ออ•ษะนฝฌกตฝ‘ฅฅ•ษฬ อฅฑ•น”คนอฅฑ•น”ค์…ออ•ษะนฝฌกตฝ‘ฅฅ•ษฬ อ…นัี…ษไคนอ…นัี…ษไค์(€…ออ•ษะนฝฌกตฝ‘ฅฅ•ษฬ ‘ี•ฐคนนฝ‘‘ฬค์…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ‘ี•ฐคนฝออI…ั”ฐฤธศิค์(€…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ู•ฑฝฅัไคน‘…อ ฐธิิค์…ออ•ษะน•ลี…ฐกตฝ‘ฅฅ•ษฬ ู•ฑฝฅัไคนอม••ฐฤธฬค์)๔ค์)ั•อะ ฅนู…ฑฅ‘ฅฅีฑัไฝฑฝนอ••นฝษต…ฑฅ้”…นฅนู…ฑฅฝนัษ…ัฬ‘ผนฝะตีั…ั”อั…ั”ฐ€ ค€๔๘์(€ฝนอะÜ๕น•Ü]ฝษฑ เนษ•ม•…ะ ศภภคฐฅนู…ฑฅค์(€…ออ•ษะน•ลี…ฐกÜนอ••นฑ•นั ฐะเค์…ออ•ษะน•ลี…ฐกÜน‘ฅฅีฑัไฐอั…น‘…ษค์(€…ออ•ษะน•ลี…ฐกÜนอฅธ อฅฑ•น”คฑ…ฑอ”ค์…ออ•ษะน•ลี…ฐกÜนมก…อ”ฐม…ะค์…ออ•ษะน•ลี…ฐกÜนฝนัษ…ัฬนฑ•นั ฐภค์(€…ออ•ษะนฝฌกÜนอฅธ ต•ษไคค์…ออ•ษะน•ลี…ฐกÜนอฅธ ต•ษไคฑ…ฑอ”ค์…ออ•ษะน•ลี…ฐกÜนฝนัษ…ัฬนฑ•นั ฐฤค์)๔ค์)ั•อะ Ý…ู”มฑ…ธ…นีมษ…‘”กฝฅ•ฬ…ษ”ฅน‘•ม•น‘•นะฝฝอต•ัฅฝกฅะI9ฝนอีตมัฅฝธฐ€ ค€๔๘์(€ฝนอะ๕น•Ü]ฝษฑ IA1dคฐ๕น•Ü]ฝษฑ IA1dค์(€ฝศกฑ•ะค๔ภํค๐ฤิภภํคฌฌคนษ…น‘ฝด ค์(€นอฅธ ต•ษไค์นอฅธ ต•ษไค์…ออ•ษะน‘••มลี…ฐกนÝ…ู•Aฑ…ธฑนÝ…ู•Aฑ…ธค์(€นฝ•ษUมษ…‘” ค์นฝ•ษUมษ…‘” ค์…ออ•ษะน‘••มลี…ฐกนฝ•ษฬฑนฝ•ษฬค์)๔ค์)ั•อะ นฝษต…ฐ…น‘ฅ…ฝน…ฐตฝู•ต•นะอก…ษ”อม••ฑฅตฅะ์มฑ…ๅ•ศอั…ๅฬฅธฝีน‘ฬฐ€ ค€๔๘์(€ฝนอะ๕…ษ•น คฐ๕…ษ•น ค์ั…ษ•ะกค์ั…ษ•ะกค์(€ฝนอะอั…ษะ๕ํเ้นภนเฑไ้นภนๅ๔ํษีธกฐุภฑํตเ่ล๔คํษีธกฐุภฑํตเ่ฤฑตไ่ดล๔ค์(€ฝนอะ…เ๕5…ั นกๅมฝะกนภนเตอั…ษะนเฑนภนไตอั…ษะนไคฐเ๕5…ั นกๅมฝะกนภนเตอั…ษะนเฑนภนไตอั…ษะนไค์(€…ออ•ษะนฝฌก5…ั น…ฬก…เตเค๐ธภภฤค์ษีธกฐุภภฑํตเ่ฤฑตไ่ล๔ค์(€…ออ•ษะนฝฏ]üฺ๊$z{-ฎ้Üjื
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const {World, rng, modifiers, segmentHit, UPGRADES, CONTRACTS} = require('../src/core.js');
+const dt = 1 / 120;
+function arena(pact = 'mercy') {
+  const w = new World('UNIT-TEST');
+  w.sign(pact); w.wavePlan = []; w.planIndex = 0;
+  w.p.inv = 0;
+  return w;
+}
+function run(w, frames, input = {}) { for (let i=0; i<frames; i++) { w.step(dt, input); w.takeEvents(); } }
+function target(w, type='turret', x=640, y=210) { const e=w.spawn(type,x,y); e.spawn=0; e.fire=100; return e; }
+
+test('seeded RNG is deterministic, bounded, and seed-sensitive', () => {
+  const a=rng('ALPHA'), b=rng('ALPHA'), c=rng('BETA');
+  const x=Array.from({length:256},a), y=Array.from({length:256},b), z=Array.from({length:256},c);
+  assert.deepEqual(x,y); assert.notDeepEqual(x,z); assert.ok(x.every(v=>v>=0&&v<1));
+});
+test('swept collision detects tunneling and handles stationary segments', () => {
+  assert.ok(segmentHit(0,0,100,0,50,0,2));
+  assert.ok(!segmentHit(0,0,100,0,50,10,2));
+  assert.ok(segmentHit(1,1,1,1,1,1,1));
+  assert.ok(!segmentHit(1,1,1,1,5,5,1));
+});
+test('all seven contracts have real, distinct modifiers', () => {
+  assert.equal(CONTRACTS.length,7);
+  assert.equal(modifiers('mercy').speed,.7); assert.ok(modifiers('mercy').extra);
+  assert.equal(modifiers('mirror').reflect,2.2); assert.equal(modifiers('mirror').gun,.75);
+  assert.equal(modifiers('glass').damage,2); assert.equal(modifiers('glass').hp,.7);
+  assert.ok(modifiers('silence').silence); assert.ok(modifiers('sanctuary').sanctuary);
+  assert.ok(modifiers('duel').noAdds); assert.equal(modifiers('duel').bossRate,1.25);
+  assert.equal(modifiers('velocity').dash,.55); assert.equal(modifiers('velocity').speed,1.3);
+});
+test('invalid difficulty/long seed normalize and invalid contracts do not mutate state', () => {
+  const w=new World('x'.repeat(200),'invalid');
+  assert.equal(w.seed.length,48); assert.equal(w.difficulty,'standard');
+  assert.equal(w.sign('silence'),false); assert.equal(w.phase,'pact'); assert.equal(w.contracts.length,0);
+  assert.ok(w.sign('mercy')); assert.equal(w.sign('mercy'),false); assert.equal(w.contracts.length,1);
+});
+test('wave plan and upgrade choices are independent of cosmetic/hit RNG consumption', () => {
+  const a=new World('REPLAY'), b=new World('REPLAY');
+  for(let i=0;i<1500;i++) b.random();
+  a.sign('mercy'); b.sign('mercy'); assert.deepEqual(a.wavePlan,b.wavePlan);
+  a.offerUpgrade(); b.offerUpgrade(); assert.deepEqual(a.offers,b.offers);
+});
+test('normal and diagonal movement share a speed limit; player stays in bounds', () => {
+  const a=arena(), b=arena(); target(a); target(b);
+  const start={x:a.p.x,y:a.p.y};run(a,60,{mx:1});run(b,60,{mx:1,my:-1});
+  const ax=Math.hypot(a.p.x-start.x,a.p.y-start.y), bx=Math.hypot(b.p.x-start.x,b.p.y-start.y);
+  assert.ok(Math.abs(ax-bx)<.001); run(a,600,{mx:1,my:1});
+  assert.ok(a.p.x<=1244&&a.p.y<=695);
+});
+test('invalid/negative dt does not advance and huge dt is clamped', () => {
+  const w=arena(); w.step(NaN); w.step(-1); w.step(0); assert.equal(w.time,0);
+  w.step(60); assert.ok(w.time<=1/30);
+});
+test('dash grants invulnerability, cannot retrigger during cooldown', () => {
+  const w=arena(); target(w);w.step(dt,{dash:true,mx:1});
+  assert.ok(w.p.dash>0&&w.p.inv>0); assert.equal(w.hurt(),false);
+  const cd=w.p.dashCd;w.step(dt,{dash:true,mx:1});assert.ok(w.p.dashCd<cd);
+});
+test('perfect parry turns enemy bullet into homing friendly damage and charges energy', () => {
+  const w=arena('mirror');target(w);const energy=w.p.energy;
+  const b=w.bullet(w.p.x+40,w.p.y,Math.PI,130,true);
+  w.step(dt,{parry:true});assert.equal(b.hostile,false);assert.equal(b.reflected,true);
+  assert.ok(b.homing);assert.equal(b.damage,58*2.2);assert.equal(w.parries,1);assert.ok(w.p.energy>energy);
+});
+test('late parry uses the non-perfect damage window', () => {
+  const w=arena();target(w);w.p.parry=.1;w.p.parryAge=.14;
+  const b=w.bullet(w.p.x+30,w.p.y,Math.PI,130,true);w.step(dt);
+  assert.equal(b.damage,38);assert.equal(w.score,40);
+});
+test('one projectile can graze only once', () => {
+  const w=arena();target(w); w.bullet(w.p.x+24,w.p.y,0,0,true);
+  run(w,10);assert.equal(w.grazes,1);assert.equal(w.score,12);
+});
+test('enemy hits consume hull, damage invulnerability prevents chained hits', () => {
+  const w=arena();const hp=w.p.hp;assert.ok(w.hurt());assert.equal(w.p.hp,hp-1);
+  assert.equal(w.hurt(),false);assert.equal(w.p.hp,hp-1);
+});
+test('glass doubles damage and breach removes both sides of the contract', () => {
+  const w=arena('glass'),e=target(w);const hp=e.maxHp;w.hurt();assert.equal(w.damageTaken,2);
+  e.hp=e.maxHp*0.9;w.breach();assert.equal(e.maxHp,hp/.7);
+  assert.equal(w.mods.damage,1);assert.equal(w.mods.hp,1);assert.equal(w.mods.enemyRate,1.25);
+  assert.equal(w.contracts[0].kept,false);assert.equal(w.breaches,1);assert.equal(w.breach(),false);
+});
+test('nova requires energy, clears bullets and lasers, damages enemies', () => {
+  const w=arena(),e=target(w,'warden');w.p.energy=99;assert.equal(w.nova(),false);
+  w.bullet(400,400,0,100);w.lasers.push({t:.5});w.p.energy=100;assert.ok(w.nova());
+  assert.equal(w.lasers.length,0);assert.ok(e.hp<=0);assert.ok(w.bullets.every(b=>b.life<=0));
+  assert.ok(w.p.energy<100);assert.equal(w.nova(),false);
+});
+test('sanctuary clears swept enemy bullets but not enemy bodies', () => {
+  const w=arena();w.mods=modifiers('sanctuary');w.p.x=640;w.p.y=400;
+  const b=w.bullet(600,400,0,160,true);w.step(dt);assert.ok(b.life<=0);
+  const hp=w.p.hp;target(w,'chaser',640,400);w.step(dt);assert.equal(w.p.hp,hp-1);
+});
+test('ceasefire stops both sides firing and hostile motion, not movement', () => {
+  const w=arena();target(w);w.mods=modifiers('silence');w.waveTime=3.8;
+  const b=w.bullet(300,300,0,100,true),x=b.x,px=w.p.x;
+  run(w,20,{mx:1,shoot:true});assert.ok(w.ceasefire);assert.equal(b.x,x);assert.ok(w.p.x>px);
+  assert.equal(w.bullets.filter(b=>!b.hostile).length,0);
+});
+test('duel suppresses boss reinforcements while ordinary pact allows them', () => {
+  const a=arena(),b=arena();a.wave=b.wave=2;a.startWave();b.startWave();b.mods=modifiers('duel');
+  for(const w of [a,b]){const e=w.enemies[0];e.spawn=0;e.hp=e.maxHp*.5;e.special=0;w.updateBoss(e,dt);}
+  assert.equal(a.enemies.length,2);assert.equal(b.enemies.length,1);
+});
+test('low-hull upgrade choices always offer a full repair', () => {
+  const w=arena();w.p.hp=2;w.offerUpgrade();assert.equal(w.offers[2].id,'repair');
+  assert.ok(w.chooseUpgrade('repair'));assert.equal(w.p.hp,w.p.maxHp);assert.equal(w.wave,1);
+  assert.equal(w.chooseUpgrade('repair'),false);
+});
+test('upgrades are unique choices and capped upgrades disappear', () => {
+  const w=arena();w.upgrades=Object.fromEntries(UPGRADES.filter(u=>u.id!=='repair'&&u.id!=='rapid').map(u=>[u.id,u.max]));
+  w.offerUpgrade();assert.deepEqual(w.offers.map(u=>u.id),['rapid']);
+  w.p.hp=2;w.offerUpgrade();assert.ok(w.offers.some(u=>u?.id==='repair'));
+});
+test('hull upgrade raises capacity and heals without overflow', () => {
   const w=arena();const max=w.p.maxHp;w.phase='upgrade';w.offers=[UPGRADES.find(u=>u.id==='hull')];
   w.chooseUpgrade('hull');assert.equal(w.p.maxHp,max+2);assert.equal(w.p.hp,max+2);
 });
