@@ -220,7 +220,7 @@
   build(frame){
    for(const k in this.groups)this.groups[k].length=0;this.count=0;let {world,w,h,t}=frame;const title=!world;
    const seedKey=title?'TITLE':String(world.seed||'SEEDLESS');
-   const stage=world?Math.min(world.stage,2):0;
+   const stage=world?Math.min(world.stage,5):0;
    const key=[w,h,stage,seedKey].join(':');
    if(this.staticKey!==key){this.floor(w,h,stage,seedKey);this.staticGroups={};for(const k in this.groups)this.staticGroups[k]=this.groups[k].slice();this.staticKey=key;}else{for(const k in this.groups)this.groups[k].push(...this.staticGroups[k]);this.count=Object.values(this.groups).reduce((n,a)=>n+a.length/STRIDE,0);}
    const bossEntity=world&&world.enemies?world.enemies.find(e=>e.type==='boss'&&e.spawn<=0&&e.hp>0):null;
@@ -228,7 +228,7 @@
    const bgAnim=frame.reduced?0:(frame.bgAnim??1);
    this.dynamicScenery(w,h,stage,seedKey,frame.backgroundTime??t,bgAnim===0?0:bossFx,bgAnim);
    if(title){const s=frame.mobile?1.9:2.15,x=frame.mobile?w*.52:w*.72,y=frame.mobile?h*.40:h*.46;this.boss({x,y,rot:t*.15,phase:1},0,t,s);this.ship(frame.mobile?w*.49:w*.715,frame.mobile?h*.79:h*.81,-Math.PI/2+.12,frame.mobile?1.5:1,t);} 
-   else{for(const e of world.enemies)if(e.type==='boss')this.boss(e,Math.min(world.stage,2),t);else this.enemy(e,t,world.p);
+   else{for(const e of world.enemies)if(e.type==='boss')this.boss(e,Math.min(world.stage,5),t);else this.enemy(e,t,world.p);
     if(world.upgrades.echo)for(let j=1;j<=world.upgrades.echo;j++){const hist=world.history.find(v=>v.t>=world.time-j*.55);if(hist)this.ship(hist.x,hist.y,hist.a,1,t,false,true);}    
     this.ship(world.p.x,world.p.y,world.p.angle,1,t,world.p.dash>0);
     const p=world.p;for(let i=0;i<(world.upgrades.orbit||0);i++){const a=world.time*1.8+i*TAU/world.upgrades.orbit;this.add('hex',p.x+Math.cos(a)*45,p.y+Math.sin(a)*45,10,7,7,10,a,colors.mint,.25,.7,.6,LAYER.FLIGHT_HIGH);}   

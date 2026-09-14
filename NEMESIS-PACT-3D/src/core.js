@@ -352,7 +352,7 @@
     }
     spawn(type,x,y){
       if(this.enemies.length>=56)return;
-      const hp=type==='boss'?BOSSES[this.stage].hp:({chaser:30,turret:58,spinner:78,lancer:54,warden:130}[type]||30);
+      const hp=type==='boss'?this.bossInfo().hp:({chaser:30,turret:58,spinner:78,lancer:54,warden:130}[type]||30);
       const e={id:this.nextId++,type,x,y,px:x,py:y,vx:0,vy:0,r:type==='boss'?54:type==='warden'?24:18,
         hp:hp*this.mods.hp*this.diffHp,maxHp:hp*this.mods.hp*this.diffHp,age:0,fire:1.1+this.random(),special:2.6,
         rot:this.random()*TAU,phase:0,hit:0,spawn:.8,stun:0,dashHit:false,charge:0,tx:0,ty:0};
@@ -486,12 +486,16 @@
       if(this.training){p.hp=p.maxHp;p.energy=Math.max(p.energy,100);return;}
       if(this.phase!=='combat')return;
       if(this.enemies.length===0&&this.planIndex>=this.wavePlan.length){this.clearClock+=dt;if(this.clearClock>1.2){
+        this.completeEncounter();
+      }}else this.clearClock=0;
+    }
+    completeEncounter(){
         if(this.wave===2){this.score+=this.broken?1000:3000;this.heal(2);this.stage++;this.wave=0;this.bullets=[];this.lasers=[];
           if(this.stage===3){this.phase='won';this.score+=Math.max(0,Math.round(6000-this.time*4))+this.p.hp*250;this.emit('victory',{ending:this.breaches===0?'keeper':this.breaches===3?'breaker':'survivor'});}
           else{this.phase='pact';this.emit('sector-clear',{stage:this.stage});}
         }else this.offerUpgrade();
-      }}else this.clearClock=0;
     }
+    bossInfo(){return BOSSES[this.stage];}
     updateEnemy(e,dt){
       const W=this.width,H=this.height;
       const p=this.p,a=angle(e,p),d=dist(e,p);e.rot+=dt*.7;
@@ -549,7 +553,7 @@
         }
       }
     }
-    report(){return {version:'0.3.6.1',layout:this.layout,arena:{width:this.width,height:this.height},seed:this.seed,difficulty:this.difficulty,outcome:this.phase,score:this.score,seconds:+this.time.toFixed(2),kills:this.kills,bosses:this.bossKills,parries:this.parries,grazes:this.grazes,damageTaken:this.damageTaken,breaches:this.breaches,contracts:this.contracts.map(c=>({...c})),upgrades:{...this.upgrades},timeline:this.log.slice(-256)};}
+    report(){return {version:'0.4.0',layout:this.layout,arena:{width:this.width,height:this.height},seed:this.seed,difficulty:this.difficulty,outcome:this.phase,score:this.score,seconds:+this.time.toFixed(2),kills:this.kills,bosses:this.bossKills,parries:this.parries,grazes:this.grazes,damageTaken:this.damageTaken,breaches:this.breaches,contracts:this.contracts.map(c=>({...c})),upgrades:{...this.upgrades},timeline:this.log.slice(-256)};}
   }
   return {World,W,H,TAU,CONTRACTS,UPGRADES,BOSSES,SECTORS,modifiers,clamp,dist,angle,hash,rng,segmentHit};
 });

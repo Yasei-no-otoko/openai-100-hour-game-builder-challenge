@@ -1,0 +1,16 @@
+BEGIN desktop
+SCENES DONE desktop
+PIXELS DONE desktop
+BEGIN portrait
+SCENES DONE portrait
+PIXELS DONE portrait
+BEGIN small
+SCENES DONE small
+PIXELS DONE small
+{
+  "browser": "144.0.7559.96",
+  "viewports": 3,
+  "sectorFixtures": 18,
+  "errors": 0,
+  "externalRequests": 0
+}

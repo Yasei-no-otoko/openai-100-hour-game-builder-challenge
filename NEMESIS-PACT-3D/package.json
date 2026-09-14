@@ -1,22 +1,26 @@
 {
   "name": "blast-buster-nemesis-pact",
-  "version": "0.3.6.1",
+  "version": "0.4.0",
   "private": true,
-  "description": "Black-screen hotfix: valid WebGPU depth, explicit shadow material, readable ground and protected flight layer.",
+  "description": "Covenant Ascent: 6-sector local-first 3D shooter, branching routes, relics, private-pilot OpenAI/Vercel bridge.",
   "scripts": {
     "start": "node tools/serve.js",
     "build": "node tools/build.js",
     "test": "node --test tests/*.test.js",
-    "check": "node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js && node --check src/meshes3d.js && node --check src/renderer3d.js",
-    "test:browser": "python3 tests/browser_test.py",
+    "check": "node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js && node --check src/meshes3d.js && node --check src/renderer3d.js && node --check src/expansion.js && node --check src/intelligence.js && node --check src/scenery040.js && node --check api/intelligence.mjs && node --check server/intelligence.mjs && node --check tools/serve.js && node --check tools/build.js",
+    "test:browser": "python3 tests/expansion_browser_test.py",
     "test:simulation": "node tests/simulate.js",
-    "test:mobile": "python3 tests/mobile_browser_test.py",
+    "test:mobile": "python3 tests/expansion_browser_test.py",
     "start:lan": "node tools/serve.js --lan",
     "test:portrait": "node tests/portrait-simulate.js",
-    "test:english": "python3 tests/english_browser_test.py",
-    "test:gpu": "python3 tests/visibility_browser_test.py"
+    "test:english": "python3 tests/expansion_browser_test.py",
+    "test:gpu": "python3 tests/expansion_browser_test.py",
+    "test:expansion": "node --test tests/expansion.test.js tests/intelligence.test.js",
+    "test:visual": "python3 tests/expansion_browser_test.py",
+    "test:campaign": "node tests/expansion-simulate.js",
+    "test:server": "node tests/server-smoke.mjs"
   },
   "engines": {
-    "node": ">=18"
+    "node": "22.x"
   }
 }

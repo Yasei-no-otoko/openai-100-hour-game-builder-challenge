@@ -2,13 +2,15 @@
 (function(){'use strict';
   const C=window.PactCore,$=id=>document.getElementById(id),canvas=$('canvas'),ctx=canvas.getContext('2d',{alpha:true});
   if(!C||!ctx){$('fatal').hidden=false;$('fatal-message').textContent='Could not initialize the game engine or Canvas.';return;}
-  const {TAU,clamp,BOSSES,CONTRACTS,UPGRADES,SECTORS}=C;
+  const {TAU,clamp,CONTRACTS,UPGRADES}=C;
+  const X=window.PactExpansion,I=window.PactIntelligence,BOSSES=X.BOSSES,SECTORS=X.SECTORS.map(s=>s.name),aiClient=new I.Client();
+  let campaignMode='expedition',airframe='vanguard',aiTask='negotiate',aiBack='choices',aiDecision=null,aiWorld=null,aiStage=0;
   let W=C.W,H=C.H;
   let gpuActive=false;
   const gpu=new window.PactGPU.Renderer($('stage'),{onStatus:s=>{const el=$('renderer-status');if(el)el.textContent=s.build+' / '+s.backend;}});
   window.NEMESIS_RENDERER=gpu;
   const sound=new window.PactSound(),keys=new Set(),pressed=new Set();
-  const mouse={x:W/2,y:240,down:false},screens=['menu','loadout','choices','pause','help-screen','settings-screen','result','confirm-screen'];
+  const mouse={x:W/2,y:240,down:false},screens=['menu','loadout','choices','pause','help-screen','settings-screen','result','confirm-screen','hangar','route','ai-screen','archive'];
   let world=null,screen='menu',previousScreen='menu',difficulty='standard',pauseFrom='game',last=0,accum=0,clock=0,shake=0,flash=0,freeze=0;
   let effects=[],particles=[],trails=[],announceTime=0,toastTime=0,uiTimer=0,trainingStep=0,trainingMoved=0,lastWorldPhase='',muted=false,oldPad=[],oldAxes=[0,0];
   let resultSaved=false,renderFrames=0,screenScale=1;
@@ -45,9 +47,9 @@
     screen=name;document.body.dataset.screen=name;document.body.dataset.training=String(!!world?.training);clearInput();for(const id of screens)$(id).hidden=id!==name;
     $('touch-controls').hidden=!(mobile&&name==='game');if($(name))$(name).scrollTop=0;
     if(name==='pause'){$('pause-reason').textContent='The battlefield is paused.';$('pause-breach').disabled=!world?.pact||world.broken||world.training;}
-    $('hud').hidden=!world||name==='menu'||name==='loadout'||(mobile&&name!=='game');$('tutorial-hud').hidden=!(world?.training&&name==='game');
+    $('hud').hidden=!world||['menu','loadout','hangar','route','archive','ai-screen'].includes(name)||(mobile&&name!=='game');$('tutorial-hud').hidden=!(world?.training&&name==='game');
     if(name!=='game'){$('announcement').classList.remove('visible');$('toast').classList.remove('visible');announceTime=0;toastTime=0;}
-    if(name!=='game'&&!mobile){const button=$(name)?.querySelector('button:not([disabled])');if(button)button.focus({preventScroll:true});}else document.activeElement?.blur();
+    if(name!=='ai-screen'){aiClient.cancel();}if(name!=='game'&&!mobile){const button=$(name)?.querySelector('button:not([disabled])');if(button)button.focus({preventScroll:true});}else document.activeElement?.blur();
     refreshView();
     accum=0;
   }
@@ -72,11 +74,11 @@
     $('boss-hud').hidden=true;refreshView();
     const arena=mobile?{layout:'portrait',height:720*view.field.height/view.field.width}:{};
     if(touch){touch.lastX=0;touch.lastY=-1;}
-    world=new C.World(seed||$('seed').value.trim()||randomSeed(),difficulty,training,arena);W=world.width;H=world.height;refreshView();lastWorldPhase='';effects=[];particles=[];trails=[];shake=flash=freeze=0;resultSaved=false;trainingStep=trainingMoved=0;
+    world=new X.Run(seed||$('seed').value.trim()||randomSeed(),difficulty,training,arena,{mode:campaignMode,airframe});W=world.width;H=world.height;refreshView();lastWorldPhase='';effects=[];particles=[];trails=[];shake=flash=freeze=0;resultSaved=false;trainingStep=trainingMoved=0;
     if(training){show('game');updateTraining();announcement('FLIGHT SCHOOL','First, take flight.','Enemy attacks cannot hurt you here.',2.4);}
-    else choiceScreen();updateHUD();}
+    else if(world.phase==='route')routeScreen();else choiceScreen();updateHUD();}
   function choiceScreen(){
-    const pact=world.phase==='pact';selectedChoice=null;show('choices');lastWorldPhase=world.phase;
+    const pact=world.phase==='pact';selectedChoice=null;show('choices');$('negotiate').hidden=!pact;$('choice-outfit').hidden=world.mode==='classic'||world.training;lastWorldPhase=world.phase;
     $('choice-confirm').disabled=true;$('choice-confirm').textContent=pact?'Choose a pact':'Choose an upgrade';$('choice-selection').textContent='Tap a card to compare';
     const b=BOSSES[world.stage];$('choices').style.setProperty('--choice-color',pact?b.color:'#78e8d0');
     $('choice-kicker').textContent=pact?`SECTOR 0${world.stage+1} / ${b.name}`:'SALVAGE COMPLETE / BUILD YOUR ANSWER';
@@ -103,15 +105,15 @@
     $('confirm-description').textContent=action==='breach'?'Restore 1 hull and clear enemy bullets and lasers. Lose all pact effects; enemy attack rate rises 25%. This cannot be undone.':'Progress in this run will be lost. Saved scores and settings are kept.';
     $('confirm-yes').textContent=action==='breach'?'Break pact & resume':'End run';show('confirm-screen');
   }
-  function choose(id){if(screen!=='choices')return;const success=world.phase==='pact'?world.sign(id):world.chooseUpgrade(id);if(!success)return;show('game');lastWorldPhase='combat';consumeEvents();updateHUD();}
+  function choose(id){if(screen!=='choices')return;const success=world.phase==='pact'?world.sign(id):world.chooseUpgrade(id);if(!success)return;if(world.phase==='route'){routeScreen();return;}show('game');lastWorldPhase='combat';consumeEvents();updateHUD();}
   function togglePause(){if(!world)return;if(screen==='game'){pauseFrom='game';show('pause');}else if(screen==='pause')show(pauseFrom);}
   function results(){
     show('result');const won=world.phase==='won',kept=world.contracts.filter(c=>c.kept).length;
-    $('result-kicker').textContent=won?'THE LAST SIGNATURE / '+(world.breaches===0?'PACT KEEPER':world.breaches===3?'OATHBREAKER':'SURVIVOR'):'SIGNAL LOST / NOT THE END';
-    $('result-title').innerHTML=won?(world.breaches===0?'A promise.<br>A new dawn.':world.breaches===3?'No chains.<br>No masters.':'Scarred.<br>Still flying.'):'One more run.<br>One step further.';
-    $('result-story').textContent=won?(world.breaches===0?'The last king lowered his weapon. “Not once? You never broke your word?” You offered no answer. Only a turn toward the dawn.':world.breaches===3?'Every pact is ash. The sky is free, and no words remain to bind your name.':'Some promises were broken. Others survived. As the last bullet faded from the sky, you kept flying.'):'Every defeat leaves a lesson. Try a different pact. Build a different answer. When there is no room to dodge, return fire with a parry.';
+    $('result-kicker').textContent=won?'THE LAST SIGNATURE / '+(world.breaches===0?'PACT KEEPER':world.breaches===(world.totalStages||3)?'OATHBREAKER':'SURVIVOR'):'SIGNAL LOST / NOT THE END';
+    $('result-title').innerHTML=won?(world.breaches===0?'A promise.<br>A new dawn.':world.breaches===(world.totalStages||3)?'No chains.<br>No masters.':'Scarred.<br>Still flying.'):'One more run.<br>One step further.';
+    $('result-story').textContent=won?(world.breaches===0?'The last guardian lowered its weapon. “Not once? You never broke your word?” You offered no answer. Only a turn toward the dawn.':world.breaches===(world.totalStages||3)?'Every pact is ash. The sky is free, and no words remain to bind your name.':'Some promises were broken. Others survived. As the last bullet faded from the sky, you kept flying.'):'Every defeat leaves a lesson. Try a different pact. Build a different answer. When there is no room to dodge, return fire with a parry.';
     $('result-score').textContent=world.score.toLocaleString('en-US');const rank=won?(world.score>34000?'S':world.score>23000?'A':'B'):'—';$('result-rank').textContent='RANK '+rank;
-    const stats=[['TIME',formatTime(world.time)],['BOSSES',`${world.bossKills} / 3`],['ELIMINATIONS',world.kills],['REFLECTIONS',world.parries],['GRAZES',world.grazes],['PACTS KEPT',`${kept} / ${world.contracts.length}`]];
+    const stats=[['TIME',formatTime(world.time)],['BOSSES',`${world.bossKills} / ${world.totalStages||3}`],['ELIMINATIONS',world.kills],['REFLECTIONS',world.parries],['GRAZES',world.grazes],['PACTS KEPT',`${kept} / ${world.contracts.length}`]];
     $('result-stats').innerHTML=stats.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join('');
     $('result-pacts').innerHTML=world.contracts.map(c=>`<div class="result-pact ${c.kept?'':'broken'}"><span>0${c.stage+1} / ${CONTRACTS.find(x=>x.id===c.id).name}</span><small>${c.kept?'KEPT':'BROKEN'}</small></div>`).join('');
     $('result-build').textContent=Object.entries(world.upgrades).map(([id,n])=>UPGRADES.find(x=>x.id===id).name+(n>1?' ×'+n:'')).join(' / ')||'No upgrades collected yet.';
@@ -119,8 +121,8 @@
     if(!resultSaved){const saved=storage.read('nemesis.scores.v1',[]),scores=Array.isArray(saved)?saved.filter(x=>x&&Number.isFinite(x.score)):[];scores.push(world.report());scores.sort((a,b)=>b.score-a.score);storage.write('nemesis.scores.v1',scores.slice(0,12));resultSaved=true;}
   }
   function formatTime(t){return Math.floor(t/60).toString().padStart(2,'0')+':'+Math.floor(t%60).toString().padStart(2,'0');}
-  function updateHUD(){if(!world)return;const p=world.p,b=world.enemies.find(e=>e.type==='boss');
-    $('sector-label').textContent=world.training?'FLIGHT SCHOOL':`${mobile?'':'SECTOR '}0${Math.min(world.stage+1,3)} / ${SECTORS[Math.min(world.stage,2)]}`;
+  function updateHUD(){if(!world)return;$('hud-ledger').textContent=world.mode!=='classic'&&!world.training?`${world.credits} CR / ${world.relics.length} RELICS`:'';const p=world.p,b=world.enemies.find(e=>e.type==='boss');
+    $('sector-label').textContent=world.training?'FLIGHT SCHOOL':`${mobile?'':'SECTOR '}0${Math.min(world.stage+1,world.totalStages||3)} / ${SECTORS[Math.min(world.stage,5)]}`;
     $('hearts').innerHTML=Array.from({length:p.maxHp},(_,i)=>`<i class="heart ${i<p.hp?'on':''}"></i>`).join('');$('hearts').parentElement.classList.toggle('critical',p.hp<=2);
     $('score').textContent=String(world.score).padStart(6,'0');$('combo').textContent=world.combo>=5?'×'+(1+Math.floor(world.combo/5)*.25).toFixed(2):'';
     const wasBossVisible=!$('boss-hud').hidden;$('boss-hud').hidden=!b;if(wasBossVisible!==!!b)refreshView();if(b){$('boss-name').textContent=BOSSES[world.stage].name;$('boss-phase').textContent=`PHASE 0${b.phase+1}`;$('boss-health').style.width=clamp(b.hp/b.maxHp*100,0,100)+'%';$('boss-health').style.background=BOSSES[world.stage].color;}
@@ -168,6 +170,8 @@
       sound.effect(e.type,e);
       gpu.event(e,world.p.x,world.p.y,W,H);
       switch(e.type){
+        case 'relic':toast('RELIC ACQUIRED / '+X.RELICS.find(x=>x.id===e.id).name);sound.effect('upgrade');break;
+        case 'revive':toast('UNBROKEN HEART / SECOND CHANCE');fxRing(world.p.x,world.p.y,'#e9e5ac',220,.8);break;
         case 'wave':if(world.wave!==2)announcement(`SECTOR 0${world.stage+1} / ${SECTORS[world.stage]}`,`WAVE 0${world.wave+1}`,world.wave===0?(mobile?'Slide to move. Tap PARRY to return fire.':'FIRE: Left-click / J     PARRY: Right-click / E'):'New upgrades. A new wave. Make them count.',2.3);break;
         case 'boss':announcement('NEMESIS ENCOUNTER',BOSSES[e.stage].name,BOSSES[e.stage].quote,2.8);shake=8;break;
         case 'boss-phase':fxRing(world.enemies.find(x=>x.type==='boss')?.x||640,240,'#ff746c',370,.7);toast('PHASE SHIFT / NEW PATTERN','#ffbf77');break;
@@ -283,7 +287,7 @@
     }
     if(e.spawn>0){ctx.save();ctx.globalAlpha=.55;circle(e.x,e.y,28+e.spawn*24,null,'#ff8676',1);line(e.x-35,e.y,e.x+35,e.y,'#ff86764d');line(e.x,e.y-35,e.x,e.y+35,'#ff86764d');ctx.restore();return;}
     if(e.type==='boss'){drawBoss(e,world.stage,t);return;}
-    ctx.save();ctx.translate(e.x,e.y);const colors={chaser:'#ff8f7e',turret:'#eec186',spinner:'#bf9cf1',lancer:'#f687c5',warden:'#f0b364'},color=colors[e.type];
+    ctx.save();ctx.translate(e.x,e.y);const colors={chaser:'#ff8f7e',turret:'#eec186',spinner:'#bf9cf1',lancer:'#f687c5',warden:'#f0b364'},color=colors[e.type]||'#dbaceb';
     if(e.locked){const a=Math.atan2(e.ty-e.y,e.tx-e.x);line(0,0,Math.cos(a)*400,Math.sin(a)*400,'#f687c568',1);}
     ctx.rotate(e.type==='chaser'?C.angle(e,world.p):e.rot);
     if(e.type==='chaser'){path([[22,0],[-13,-16],[-6,0],[-13,16]],e.hit?'#fff5dc':'#3d2b30',color,1.2);path([[13,0],[-4,-5],[-4,5]],color);}
@@ -305,7 +309,8 @@
     ctx.save();ctx.strokeStyle='#96ccc82a';ctx.setLineDash([4,8]);ctx.beginPath();ctx.arc(x,y,270,-.6,2.4);ctx.stroke();ctx.restore();
   }
   function renderGame(t){
-    const stage=Math.min(world.stage,2),p=world.p;arena(t,stage);
+    const stage=Math.min(world.stage,5),p=world.p;arena(t,stage);
+    for(const item of world.pickups||[]){poly(item.x,item.y,5,4,t*.6,'#e7cf86','#fff0bd',1);}
     if(world.mods.sanctuary){circle(W/2,H/2,76,'#83dca813','#9eecac77',1);circle(W/2,H/2,70,null,'#9eecac35');ctx.font='9px monospace';ctx.textAlign='center';ctx.fillStyle='#9eecac77';ctx.fillText('SANCTUARY',W/2,H/2+96);}
     if(world.ceasefire){ctx.fillStyle='#8573c90a';ctx.fillRect(35,100,1210,595);}
     for(const l of world.lasers){
@@ -362,7 +367,7 @@
     const edge=i=>!!pad.buttons[i]?.pressed&&!oldPad[i],held=i=>!!pad.buttons[i]?.pressed;
     if(screen==='game'){if(edge(9))togglePause();}
     else if(screen==='pause'&&edge(9))show('game');
-    else{const buttons=Array.from($(screen)?.querySelectorAll('button:not([disabled])')||[]);let idx=buttons.indexOf(document.activeElement);const nav=held(13)||held(15)?1:held(12)||held(14)?-1:0;const axis=pad.axes[1]>.6?1:pad.axes[1]<-.6?-1:0;const move=nav||axis;
+    else{const buttons=Array.from($(screen)?.querySelectorAll('button:not([disabled]):not([hidden])')||[]);let idx=buttons.indexOf(document.activeElement);const nav=held(13)||held(15)?1:held(12)||held(14)?-1:0;const axis=pad.axes[1]>.6?1:pad.axes[1]<-.6?-1:0;const move=nav||axis;
       if(move&&move!==oldAxes[0]&&buttons.length){idx=(idx+move+buttons.length)%buttons.length;buttons[idx].focus();}oldAxes[0]=move;if(edge(0))(document.activeElement?.tagName==='BUTTON'?document.activeElement:buttons[0])?.click();}
     const ax=Math.abs(pad.axes[0]||0)>.18?pad.axes[0]:0,ay=Math.abs(pad.axes[1]||0)>.18?pad.axes[1]:0,rx=pad.axes[2]||0,ry=pad.axes[3]||0,aim=Math.hypot(rx,ry)>.25;
     const input={mx:ax,my:ay,shoot:aim||held(7),dash:edge(0),parry:edge(4),nova:edge(3),breach:edge(1),autoAim:held(7)&&!aim};
@@ -385,7 +390,7 @@
           if(world.training&&trainingStep===0){trainingMoved+=(Math.abs(inp.mx)+Math.abs(inp.my))/120;if(trainingMoved>1.2){trainingStep=1;updateTraining();sound.effect('heal');}}
           consumeEvents();
           if(world.phase!=='combat'){
-            if(world.phase==='pact'||world.phase==='upgrade')choiceScreen();else if(world.phase==='won'||world.phase==='dead')results();accum=0;
+            if(world.phase==='route')routeScreen();else if(world.phase==='pact'||world.phase==='upgrade')choiceScreen();else if(world.phase==='won'||world.phase==='dead')results();accum=0;
           }
         }
         if(stepped){pressed.clear();touch?.consume();}
@@ -401,11 +406,11 @@
   window.addEventListener('pointerup',ev=>{if(ev.pointerType!=='touch')mouse.down=false;});window.addEventListener('pointercancel',ev=>{if(ev.pointerType!=='touch')clearInput();});
   canvas.addEventListener('contextmenu',e=>e.preventDefault());
   window.addEventListener('keydown',e=>{
-    const input=e.target instanceof HTMLInputElement;
-    if(e.code==='Escape'&&!e.repeat){e.preventDefault();if(screen==='game'||screen==='pause')togglePause();else if(screen==='help-screen'||screen==='settings-screen')show(previousScreen);else if(screen==='confirm-screen')show('pause');else if(screen==='loadout')home();return;}
+    const input=e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement||e.target instanceof HTMLSelectElement;
+    if(e.code==='Escape'&&!e.repeat){e.preventDefault();if(screen==='game'||screen==='pause')togglePause();else if(screen==='help-screen'||screen==='settings-screen')show(previousScreen);else if(screen==='confirm-screen')show('pause');else if(screen==='loadout')hangarScreen();else if(screen==='hangar'||screen==='archive')home();else if(screen==='ai-screen')closeAI();return;}
     if(input)return;
     if(e.code==='Tab'&&screen!=='game'){
-      const focusable=Array.from($(screen)?.querySelectorAll('button,input')||[]);if(focusable.length){const first=focusable[0],lastEl=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();lastEl.focus();}else if(!e.shiftKey&&document.activeElement===lastEl){e.preventDefault();first.focus();}}return;}
+      const focusable=Array.from($(screen)?.querySelectorAll('button,input,textarea,select')||[]);if(focusable.length){const first=focusable[0],lastEl=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();lastEl.focus();}else if(!e.shiftKey&&document.activeElement===lastEl){e.preventDefault();first.focus();}}return;}
     if(e.code==='KeyM'&&!e.repeat){muted=!muted;sound.settings(opts.volume,opts.music,muted);toast(muted?'AUDIO OFF':'AUDIO ON');return;}
     if(screen==='choices'&&/^Digit[123]$/.test(e.code)&&!e.repeat){const i=Number(e.code.slice(-1))-1;$('choice-cards').children[i]?.click();e.preventDefault();return;}
     if(screen==='game'){
@@ -419,7 +424,7 @@
   window.addEventListener('resize',resize);
   // ResizeObserver also catches dynamic browser chrome (100dvh) changes.
   if(typeof ResizeObserver!=='undefined'){new ResizeObserver(()=>{const r=$('stage').getBoundingClientRect();if(Math.abs(r.width-view.width)>.5||Math.abs(r.height-view.height)>.5)resize();}).observe($('stage'));}
-  $('start').onclick=()=>{sound.unlock();show('loadout');};$('launch').onclick=()=>start();$('train').onclick=()=>start(true);$('training-exit').onclick=home;
+  $('start').onclick=()=>{sound.unlock();hangarScreen();};$('launch').onclick=()=>start();$('train').onclick=()=>start(true);$('training-exit').onclick=home;
   $('daily').onclick=()=>{const d=new Date(),date=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');$('seed').value='DAILY-'+date;show('loadout');};
   for(const el of document.querySelectorAll('[data-difficulty]'))el.onclick=()=>{difficulty=el.dataset.difficulty;for(const b of document.querySelectorAll('[data-difficulty]')){b.classList.toggle('selected',b===el);b.setAttribute('aria-pressed',String(b===el));}};
   for(const el of document.querySelectorAll('[data-home]'))el.onclick=home;
@@ -435,10 +440,88 @@
   $('volume').oninput=()=>{opts.volume=Number($('volume').value)/100;sound.unlock();syncSettings();storage.write('nemesis.settings.v1',opts);};
   $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen();}catch(_){$('fullscreen').textContent='Fullscreen unavailable in this browser';}};
   $('export').onclick=()=>{if(!world)return;const blob=new Blob([JSON.stringify(world.report(),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nemesis-pact-run-'+world.seed.replace(/[^a-zA-Z0-9_-]/g,'_')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+  function cardList(host,items,render,action){$(host).replaceChildren();for(const item of items){const b=document.createElement('button');b.className='command-card';b.innerHTML=render(item);b.onclick=()=>action(item,b);$(host).append(b);}}
+  function hangarScreen(){
+    show('hangar');
+    const modes=[{id:'expedition',name:'EXPEDITION',tag:'6 SECTORS / 18 ENCOUNTERS',desc:'Branching passages, salvage and relics. The complete new campaign.'},{id:'gauntlet',name:'BOSS GAUNTLET',tag:'6 BOSSES / NO WARM-UP',desc:'A boss-only run. Start with additional firepower and full Nova energy.'},{id:'classic',name:'CLASSIC PACT',tag:'3 SECTORS / ORIGINAL RULES',desc:'The original compact campaign. No airframe bonuses, routes or relics.'}];
+    cardList('mode-options',modes,m=>`<small>${m.tag}</small><h3>${m.name}</h3><p>${m.desc}</p>`,m=>{campaignMode=m.id;hangarScreen();});
+    for(const [i,b]of [...$('mode-options').children].entries()){b.classList.toggle('selected',modes[i].id===campaignMode);b.setAttribute('aria-pressed',String(modes[i].id===campaignMode));}
+    cardList('airframes',X.AIRFRAMES,a=>`<span class="card-icon">${a.icon}</span><small>${a.role}</small><h3>${a.name}</h3><p>${a.desc}</p>`,a=>{airframe=a.id;hangarScreen();});
+    for(const [i,b]of [...$('airframes').children].entries()){b.style.setProperty('--card-accent',X.AIRFRAMES[i].color);b.classList.toggle('selected',X.AIRFRAMES[i].id===airframe);b.setAttribute('aria-pressed',String(X.AIRFRAMES[i].id===airframe));}
+  }
+  function rememberSector(){if(!world||world.training)return;const raw=storage.read('nemesis.codex.v1',[]),seen=Array.isArray(raw)?raw.filter(n=>Number.isInteger(n)&&n>=0&&n<6):[];if(!seen.includes(world.stage)&&world.stage<6)seen.push(world.stage);storage.write('nemesis.codex.v1',seen);}
+  function routeScreen(outfit=false){
+    if(!world)return;show('route');rememberSector();const stage=Math.min(world.stage,5),sector=X.SECTORS[stage];$('route').style.setProperty('--sector',sector.color);
+    $('sector-line').innerHTML=X.SECTORS.slice(0,world.totalStages).map((s,i)=>`<div class="sector-node ${i<stage?'done':i===stage?'current':''}"><b>${String(i+1).padStart(2,'0')}</b>${s.name}</div>`).join('');
+    $('route-title').textContent=outfit?'Make this run yours.':sector.name;$('route-subtitle').textContent=outfit?'Purchase a relic or repair the hull, then return to your next choice.':sector.subtitle;
+    $('route-resources').textContent=`${world.credits} CREDITS / HULL ${world.p.hp} OF ${world.p.maxHp} / ${world.relics.length} RELICS`;
+    $('route-options').parentElement.hidden=outfit||world.phase!=='route';
+    cardList('route-options',X.ROUTES,r=>`<span class="card-icon">${r.icon}</span><small>${r.tag}</small><h3>${r.name}</h3><p>${r.desc}</p><strong>${r.reward}</strong>`,r=>{if(world.chooseRoute(r.id)){choiceScreen();updateHUD();}});
+    cardList('relic-shop',world.shop,r=>`<span class="card-icon">${r.icon}</span><small>RELIC / ${r.cost} CR</small><h3>${r.name}</h3><p>${r.desc}</p>`,r=>{if(world.purchase(r.id)){routeScreen(outfit);$('shop-status').textContent=r.name+' installed.';consumeEvents();}});
+    for(const [i,b]of [...$('relic-shop').children].entries())b.disabled=world.credits<world.shop[i].cost||!world.relicAvailable(world.shop[i].id);
+    if(!world.shop.length)$('relic-shop').textContent='No uncollected relics in this sector.';
+    $('field-repair').disabled=world.p.hp>=world.p.maxHp||world.credits<35;$('field-repair').onclick=()=>{if(world.repair()){routeScreen(outfit);$('shop-status').textContent='Hull restored.';}};
+    $('route-intelligence').hidden=outfit||world.phase!=='route';$('route-end').textContent=outfit?'Back to selection':'End run';
+    $('route-end').onclick=()=>{if(outfit)choiceScreen();else if(confirm('End this run and return to the main menu?'))home();};
+    $('shop-status').textContent=`DIRECTOR: ${X.DIRECTORS[world.director].name.toUpperCase()} / ${world.relics.map(id=>X.RELICS.find(r=>r.id===id).name).join(' / ')||'NO RELICS YET'}`;
+  }
+  function archiveScreen(){
+    show('archive');const raw=storage.read('nemesis.codex.v1',[]),seen=Array.isArray(raw)?raw:[];$('archive-grid').replaceChildren();
+    for(const [i,s]of X.SECTORS.entries()){const el=document.createElement('article');el.className='command-card';el.style.setProperty('--card-accent',s.color);el.innerHTML=`<span class="card-icon">${['\u2727','\u22c8','\u25b3','\u224b','\u25c7','\u25ce'][i]}</span><small class="seen">${seen.includes(i)?'VISITED ON THIS DEVICE':'UNEXPLORED / PREVIEW'}</small><small>SECTOR ${i+1} / ${s.boss.name}</small><h3>${s.name}</h3><p>${s.lore}</p><strong>${s.style}</strong>`;$('archive-grid').append(el);}
+  }
+  function closeAI(){aiClient.cancel();aiClient.token='';$('pilot-token').value='';const back=aiBack;show(back);if(back==='route')routeScreen();}
+  function openAI(task){
+    if(!world)return;aiTask=task;aiBack=screen;aiWorld=world;aiStage=world.stage;aiDecision=null;show('ai-screen');
+    const sector=X.SECTORS[Math.min(world.stage,5)];$('ai-screen').style.setProperty('--sector',sector.color);
+    $('ai-kicker').textContent=`INTELLIGENCE PROTOTYPE / ${task.toUpperCase()}`;
+    $('ai-title').textContent=task==='negotiate'?'Put it in writing.':task==='director'?'Shape the next encounter.':'Every flight leaves a story.';
+    $('ai-rival-name').textContent=task==='debrief'?'FLIGHT RECORDER':sector.boss.name;$('ai-rival-copy').textContent=sector.boss.quote;
+    $('ai-request').textContent=task==='negotiate'?'Propose terms':task==='director'?'Propose formation':'Analyze flight';
+    $('ai-apply').textContent=task==='negotiate'?'Accept & launch':'Use this formation';$('ai-apply').hidden=task==='debrief';$('ai-apply').disabled=true;
+    $('ai-provider').textContent='LOCAL MOCK / NO AI CALLS';$('ai-status').textContent='';$('ai-benefit').textContent='';$('ai-price').textContent='';
+    $('ai-line').textContent='The channel is open.';$('ai-rationale').textContent='Local mode uses authored keyword rules, not an LLM. Try a request, inspect the benefit and cost, then decide.';
+    const prompts=task==='negotiate'?['Slow your bullets. I will face more.','Let me reflect your attacks.','No minions. Fight me alone.']:task==='director'?['A balanced formation, please.','Test me with pursuit units.','A crossfire lattice, with fair gaps.']:['What should I change next run?'];
+    $('ai-prompt').value=prompts[0];$('ai-suggestions').replaceChildren();
+    for(const text of prompts){const b=document.createElement('button');b.textContent=text;b.onclick=()=>{$('ai-prompt').value=text;};$('ai-suggestions').append(b);}
+    $('ai-mode').value='mock';aiClient.mode='mock';$('pilot-token').value='';$('ai-consent').checked=false;
+  }
+  async function requestAI(){
+    if(!world||world!==aiWorld||world.stage!==aiStage)return;
+    aiDecision=null;$('ai-apply').disabled=true;
+    const server=$('ai-mode').value==='server';
+    if(server&&!window.NEMESIS_HOSTED){$('ai-status').textContent='This standalone HTML is offline. Use the hosted build to test the server, or select Local mock.';return;}
+    if(server&&!$('ai-consent').checked){$('ai-status').textContent='Confirm the limited data transfer before using the server.';return;}
+    aiClient.mode=server?'server':'mock';aiClient.token=$('pilot-token').value;
+    $('ai-request').disabled=true;$('ai-apply').disabled=true;aiDecision=null;$('ai-status').textContent=server?'Waiting for server; local fallback is available.':'Running the local, rule-based mock...';
+    const request={task:aiTask,prompt:$('ai-prompt').value,seed:world.seed,stage:Math.min(world.stage,5),allowed:aiTask==='negotiate'?world.offersForPact().map(c=>c.id):I.CONTRACTS,telemetry:I.telemetry(world)};
+    try{const result=await aiClient.request(request);if(screen!=='ai-screen'||world!==aiWorld||world.stage!==aiStage)return;
+      aiDecision=I.validateDecision(result.decision,request);$('ai-provider').textContent=result.provider==='openai'?'OPENAI / SERVER RESPONSE':result.fallback?'FALLBACK / RULE-BASED MOCK':server?'SERVER MOCK / NO AI CALLS':'LOCAL MOCK / NO AI CALLS';
+      $('ai-line').textContent=aiDecision.line;$('ai-rationale').textContent=aiDecision.rationale;$('ai-status').textContent=result.fallback?result.reason:'VALIDATED / CATALOG IDS ONLY';
+      if(aiTask==='negotiate'){const c=CONTRACTS.find(c=>c.id===aiDecision.contractId);$('ai-benefit').textContent='BENEFIT / '+c.gift;$('ai-price').textContent='PRICE / '+c.cost;}
+      else if(aiTask==='director'){$('ai-benefit').textContent=X.DIRECTORS[aiDecision.directorId].name;$('ai-price').textContent=X.DIRECTORS[aiDecision.directorId].desc;}
+      $('ai-apply').disabled=aiTask==='debrief';
+    }catch(error){if(screen==='ai-screen')$('ai-status').textContent='Request cancelled or invalid. No game rules changed.';}
+    finally{$('ai-request').disabled=false;}
+  }
+  function applyAI(){
+    if(!aiDecision||world!==aiWorld||world.stage!==aiStage)return;
+    if(aiTask==='negotiate'&&world.phase==='pact'){const id=aiDecision.contractId;show('choices');choose(id);}
+    else if(aiTask==='director'&&world.setDirector(aiDecision.directorId)){const back=aiBack;show(back);if(back==='route')routeScreen();else choiceScreen();}
+    aiDecision=null;aiClient.token='';$('pilot-token').value='';
+  }
+  $('hangar-close').onclick=home;$('hangar-ready').onclick=()=>show('loadout');
+  $('archive-open').onclick=archiveScreen;$('archive-close').onclick=home;
+  $('route-intelligence').onclick=()=>openAI('director');$('negotiate').onclick=()=>openAI('negotiate');
+  $('choice-outfit').onclick=()=>routeScreen(true);$('debrief').onclick=()=>openAI('debrief');
+  $('ai-close').onclick=closeAI;$('ai-request').onclick=requestAI;$('ai-apply').onclick=applyAI;
+  const invalidateProposal=()=>{aiClient.cancel();aiDecision=null;$('ai-apply').disabled=true;$('ai-request').disabled=false;$('ai-status').textContent='Request changed. Propose again before accepting.';};
+  $('ai-mode').onchange=invalidateProposal;$('ai-prompt').oninput=invalidateProposal;
+
   // Test access is opt-in; normal launches do not expose mutable simulation state.
   if(new URLSearchParams(location.search).has('test')||window.__PACT_TEST_MODE__===true)window.__PACT_TEST__={
     get world(){return world;},get view(){return {...view};},get touch(){return touch;},get mobile(){return mobile;},get trainingStep(){return trainingStep;},get screen(){return screen;},get sound(){return sound;},get options(){return {...opts};},start,choose,selectChoice,show,render,updateHUD,consumeEvents,results,
-    advance(n,input={}){for(let i=0;i<n&&world?.phase==='combat';i++)world.step(1/120,input);consumeEvents();updateHUD();if(world.phase==='upgrade'||world.phase==='pact')choiceScreen();else if(world.phase==='won'||world.phase==='dead')results();render();},
+    advance(n,input={}){for(let i=0;i<n&&world?.phase==='combat';i++)world.step(1/120,input);consumeEvents();updateHUD();if(world.phase==='route')routeScreen();else if(world.phase==='upgrade'||world.phase==='pact')choiceScreen();else if(world.phase==='won'||world.phase==='dead')results();render();},
+    hangarScreen,routeScreen,openAI,archiveScreen,setCampaign(mode,frame){campaignMode=mode;airframe=frame;},
     snapshot(){return {screen,world:world?.report(),bullets:world?.bullets.length,particles:particles.length,frames:renderFrames};}
   };
   touch=new window.PactTouch.TouchController({pad:$('move-pad'),surface:canvas,knob:$('move-knob'),isPlaying:()=>screen==='game',isMobile:()=>mobile,getWorld:()=>world,unlock:()=>sound.unlock(),sensitivity:()=>opts.sensitivity});

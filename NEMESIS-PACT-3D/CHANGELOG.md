@@ -1,16 +1,11 @@
-# 0.3.6.1 — 2026-09-12
+# 0.4.0 — Covenant Ascent — 2026-09-12
 
-Black-screen hotfix, based directly on the received v0.3.6 source.
+Based on the retained v0.3.6.1 hotfix source, not the earlier broken black-screen build.
 
-- Fix WebGPU near-plane clipping of aircraft/architecture by using valid normalized Z.
-- Separate scenery and aircraft depth bands; towers cannot overwrite aircraft.
-- Fix floor being classified and shaded as shadow; explicitly tag shadow silhouettes.
-- Restore readable ambient lighting and keep excessive haze off aircraft.
-- Protect every post-process resample with a binary foreground mask.
-- Keep essential tone mapping independent of the optional Post FX setting.
-- Constrain the enlarged settings panel on desktop/narrow portrait screens.
-- Freeze background animation with paused simulation and honor static ambience.
-- Add emitted-vertex and actual-framebuffer regression tests; archive old evidence.
+Added six-sector Expedition (18 encounters), six-boss Gauntlet with inter-boss drafts, and a Classic compatibility mode. Added three airframe loadouts, three risk/reward routes, credits and salvage, eight unique in-run relics, repairs, a local world archive, and expanded run records. Added Harrier, Prism and Carrier enemies plus Leviathan, Weaver and Unwritten boss controllers/meshes. Harrier strafe/hold windows prevent a long-range auto-aim stalemate found during simulation.
 
-The four-component version is the requested game build identifier, not an npm
-registry release. There are no npm runtime dependencies to resolve.
+Redesigned preflight, route/outfitter and intelligence screens for English desktop and portrait touch. Added edge-weighted six-sector scenery, new palettes, faceted parts, thinner animated motifs and clearer HUD contrast. Preserved protected flight depth, floor-lighting correction and background-only fog/distortion.
+
+Added local deterministic negotiation/director/debrief mocks with explicit provider labels and acceptance. Added a schema-validated, default-mock Vercel Node handler and private live OpenAI adapter. No paid provider call or actual deployment was performed. Added separate offline and hosted HTML builds; the development server serves only public assets.
+
+Validation: current evidence is under docs/validation-0.4.0. Earlier test scripts and fixtures remain as baseline references; their old screenshots are not claimed as this build's evidence.

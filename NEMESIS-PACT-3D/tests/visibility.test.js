@@ -55,7 +55,7 @@ test('each color-aberration sample checks foreground masks, preventing ghost shi
  assert.match(G.GL_COMPOSITE,/orig.a<.5&&warped.a<.5&&redSample.a<.5&&blueSample.a<.5/);
  assert.match(G.WG_COMPOSITE,/rr.a<.5&&bb.a<.5/);
 });
-test('distribution source and standalone both advertise the exact hotfix version',()=>{
- const root=path.resolve(__dirname,'..');const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));assert.equal(pkg.version,'0.3.6.1');
- const html=fs.readFileSync(path.join(root,'dist/NEMESIS-PACT.html'),'utf8');assert.match(html,/build:'0.3.6.1'/);assert.match(html,/vClass<0\./);assert.match(html,/z01,1\.\)/);
+test('distribution source and standalone both advertise the exact build version',()=>{
+ const root=path.resolve(__dirname,'..');const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json')));assert.equal(pkg.version,'0.4.0');
+ const html=fs.readFileSync(path.join(root,'dist/NEMESIS-PACT.html'),'utf8');assert.match(html,/build:'0.4.0'/);assert.match(html,/vClass<0\./);assert.match(html,/z01,1\.\)/);
 });

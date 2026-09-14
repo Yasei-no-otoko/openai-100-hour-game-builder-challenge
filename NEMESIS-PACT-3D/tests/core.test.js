@@ -162,10 +162,10 @@ test('report is detached, bounded and JSON serializable', () => {
   assert.equal(r.timeline.length,256);r.contracts[0].kept=false;assert.equal(w.contracts[0].kept,true);
   assert.equal(JSON.parse(JSON.stringify(r)).seed,'UNIT-TEST');
 });
-test('standalone build has no external runtime scripts, styles, or networking calls', () => {
+test('standalone has no external assets and networking is disabled by CSP and hosted gate', () => {
   const html=fs.readFileSync(path.join(__dirname,'../dist/NEMESIS-PACT.html'),'utf8');
   assert.ok(!/<script\s+src=/i.test(html));assert.ok(!/<link[^>]+rel="stylesheet"/i.test(html));
-  assert.ok(!/\b(fetch|XMLHttpRequest|WebSocket|EventSource)\s*\(/.test(html));
+  assert.match(html,/connect-src 'none'/);assert.match(html,/!globalThis\.NEMESIS_HOSTED/);assert.doesNotMatch(html,/window\.NEMESIS_HOSTED=true/);
   assert.ok(html.includes("connect-src 'none'"));
   assert.ok(html.includes('window.PactCore'));assert.ok(html.includes('NEMESIS PACT'));
 });

@@ -27,8 +27,13 @@ test('three bosses and sector names are localized without changing boss hull',()
   for(const b of C.BOSSES)assert.ok(b.subtitle&&b.quote.startsWith('“'));
   assert.deepEqual(C.SECTORS,['Faded Signatures','Silent Cathedral','Kingless Dawn']);
 });
-test('gameplay implementation is byte-identical after excluding locale content and version',()=>{
-  const normalized=read('src/core.js').replace(/  const CONTRACTS = \[[\s\S]*?  function modifiers\(/,'  function modifiers(').replace(/version:'[^']+'/g,"version:'CANONICAL'");
+test('classic mechanics are byte-identical after undoing the two explicit virtual-hook extractions',()=>{
+  let text=read('src/core.js');
+  const from=text.indexOf('    completeEncounter(){'),to=text.indexOf('    updateEnemy(e,dt){',from);
+  const block=text.slice(from,to);const body=block.slice('    completeEncounter(){\n'.length,block.indexOf('\n    }\n    bossInfo'));
+  text=text.slice(0,from)+text.slice(to);
+  text=text.replace('        this.completeEncounter();',body).replace("type==='boss'?this.bossInfo().hp","type==='boss'?BOSSES[this.stage].hp");
+  const normalized=text.replace(/  const CONTRACTS = \[[\s\S]*?  function modifiers\(/,'  function modifiers(').replace(/version:'[^']+'/g,"version:'CANONICAL'");
   assert.equal(sha(normalized),baseline.normalized_core_sha256);
 });
 test('localization leaves touch input and synthesized audio implementations unchanged',()=>{

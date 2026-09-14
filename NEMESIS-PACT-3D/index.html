@@ -6,12 +6,13 @@
 <meta name="theme-color" content="#080e18">
 <meta name="description" content="BLAST BUSTER: NEMESIS PACT — Turn their fire against them. An offline pact-driven arena shooter, built for portrait touch play.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; media-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
-<title>BLAST BUSTER: NEMESIS PACT — 3D v0.3.6.1</title>
+<title>BLAST BUSTER: NEMESIS PACT — Covenant Ascent v0.4.0</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080e18'/%3E%3Cpath d='M32 6 56 54 32 42 8 54Z' fill='%2378e8d0'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="src/style.css">
 <link rel="stylesheet" href="src/mobile.css">
 <link rel="stylesheet" href="src/english.css">
 <link rel="stylesheet" href="src/renderer3d.css">
+<link rel="stylesheet" href="src/expansion.css">
 </head>
 <body>
 <main id="stage" aria-label="NEMESIS PACT game">
@@ -25,6 +26,7 @@
         <button class="icon-button" id="pause-btn" aria-label="Pause game">Ⅱ</button>
       </div>
       <div class="boss-hud" id="boss-hud" hidden><div><span id="boss-name"></span><small id="boss-phase"></small></div><div class="boss-track"><i id="boss-health"></i></div></div>
+      <div id="hud-ledger" class="hud-ledger"></div>
       <div id="pact-hud"><span class="micro">ACTIVE PACT</span><strong id="pact-name"></strong><small id="pact-state"></small></div>
       <div id="wave-hud"><span id="wave-label"></span><div class="wave-track"><i id="wave-progress"></i></div></div>
       <div class="hud-bottom">
@@ -45,10 +47,10 @@
         <p class="tagline">Turn their fire<br>against them.</p>
         <p class="title-desc">Make a pact. Rewrite the rules of battle.<br>Keep your word. Or break it to survive.</p>
         <div class="mobile-only mobile-pitch"><span>01</span> MOVE.<span>02</span> PARRY.<span>03</span> MAKE A PACT.</div><div class="title-actions"><button id="start" class="primary">Play <span>↗</span></button><button id="train" class="secondary">Training</button></div>
-        <div class="title-links"><button id="help" class="text-button">How to play ↗</button><button id="settings" class="text-button">Settings ↗</button><button id="daily" class="text-button">Daily seed ↗</button></div>
+        <div class="title-links"><button id="help" class="text-button">How to play ↗</button><button id="archive-open" class="text-button">Archive</button><button id="settings" class="text-button">Settings ↗</button><button id="daily" class="text-button">Daily seed ↗</button></div>
       </div>
       <div class="hero-caption"><span class="micro">YOUR ENEMY. YOUR RULES.</span><div><span class="tiny-line"></span> 01 / THE NOTARY</div></div>
-      <div class="title-bottom"><span>3 SECTORS &nbsp; / &nbsp; 7 PACTS &nbsp; / &nbsp; ONE CHOICE</span><span id="best-score">BEST —</span><span class="desktop-only">WASD + MOUSE · HEADPHONES RECOMMENDED</span><span class="mobile-only">TOUCH TO MOVE · AUTO AIM</span></div>
+      <div class="title-bottom"><span>6 SECTORS / 6 BOSSES / YOUR TERMS</span><span id="best-score">BEST —</span><span class="desktop-only">WASD + MOUSE · HEADPHONES RECOMMENDED</span><span class="mobile-only">TOUCH TO MOVE · AUTO AIM</span></div>
     </section>
     <section id="loadout" class="screen backdrop" hidden aria-label="Run setup"><div class="panel loadout-panel"><span class="eyebrow">BEFORE THE FIRST SHOT</span><h2>Fly your way.</h2><p class="muted">Three sectors. Three bosses. One life.<br>Defeat a boss to restore 2 hull. Fall, and start again.</p>
       <div class="difficulty-options" role="group" aria-label="Difficulty"><button data-difficulty="assist" aria-pressed="false"><b>STORY</b><span>10 hull / Slower bullets</span></button><button class="selected" data-difficulty="standard" aria-pressed="true"><b>STANDARD</b><span>7 hull / Standard rules</span></button><button data-difficulty="veteran" aria-pressed="false"><b>VETERAN</b><span>Faster bullets / Tougher enemies</span></button></div>
@@ -56,7 +58,33 @@
       <p class="mobile-only touch-info">Slide to move. Aiming and firing are automatic.<br>Parry and dash to carve a path through the fire.</p><p class="small-muted">Seeds repeat waves. Your hull and build also shape the upgrade offers.</p>
       <div class="button-row"><button id="launch" class="primary">Choose your pact <span>→</span></button><button data-home class="secondary">Back</button></div>
     </div></section>
-    <section id="choices" class="screen backdrop" hidden aria-label="Choose a pact or upgrade"><div class="choices-header"><span class="eyebrow" id="choice-kicker"></span><h2 id="choice-title"></h2><p id="choice-description"></p></div><div id="choice-cards"></div><div class="choices-footer"><span id="choice-footer"></span><span class="desktop-only">Click / Press 1, 2 or 3 to choose</span><div class="mobile-only choice-confirmation"><small id="choice-selection">Tap a card to compare</small><button id="choice-confirm" class="primary" disabled>Choose a pact <span>→</span></button></div></div></section>
+    <section id="choices" class="screen backdrop" hidden aria-label="Choose a pact or upgrade"><div class="choices-header"><span class="eyebrow" id="choice-kicker"></span><h2 id="choice-title"></h2><p id="choice-description"></p></div><div class="choice-ai-row"><button id="negotiate">Negotiate terms / prototype</button><button id="choice-outfit">Outfitter</button></div><div id="choice-cards"></div><div class="choices-footer"><span id="choice-footer"></span><span class="desktop-only">Click / Press 1, 2 or 3 to choose</span><div class="mobile-only choice-confirmation"><small id="choice-selection">Tap a card to compare</small><button id="choice-confirm" class="primary" disabled>Choose a pact <span>→</span></button></div></div></section>
+    <section id="hangar" class="screen command-screen" hidden aria-label="Flight command"><div class="command-wrap">
+ <div class="command-top"><span class="eyebrow">FLIGHT COMMAND / COVENANT ASCENT</span><button id="hangar-close">Main menu</button></div>
+ <div class="command-heading"><div><h2>Your ship.<br>Your terms.</h2><p>A six-sector expedition. Choose the route, assemble your relics, and turn an enemy's promise into your greatest weapon.</p></div><span class="mode-note">LOCAL-FIRST BUILD / 0.4.0</span></div>
+ <div><p class="section-cap">01 / Choose your campaign</p><div class="mode-options" id="mode-options"></div></div>
+ <div><p class="section-cap">02 / Choose your airframe</p><div class="airframes" id="airframes"></div></div>
+ <div class="command-footer"><p>Flight controls are unchanged.<br>Every airframe is available from the first run.</p><button id="hangar-ready" class="primary">Set flight conditions <span>→</span></button></div>
+ </div></section>
+ <section id="route" class="screen command-screen" hidden aria-label="Sector route and outfitter"><div class="command-wrap">
+ <div class="command-top"><span class="eyebrow">THE CONSTELLATION / CHOOSE YOUR WAY</span><button id="route-intelligence">Director lab</button></div>
+ <div class="sector-line" id="sector-line"></div>
+ <div class="command-heading"><div><h2 id="route-title"></h2><p id="route-subtitle"></p></div><div class="route-aside" id="route-resources"></div></div>
+ <div><p class="section-cap">01 / Passage changes the next sector</p><div class="route-options" id="route-options"></div></div>
+ <div><div class="repair-row"><p class="section-cap">02 / Relics & field repair</p><button id="field-repair" class="secondary">Repair +2 / 35 cr</button></div><div class="relic-shop" id="relic-shop"></div><p class="shop-status" id="shop-status" role="status"></p></div>
+ <div class="command-footer"><p>Buy before choosing a route. Relics last for this run.<br>Salvage is earned in combat, not purchased with real money.</p><button id="route-end" class="secondary">End run</button></div>
+ </div></section>
+ <section id="ai-screen" class="screen command-screen" hidden aria-label="Intelligence prototype"><div class="command-wrap">
+ <div class="command-top"><span class="eyebrow" id="ai-kicker">INTELLIGENCE / PROTOTYPE</span><button id="ai-close">Back</button></div>
+ <div class="command-heading"><div><h2 id="ai-title">Put it in writing.</h2><p>Words select bounded game rules. Nothing changes until you accept.</p></div></div>
+ <div class="ai-layout"><aside class="ai-rival"><span class="provider-pill" id="ai-provider">LOCAL MOCK / NO AI CALLS</span><div class="rival-seal" aria-hidden="true">◈</div><h3 id="ai-rival-name"></h3><p id="ai-rival-copy"></p><p class="ai-help">No generated code. No mid-combat requests. Invalid replies fall back locally.</p></aside>
+ <div class="ai-main"><label for="ai-prompt">Your request (280 characters max)</label><textarea id="ai-prompt" maxlength="280" placeholder="Slow your bullets. I will face more of them."></textarea><div id="ai-suggestions" class="ai-suggestions"></div>
+ <div class="ai-output" id="ai-output"><blockquote id="ai-line">The channel is open.</blockquote><p id="ai-rationale">This default provider uses authored, keyword-based replies. It is not a language model.</p><p id="ai-benefit" class="mechanical"></p><p id="ai-price" class="mechanical cost"></p></div>
+ <p class="ai-status" id="ai-status" role="status" aria-live="polite"></p><div class="ai-buttons"><button id="ai-request" class="secondary">Propose terms</button><button id="ai-apply" class="primary" disabled>Accept & launch</button></div>
+ <div class="ai-transport"><label for="ai-mode">Provider</label><select id="ai-mode"><option value="mock">Local mock (offline)</option><option value="server">Server pilot (opt-in)</option></select><input type="password" id="pilot-token" autocomplete="off" placeholder="Private pilot token (not API key)" aria-label="Private pilot access token"></div>
+ <label class="ai-consent"><input id="ai-consent" type="checkbox"><span>For server mode: send this text, seed, sector and six aggregate play counters to this site's server. A live server may send them to OpenAI. No audio or screenshots are sent.</span></label>
+ </div></div></div></section>
+ <section id="archive" class="screen command-screen" hidden aria-label="World archive"><div class="command-wrap"><div class="command-top"><span class="eyebrow">ARCHIVE / SIX FORBIDDEN SKIES</span><button id="archive-close">Main menu</button></div><div class="command-heading"><div><h2>A world worth returning to.</h2><p>Sector discoveries are stored on this device. No account, online ranking or cloud save is simulated.</p></div></div><div id="archive-grid" class="archive-grid"></div></div></section>
     <section id="pause" class="screen backdrop" hidden aria-label="Paused"><div class="panel compact"><span class="eyebrow">THE WORLD CAN WAIT.</span><h2>Paused</h2><p class="muted" id="pause-reason">The battlefield is paused.</p><button id="resume" class="primary">Resume <span>→</span></button><button id="pause-help" class="secondary">Controls</button><button id="pause-settings" class="secondary">Settings</button><button id="pause-breach" class="secondary danger mobile-only">Break pact</button><button id="quit" class="text-button danger">End this run</button></div></section>
     <section id="help-screen" class="screen backdrop" hidden aria-label="How to play"><div class="panel help-panel"><span class="eyebrow">DON'T DODGE EVERYTHING. SEND IT BACK.</span><h2>Do more than dodge.</h2><div class="mobile-only touch-help">
       <div><b>01 / SLIDE TO MOVE</b><p>Slide on the movement pad in the direction you want to go. Lift your finger to stop. You can also drag on the battlefield. Aiming and firing are automatic.</p></div>
@@ -81,10 +109,10 @@
       <label class="setting-row mobile-only"><span>Left-handed layout <small>Movement on the right; actions on the left</small></span><input id="lefthanded" type="checkbox"></label>
       <label class="setting-row mobile-only"><span>Touch sensitivity <small>Reach full speed with less finger travel</small></span><input id="sensitivity" type="range" min="70" max="140" value="100"></label>
       <p class="mobile-only touch-info">Automatic aim and fire are always on for touch controls.</p>
-      <p id="renderer-status" class="renderer-status" role="status">0.3.6.1 / INITIALIZING 3D</p>
+      <p id="renderer-status" class="renderer-status" role="status">0.4.0 / INITIALIZING 3D</p>
       <button id="fullscreen" class="secondary">Toggle fullscreen</button><button id="settings-close" class="primary">Back <span>→</span></button>
     </div></section>
-    <section id="result" class="screen backdrop" hidden aria-label="Run results"><div class="result-left"><span class="eyebrow" id="result-kicker"></span><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><span class="micro">FINAL SCORE</span><strong id="result-score"></strong><span id="result-rank"></span></div><div class="button-row"><button id="retry" class="primary">Try again <span>↗</span></button><button data-home class="secondary">Main menu</button></div><button id="export" class="text-button">Save run report as JSON ↓</button></div><div class="result-right"><span class="eyebrow">FLIGHT RECORDER</span><div id="result-stats"></div><div id="result-pacts"></div><div id="result-build"></div><p id="result-seed" class="micro"></p></div></section>
+    <section id="result" class="screen backdrop" hidden aria-label="Run results"><div class="result-left"><span class="eyebrow" id="result-kicker"></span><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><span class="micro">FINAL SCORE</span><strong id="result-score"></strong><span id="result-rank"></span></div><div class="button-row"><button id="retry" class="primary">Try again <span>↗</span></button><button data-home class="secondary">Main menu</button></div><button id="debrief" class="secondary debrief-button">Flight debrief / prototype</button><button id="export" class="text-button">Save run report as JSON ↓</button></div><div class="result-right"><span class="eyebrow">FLIGHT RECORDER</span><div id="result-stats"></div><div id="result-pacts"></div><div id="result-build"></div><p id="result-seed" class="micro"></p></div></section>
     <section id="confirm-screen" class="screen backdrop" hidden aria-label="Confirm action"><div class="panel compact"><span class="eyebrow">A CHOICE THAT MATTERS.</span><h2 id="confirm-title"></h2><p class="muted" id="confirm-description"></p><button id="confirm-cancel" class="primary">Back</button><button id="confirm-yes" class="secondary danger">Confirm</button></div></section>
     <div id="playfield" class="mobile-only" aria-hidden="true"></div>
     <div id="touch-controls" hidden aria-label="Touch controls">
@@ -106,9 +134,12 @@
 
 <noscript>Enable JavaScript to play. This game makes no external network requests.</noscript>
 <script src="src/core.js"></script>
+<script src="src/expansion.js"></script>
+<script src="src/intelligence.js"></script>
 <script src="src/audio.js"></script>
 <script src="src/touch.js"></script>
 <script src="src/meshes3d.js"></script>
+<script src="src/scenery040.js"></script>
 <script src="src/renderer3d.js"></script>
 <script src="src/game.js"></script>
 </body>

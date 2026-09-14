@@ -6,6 +6,9 @@ html=html.replace(/<link rel="stylesheet" href="(src\/[^"<>]+)">/g,(_,name)=>'<s
 html=html.replace(/<script src="(src\/[^"<>]+)"><\/script>/g,(_,name)=>'<script>\n'+fs.readFileSync(path.join(root,name),'utf8').replace(/<\/script/gi,'<\\/script')+'\n</script>');
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});
 fs.writeFileSync(path.join(root,'dist','NEMESIS-PACT.html'),html);
+fs.mkdirSync(path.join(root,'public'),{recursive:true});
+const hosted=html.replace("connect-src 'none'","connect-src 'self'").replace('<head>','<head><script>window.NEMESIS_HOSTED=true;</script>');
+fs.writeFileSync(path.join(root,'public','index.html'),hosted);
 console.log('Built dist/NEMESIS-PACT.html ('+Buffer.byteLength(html)+' bytes, no external assets)');
 const shaders=require('../src/renderer3d.js');
 const names={GL_VERTEX:'mesh.vert',GL_FRAGMENT:'mesh.frag',GL_QUAD:'fullscreen.vert',GL_BLUR:'bloom.frag',GL_COMPOSITE:'composite.frag',WG_MESH:'mesh.wgsl',WG_BLUR:'bloom.compute.wgsl',WG_COMPOSITE:'composite.compute.wgsl',WG_PRESENT:'present.wgsl'};
