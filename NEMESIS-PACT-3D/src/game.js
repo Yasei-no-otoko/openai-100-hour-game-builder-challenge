@@ -21,7 +21,7 @@
   const initial=savedSettings&&typeof savedSettings==='object'&&!Array.isArray(savedSettings)?savedSettings:{};
   const level=v=>Number.isFinite(v)?Math.max(0,Math.min(2,Math.round(v))):1;
   const effectLabel=v=>v===0?'OFF':v===2?'HIGH':'STANDARD';
-  const opts={volume:Number.isFinite(initial.volume)?clamp(initial.volume,0,1):.55,music:initial.music!==false,reduced:initial.reduced===true||(!('reduced'in initial)&&matchMedia('(prefers-reduced-motion: reduce)').matches),postfx:level(initial.postfx),bloom:level(initial.bloom),bganim:level(initial.bganim),autofire:initial.autofire===true,autoaim:initial.autoaim===true,lefthanded:initial.lefthanded===true,sensitivity:Number.isFinite(initial.sensitivity)?clamp(initial.sensitivity,.7,1.4):1};
+  const opts={volume:Number.isFinite(initial.volume)?clamp(initial.volume,0,1):.55,music:initial.music!==false,musicVolume:Number.isFinite(initial.musicVolume)?clamp(initial.musicVolume,0,1):.72,sfxVolume:Number.isFinite(initial.sfxVolume)?clamp(initial.sfxVolume,0,1):1,adaptiveMusic:initial.adaptiveMusic!==false,reduced:initial.reduced===true||(!('reduced'in initial)&&matchMedia('(prefers-reduced-motion: reduce)').matches),postfx:level(initial.postfx),bloom:level(initial.bloom),bganim:level(initial.bganim),autofire:initial.autofire===true,autoaim:initial.autoaim===true,lefthanded:initial.lefthanded===true,sensitivity:Number.isFinite(initial.sensitivity)?clamp(initial.sensitivity,.7,1.4):1};
   const starRng=C.rng('NEMESIS-STARS-1'),stars=Array.from({length:130},()=>({x:starRng()*W,y:starRng()*H,r:starRng()*1.3+.3,z:starRng(),phase:starRng()*TAU}));
   function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function refreshView(){
@@ -44,6 +44,7 @@
   }
   function clearInput(){keys.clear();pressed.clear();mouse.down=false;touch?.clear();}
   function show(name){
+    if(name!=='settings-screen')sound.stopPreview();
     screen=name;document.body.dataset.screen=name;document.body.dataset.training=String(!!world?.training);clearInput();for(const id of screens)$(id).hidden=id!==name;
     $('touch-controls').hidden=!(mobile&&name==='game');if($(name))$(name).scrollTop=0;
     if(name==='pause'){$('pause-reason').textContent='The battlefield is paused.';$('pause-breach').disabled=!world?.pact||world.broken||world.training;}
@@ -51,19 +52,22 @@
     if(name!=='game'){$('announcement').classList.remove('visible');$('toast').classList.remove('visible');announceTime=0;toastTime=0;}
     if(name!=='ai-screen'){aiClient.cancel();}if(name!=='game'&&!mobile){const button=$(name)?.querySelector('button:not([disabled])');if(button)button.focus({preventScroll:true});}else document.activeElement?.blur();
     refreshView();
-    accum=0;
+    accum=0;updateAudio();
   }
   function home(){world=null;W=C.W;H=C.H;effects=[];particles=[];trails=[];lastWorldPhase='';show('menu');updateBest();resize();}
   function updateBest(){const scores=storage.read('nemesis.scores.v1',[]);const best=Array.isArray(scores)?Math.max(0,...scores.filter(s=>s&&Number.isFinite(s.score)).map(s=>s.score)):0;$('best-score').textContent=best?'BEST '+best.toLocaleString('en-US'):'BEST —';}
   function syncSettings(){
+    $('music-volume').value=Math.round(opts.musicVolume*100);$('sfx-volume').value=Math.round(opts.sfxVolume*100);$('adaptive-music').checked=opts.adaptiveMusic;
     $('volume').value=Math.round(opts.volume*100);for(const name of ['music','reduced','autofire','autoaim','lefthanded'])$(name).checked=opts[name];
     $('sensitivity').value=Math.round(opts.sensitivity*100);
     $('postfx').value=opts.postfx;$('bloom').value=opts.bloom;$('bganim').value=opts.bganim;
     $('postfx-value').textContent=effectLabel(opts.postfx);$('bloom-value').textContent=effectLabel(opts.bloom);$('bganim-value').textContent=effectLabel(opts.bganim);
     document.body.classList.toggle('lefthanded',opts.lefthanded);
-    document.body.classList.toggle('reduced',opts.reduced);sound.settings(opts.volume,opts.music,muted);
+    document.body.classList.toggle('reduced',opts.reduced);sound.settings(opts.volume,opts.music,muted,opts.musicVolume,opts.sfxVolume,opts.adaptiveMusic);
   }
-  function openSettings(){previousScreen=screen;show('settings-screen');syncSettings();}
+  function openSettings(){previousScreen=screen;show('settings-screen');syncSettings();updateMusicStatus();}
+  function updateAudio(){sound.tick({screen,world,hidden:document.hidden});}
+  function updateMusicStatus(){const info=sound.status();$('music-preview').textContent=info.preview?'Stop preview':'Play preview';$('music-preview').setAttribute('aria-pressed',String(info.preview));$('music-status').textContent=!opts.music?'Music is off. Enable Music to listen.':muted?'Audio muted. Press M to unmute.':!sound.ctx?'Audio starts after Play or Preview.':`${info.preview?'PREVIEW':info.playing?'NOW PLAYING':'PAUSED'} / ${info.name} / ${info.bpm} BPM`;}
   function openHelp(){previousScreen=screen;show('help-screen');}
   function announcement(kicker,title,sub='',duration=2.2){$('announce-kicker').textContent=kicker;$('announce-title').textContent=title;$('announce-sub').textContent=sub;announceTime=duration;$('announcement').classList.add('visible');}
   function toast(text,color='#78e8d0'){if(screen!=='game')return;$('toast').textContent=text;$('toast').style.color=color;toastTime=1.45;$('toast').classList.add('visible');}
@@ -397,7 +401,7 @@
       }
       updateEffects(real);uiTimer+=real;if(uiTimer>.075){uiTimer=0;updateHUD();}
     }else if(!world)updateEffects(real);
-    sound.tick(screen==='game',world?Math.min(1,world.bullets.length/110+(world.wave===2?.35:0)):0);render();requestAnimationFrame(frame);
+    updateAudio();if(screen==='settings-screen'&&renderFrames%30===0)updateMusicStatus();render();requestAnimationFrame(frame);
   }
   // --- Input & menu wiring ---
   function mapPointer(ev){if(mobile||ev.pointerType==='touch')return;const r=canvas.getBoundingClientRect();mouse.x=clamp((ev.clientX-r.left-view.x)/view.scale,0,W);mouse.y=clamp((ev.clientY-r.top-view.y)/view.scale,0,H);}
@@ -411,7 +415,7 @@
     if(input)return;
     if(e.code==='Tab'&&screen!=='game'){
       const focusable=Array.from($(screen)?.querySelectorAll('button,input,textarea,select')||[]);if(focusable.length){const first=focusable[0],lastEl=focusable[focusable.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();lastEl.focus();}else if(!e.shiftKey&&document.activeElement===lastEl){e.preventDefault();first.focus();}}return;}
-    if(e.code==='KeyM'&&!e.repeat){muted=!muted;sound.settings(opts.volume,opts.music,muted);toast(muted?'AUDIO OFF':'AUDIO ON');return;}
+    if(e.code==='KeyM'&&!e.repeat){muted=!muted;sound.settings(opts.volume,opts.music,muted,opts.musicVolume,opts.sfxVolume,opts.adaptiveMusic);toast(muted?'AUDIO OFF':'AUDIO ON');return;}
     if(screen==='choices'&&/^Digit[123]$/.test(e.code)&&!e.repeat){const i=Number(e.code.slice(-1))-1;$('choice-cards').children[i]?.click();e.preventDefault();return;}
     if(screen==='game'){
       const used=['Space','ShiftLeft','ShiftRight','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','KeyW','KeyA','KeyS','KeyD','KeyJ','KeyE','KeyQ','KeyF','KeyP'];if(used.includes(e.code))e.preventDefault();
@@ -420,7 +424,8 @@
   });
   window.addEventListener('keyup',e=>keys.delete(e.code));
   window.addEventListener('blur',()=>{clearInput();if(screen==='game')togglePause();});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();if(screen==='game')togglePause();}});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInput();if(screen==='game')togglePause();}updateAudio();});
+  window.addEventListener('pagehide',()=>{sound.tick({screen:'pause',world,hidden:true});});
   window.addEventListener('resize',resize);
   // ResizeObserver also catches dynamic browser chrome (100dvh) changes.
   if(typeof ResizeObserver!=='undefined'){new ResizeObserver(()=>{const r=$('stage').getBoundingClientRect();if(Math.abs(r.width-view.width)>.5||Math.abs(r.height-view.height)>.5)resize();}).observe($('stage'));}
@@ -438,6 +443,11 @@
   for(const [name,key] of [['postfx','postfx'],['bloom','bloom'],['bganim','bganim']])$(name).oninput=()=>{opts[key]=level(Number($(name).value));syncSettings();storage.write('nemesis.settings.v1',opts);};
   $('sensitivity').oninput=()=>{opts.sensitivity=Number($('sensitivity').value)/100;storage.write('nemesis.settings.v1',opts);};
   $('volume').oninput=()=>{opts.volume=Number($('volume').value)/100;sound.unlock();syncSettings();storage.write('nemesis.settings.v1',opts);};
+  for(const [id,key] of [['music-volume','musicVolume'],['sfx-volume','sfxVolume']])$(id).oninput=()=>{opts[key]=Number($(id).value)/100;syncSettings();storage.write('nemesis.settings.v1',opts);};
+  $('adaptive-music').onchange=()=>{opts.adaptiveMusic=$('adaptive-music').checked;syncSettings();storage.write('nemesis.settings.v1',opts);};
+  for(const tr of window.PactScore.TRACKS){const option=document.createElement('option');option.value=tr.id;option.textContent=`${tr.name} - ${tr.sector}`;$('music-track').append(option);}
+  $('music-preview').onclick=()=>{if(sound.previewId)sound.stopPreview();else if(opts.music)sound.preview($('music-track').value);updateMusicStatus();};
+  $('music-track').onchange=()=>{if(sound.previewId)sound.preview($('music-track').value);updateMusicStatus();};
   $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen();}catch(_){$('fullscreen').textContent='Fullscreen unavailable in this browser';}};
   $('export').onclick=()=>{if(!world)return;const blob=new Blob([JSON.stringify(world.report(),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nemesis-pact-run-'+world.seed.replace(/[^a-zA-Z0-9_-]/g,'_')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
   function cardList(host,items,render,action){$(host).replaceChildren();for(const item of items){const b=document.createElement('button');b.className='command-card';b.innerHTML=render(item);b.onclick=()=>action(item,b);$(host).append(b);}}
@@ -519,7 +529,7 @@
 
   // Test access is opt-in; normal launches do not expose mutable simulation state.
   if(new URLSearchParams(location.search).has('test')||window.__PACT_TEST_MODE__===true)window.__PACT_TEST__={
-    get world(){return world;},get view(){return {...view};},get touch(){return touch;},get mobile(){return mobile;},get trainingStep(){return trainingStep;},get screen(){return screen;},get sound(){return sound;},get options(){return {...opts};},start,choose,selectChoice,show,render,updateHUD,consumeEvents,results,
+    get world(){return world;},get view(){return {...view};},get touch(){return touch;},get mobile(){return mobile;},get trainingStep(){return trainingStep;},get screen(){return screen;},get sound(){return sound;},get options(){return {...opts};},start,choose,selectChoice,show,render,updateHUD,consumeEvents,results,updateAudio,updateMusicStatus,
     advance(n,input={}){for(let i=0;i<n&&world?.phase==='combat';i++)world.step(1/120,input);consumeEvents();updateHUD();if(world.phase==='route')routeScreen();else if(world.phase==='upgrade'||world.phase==='pact')choiceScreen();else if(world.phase==='won'||world.phase==='dead')results();render();},
     hangarScreen,routeScreen,openAI,archiveScreen,setCampaign(mode,frame){campaignMode=mode;airframe=frame;},
     snapshot(){return {screen,world:world?.report(),bullets:world?.bullets.length,particles:particles.length,frames:renderFrames};}

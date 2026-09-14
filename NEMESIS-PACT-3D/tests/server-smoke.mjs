@@ -18,5 +18,5 @@ try{
  res=await fetch(base+'/api/intelligence');assert.equal(res.status,405);checks.push('GET rejected');
  res=await fetch(base+'/api/intelligence',{method:'POST',body:'x'});assert.equal(res.status,415);checks.push('Non-JSON rejected');
  res=await fetch(base+'/api/intelligence',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...request,prompt:'x'.repeat(5000)})});assert.equal(res.status,413);checks.push('Oversize body rejected');
- const report={build:'0.4.0',node:process.version,checks,upstreamCalls:0,scope:'Loopback integration, not a Vercel deployment'};await writeFile(path.join(root,'docs/validation-0.4.0/server-smoke.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+ const report={build:'0.4.1',node:process.version,checks,upstreamCalls:0,scope:'Loopback integration, not a Vercel deployment'};await writeFile(path.join(root,'docs/validation-0.4.1/server-smoke.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
 }finally{app.kill('SIGTERM');}

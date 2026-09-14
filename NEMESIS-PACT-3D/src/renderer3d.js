@@ -1,4 +1,5 @@
 /* NEMESIS PACT — 0.4.0 (preserves 0.3.6.1 visibility fix), native WebGL2 + native WebGPU.
+ * Filmic fit: Krzysztof Narkowicz (2016), CC0 option; see THIRD_PARTY_NOTICES.md.
  * Mesh PBR rasterization; WebGPU runs three compute dispatches per frame.
  * Collision-bearing bullets/reticles and all UI remain outside distortion.
  * Height-class layering keeps ships above field architecture while preserving 2D mechanics.
@@ -201,7 +202,7 @@ class Renderer{
   if(!this.active)this.backend='CANVAS 2D FALLBACK';this.notify();return this;
  }
  event(e,x,y,w,h){if(e.type==='nova'||e.type==='breach'){this.shock={x:x/w,y:y/h,age:0,strength:1};this.shockStart=this.latestTime;}}
- stats(){return {build:'0.4.0',backend:this.backend,frames:this.active?.frames||0,computeDispatches:this.active?.computeDispatches||0,instances:this.scene.count,draws:this.active?.draws||0,hdr:this.active instanceof GPUBackend||!!this.active?.hdr,errors:[...this.messages]};}
+ stats(){return {build:'0.4.1',backend:this.backend,frames:this.active?.frames||0,computeDispatches:this.active?.computeDispatches||0,instances:this.scene.count,draws:this.active?.draws||0,hdr:this.active instanceof GPUBackend||!!this.active?.hdr,errors:[...this.messages]};}
  draw(frame){if(!this.active)return false;this.latestTime=frame.t;const b=this.active;if(b instanceof GLBackend&&b.gl.isContextLost())return false;
   const {view,mobile,world}=frame;let f={...frame};if(mobile&&!world){f.w=720;f.h=720*view.height/view.width;f.scale=view.width/720;f.x=0;f.y=0;}else{f.scale=view.scale;f.x=view.x;f.y=view.y;}
   const cw=f.w*f.scale,ch=f.h*f.scale;const dpr=Math.min(window.devicePixelRatio||1,2),maxPixels=mobile?1200000:2100000,factor=Math.min(dpr,Math.sqrt(maxPixels/Math.max(1,cw*ch)));const rw=Math.max(1,Math.round(cw*factor)),rh=Math.max(1,Math.round(ch*factor));

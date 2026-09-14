@@ -1,8 +1,8 @@
 # BLAST BUSTER: NEMESIS PACT — COVENANT ASCENT
 
-**v0.4.0 · English · portrait touch + desktop · local-first · WebGL2 / WebGPU**
+**v0.4.1 · English · portrait touch + desktop · local-first · WebGL2 / WebGPU**
 
-A playable expansion of v0.3.6.1, not a visual mockup. Negotiate a rule, build a ship around it, and decide what you are willing to break. The complete game and the default intelligence mock run without an API key or network connection. No commercial-quality or award claim is implied by this build.
+The 0.4.1 soundtrack update to the playable v0.4.0 expansion, not a visual mockup. Negotiate a rule, build a ship around it, and decide what you are willing to break. The complete game and the default intelligence mock run without an API key or network connection. No commercial-quality or award claim is implied by this build.
 
 ## Play
 
@@ -32,6 +32,12 @@ Eight unique, in-run relics add piercing, energy, a one-use revive, dash damage,
 At each sector choose a recovery, salvage, or elite route. These are **risk/reward branches to the next authored sector**, not three separate geography campaigns. The selected route changes enemy counts, elite hull and credit rewards. The six-sector world archive stores discoveries on this browser; run reports include route, relic and airframe choices.
 
 The new enemies are Harrier, Prism and Carrier, joining the five original ordinary types. The new bosses are the Leviathan, the Weaver and the Unwritten, each with its own mesh silhouette, attack controller and phased patterns. The original seven pacts and thirteen upgrade choices remain.
+
+## New in 0.4.1: soundtrack
+
+Seventeen local cues: six sector themes, six boss arrangements, title, hangar, interlude, victory and defeat. Themes differ in motif, harmony, rhythm, tempo and synthesized timbre. Context-based transitions crossfade near a beat; the adaptive arrangement adds layers during intense fights. Ceasefire thins the rhythm, and major sound effects briefly duck the music.
+
+Open **Settings → Soundtrack preview** to hear every cue. Music/effects levels are independent. All synthesis is local; no sampled songs, streaming or music API is required. The cue sheet, scheduling details and verification limits are in [AUDIO.md](docs/AUDIO.md).
 
 ## Controls
 
@@ -80,8 +86,12 @@ The browser harness explicitly chooses `/usr/bin/chromium` and ANGLE/SwiftShader
 
 ## Layout
 
-`src/core.js` is the classic simulation with two overridable hooks. `src/expansion.js` implements campaign content. `src/scenery040.js` supplies six scenic identities and new meshes. `src/game.js` owns screen transitions. `src/intelligence.js` is the shared schema/mock/client. `server/intelligence.mjs` validates requests and handles the private live provider. `tools/build.js` emits both distributions and shader source files. `public/` is the only static serving root.
+`src/score.js` is the pure cue/arrangement planner and `src/audio.js` is the Web Audio engine. `src/core.js` is the classic simulation with two overridable hooks. `src/expansion.js` implements campaign content. `src/scenery040.js` supplies six scenic identities and new meshes. `src/game.js` owns screen transitions. `src/intelligence.js` is the shared schema/mock/client. `server/intelligence.mjs` validates requests and handles the private live provider. `tools/build.js` emits both distributions and shader source files. `public/` is the only static serving root.
 
 ## Known limits
 
 No physical-phone/Safari/gamepad verification, no native WebGPU runtime verification, no cloud save, no authenticated leaderboard, no multiplayer, no persistent progression power, no procedural narrative beyond the described mock, and no runtime-generated code. Public live launch still needs real user authentication, durable quotas, a global spending budget, provider evaluation and platform testing. The current per-instance request brake is not a production cost control.
+
+## Credits and submission
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for formula attribution and development-tool licenses. The project-specific code has no public open-source license declared. The separate submission pack contains private team-field placeholders and draft English text, not a completed or submitted entry.

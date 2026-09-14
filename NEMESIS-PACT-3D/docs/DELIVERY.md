@@ -1,7 +1,7 @@
-# Delivery — 0.4.0
+# Delivery — v0.4.1
 
-The top-level distribution is `dist/NEMESIS-PACT.html`. It runs offline with the local intelligence mock. `public/index.html` is the separately built server-capable version. Both are generated from the included source; neither contains a provider key.
+`dist/NEMESIS-PACT.html` is the exact offline standalone distribution. `public/index.html` is the explicitly server-capable counterpart. `npm run build` recreates both without downloading a runtime dependency.
 
-This is a new authored expansion of the retained 0.3.6.1 source. It is not an image-only concept or an already-deployed web service. See VALIDATION.md for actual tests and exclusions, DEPLOYMENT.md for the prepared Vercel path, and AI-PROTOTYPE.md for provider/validation boundaries.
+The release receipt delivered beside the HTML and ZIP records their sizes/SHA-256, ZIP CRC, standalone equality and a clean extracted-source rebuild comparison. SHA-256 inventory of source/evidence files is in `checksums.json`. There are no font files or credentials in this package.
 
-Current screenshots and logs are under validation-0.4.0. The downloadable archive is validated and rebuilt before final handoff; a SHA-256 delivery receipt accompanies it.
+The submission draft and private participant checklist are a separate archive. The MP3 sampler is also separate and is not loaded by the game. Neither archive constitutes a Google Form submission, public video link, live deployment or verified runtime AI call.

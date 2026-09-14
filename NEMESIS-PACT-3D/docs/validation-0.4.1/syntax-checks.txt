@@ -1,0 +1,4 @@
+
+> blast-buster-nemesis-pact@0.4.1 check
+> node --check src/core.js && node --check src/game.js && node --check src/audio.js && node --check src/touch.js && node --check src/meshes3d.js && node --check src/renderer3d.js && node --check src/expansion.js && node --check src/intelligence.js && node --check src/scenery040.js && node --check api/intelligence.mjs && node --check server/intelligence.mjs && node --check tools/serve.js && node --check tools/build.js && node --check src/score.js
+

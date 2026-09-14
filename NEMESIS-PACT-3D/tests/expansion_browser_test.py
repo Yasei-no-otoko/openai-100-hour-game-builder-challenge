@@ -3,7 +3,7 @@ from pathlib import Path
 import json, hashlib
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'docs'/'validation-0.4.0';OUT.mkdir(exist_ok=True)
+OUT=ROOT/'docs'/'validation-0.4.1';OUT.mkdir(exist_ok=True)
 HTML=(ROOT/'dist/NEMESIS-PACT.html').read_text()
 results=[]
 def wait_js(page,expr):
@@ -100,5 +100,5 @@ with sync_playwright() as pw:
         assert not errors,errors;assert not network,network
         results.append({'viewport':[width,height],'name':name,'sectors':len(frames),'frames':frames,'pixels':pixels,'errors':errors,'networkRequests':network,'ui':['hangar','airframe','route','director proposal/apply','negotiation preview/sign','settings','debrief','standalone server guard']})
         context.close()
-    (OUT/'browser-results.json').write_text(json.dumps({'build':'0.4.0','htmlSha256':hashlib.sha256(HTML.encode()).hexdigest(),'browser':browser.version,'backend':'ANGLE / SwiftShader SOFTWARE','nativeWebGPU':'NOT EXECUTED','results':results},indent=2))
+    (OUT/'browser-results.json').write_text(json.dumps({'build':'0.4.1','htmlSha256':hashlib.sha256(HTML.encode()).hexdigest(),'browser':browser.version,'backend':'ANGLE / SwiftShader SOFTWARE','nativeWebGPU':'NOT EXECUTED','results':results},indent=2))
     print(json.dumps({'browser':browser.version,'viewports':len(results),'sectorFixtures':sum(r['sectors'] for r in results),'errors':sum(len(r['errors']) for r in results),'externalRequests':0},indent=2));browser.close()

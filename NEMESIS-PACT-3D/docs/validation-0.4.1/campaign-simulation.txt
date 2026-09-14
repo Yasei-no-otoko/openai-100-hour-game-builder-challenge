@@ -1,0 +1,16 @@
+
+> blast-buster-nemesis-pact@0.4.1 test:campaign
+> node tests/expansion-simulate.js
+
+desktop expedition assist won 6 401.44 14
+desktop expedition standard won 6 403.94 11
+desktop expedition veteran won 6 439.2 11
+desktop gauntlet assist won 6 158.24 10
+desktop gauntlet standard won 6 156.59 7
+desktop gauntlet veteran won 6 189.55 7
+portrait expedition assist won 6 407.34 12
+portrait expedition standard won 6 406.54 9
+portrait expedition veteran won 6 430.71 9
+portrait gauntlet assist won 6 197.18 10
+portrait gauntlet standard won 6 201.28 7
+portrait gauntlet veteran won 6 229.34 7

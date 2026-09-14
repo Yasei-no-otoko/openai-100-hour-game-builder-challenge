@@ -6,13 +6,14 @@
 <meta name="theme-color" content="#080e18">
 <meta name="description" content="BLAST BUSTER: NEMESIS PACT — Turn their fire against them. An offline pact-driven arena shooter, built for portrait touch play.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; media-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
-<title>BLAST BUSTER: NEMESIS PACT — Covenant Ascent v0.4.0</title>
+<title>BLAST BUSTER: NEMESIS PACT — Covenant Ascent v0.4.1</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080e18'/%3E%3Cpath d='M32 6 56 54 32 42 8 54Z' fill='%2378e8d0'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="src/style.css">
 <link rel="stylesheet" href="src/mobile.css">
 <link rel="stylesheet" href="src/english.css">
 <link rel="stylesheet" href="src/renderer3d.css">
 <link rel="stylesheet" href="src/expansion.css">
+<link rel="stylesheet" href="src/audio.css">
 </head>
 <body>
 <main id="stage" aria-label="NEMESIS PACT game">
@@ -61,7 +62,7 @@
     <section id="choices" class="screen backdrop" hidden aria-label="Choose a pact or upgrade"><div class="choices-header"><span class="eyebrow" id="choice-kicker"></span><h2 id="choice-title"></h2><p id="choice-description"></p></div><div class="choice-ai-row"><button id="negotiate">Negotiate terms / prototype</button><button id="choice-outfit">Outfitter</button></div><div id="choice-cards"></div><div class="choices-footer"><span id="choice-footer"></span><span class="desktop-only">Click / Press 1, 2 or 3 to choose</span><div class="mobile-only choice-confirmation"><small id="choice-selection">Tap a card to compare</small><button id="choice-confirm" class="primary" disabled>Choose a pact <span>→</span></button></div></div></section>
     <section id="hangar" class="screen command-screen" hidden aria-label="Flight command"><div class="command-wrap">
  <div class="command-top"><span class="eyebrow">FLIGHT COMMAND / COVENANT ASCENT</span><button id="hangar-close">Main menu</button></div>
- <div class="command-heading"><div><h2>Your ship.<br>Your terms.</h2><p>A six-sector expedition. Choose the route, assemble your relics, and turn an enemy's promise into your greatest weapon.</p></div><span class="mode-note">LOCAL-FIRST BUILD / 0.4.0</span></div>
+ <div class="command-heading"><div><h2>Your ship.<br>Your terms.</h2><p>A six-sector expedition. Choose the route, assemble your relics, and turn an enemy's promise into your greatest weapon.</p></div><span class="mode-note">LOCAL-FIRST BUILD / 0.4.1</span></div>
  <div><p class="section-cap">01 / Choose your campaign</p><div class="mode-options" id="mode-options"></div></div>
  <div><p class="section-cap">02 / Choose your airframe</p><div class="airframes" id="airframes"></div></div>
  <div class="command-footer"><p>Flight controls are unchanged.<br>Every airframe is available from the first run.</p><button id="hangar-ready" class="primary">Set flight conditions <span>→</span></button></div>
@@ -99,7 +100,17 @@
     </div><div class="help-bottom"><p class="desktop-only">Standard gamepad: Left stick move / Right stick aim and fire / A dash / LB parry / Y Nova / B break pact / START pause</p><button id="help-close" class="primary">Got it <span>→</span></button></div></div></section>
     <section id="settings-screen" class="screen backdrop" hidden aria-label="Settings"><div class="panel settings-panel"><span class="eyebrow">MAKE YOURSELF AT HOME.</span><h2>Settings</h2>
       <label class="setting-row"><span>Volume <small>Music and sound effects</small></span><input id="volume" type="range" min="0" max="100" value="55"></label>
-      <label class="setting-row"><span>Music <small>Locally synthesized soundtrack</small></span><input id="music" type="checkbox" checked></label>
+      <label class="setting-row"><span>Music <small>17 local soundtrack cues; no streaming</small></span><input id="music" type="checkbox" checked></label>
+      <label class="setting-row"><span>Music volume <small>Independent of sound effects</small></span><input id="music-volume" type="range" min="0" max="100" value="72"></label>
+      <label class="setting-row"><span>Effects volume <small>Shots, parries and alerts</small></span><input id="sfx-volume" type="range" min="0" max="100" value="100"></label>
+      <label class="setting-row"><span>Adaptive arrangement <small>Musical layers respond to combat intensity</small></span><input id="adaptive-music" type="checkbox" checked></label>
+      <div class="sound-lab" role="group" aria-label="Soundtrack preview">
+        <div class="sound-lab-heading"><span class="eyebrow">FLIGHT RECORDER / SOUNDTRACK</span><span class="sound-count">17 CUES</span></div>
+        <label for="music-track">Preview a theme</label>
+        <select id="music-track"></select>
+        <div class="sound-lab-controls"><button id="music-preview" class="secondary" type="button">Play preview</button><p id="music-status" role="status">Music starts after your first interaction.</p></div>
+        <small>Preview only. Does not change the stage or your run. Use headphones at a comfortable volume.</small>
+      </div>
       <label class="setting-row"><span>Reduced effects <small>Less shake, flashing and afterimages</small></span><input id="reduced" type="checkbox"></label>
       <label class="setting-row"><span>Post FX <small>Distortion and color grading. Basic tone mapping stays on.</small></span><span class="setting-control"><input id="postfx" type="range" min="0" max="2" step="1" value="1"><b id="postfx-value" class="setting-value">STANDARD</b></span></label>
       <label class="setting-row"><span>Bloom <small>Glow pass strength for emissive surfaces</small></span><span class="setting-control"><input id="bloom" type="range" min="0" max="2" step="1" value="1"><b id="bloom-value" class="setting-value">STANDARD</b></span></label>
@@ -109,7 +120,7 @@
       <label class="setting-row mobile-only"><span>Left-handed layout <small>Movement on the right; actions on the left</small></span><input id="lefthanded" type="checkbox"></label>
       <label class="setting-row mobile-only"><span>Touch sensitivity <small>Reach full speed with less finger travel</small></span><input id="sensitivity" type="range" min="70" max="140" value="100"></label>
       <p class="mobile-only touch-info">Automatic aim and fire are always on for touch controls.</p>
-      <p id="renderer-status" class="renderer-status" role="status">0.4.0 / INITIALIZING 3D</p>
+      <p id="renderer-status" class="renderer-status" role="status">0.4.1 / INITIALIZING 3D</p>
       <button id="fullscreen" class="secondary">Toggle fullscreen</button><button id="settings-close" class="primary">Back <span>→</span></button>
     </div></section>
     <section id="result" class="screen backdrop" hidden aria-label="Run results"><div class="result-left"><span class="eyebrow" id="result-kicker"></span><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><span class="micro">FINAL SCORE</span><strong id="result-score"></strong><span id="result-rank"></span></div><div class="button-row"><button id="retry" class="primary">Try again <span>↗</span></button><button data-home class="secondary">Main menu</button></div><button id="debrief" class="secondary debrief-button">Flight debrief / prototype</button><button id="export" class="text-button">Save run report as JSON ↓</button></div><div class="result-right"><span class="eyebrow">FLIGHT RECORDER</span><div id="result-stats"></div><div id="result-pacts"></div><div id="result-build"></div><p id="result-seed" class="micro"></p></div></section>
@@ -136,6 +147,7 @@
 <script src="src/core.js"></script>
 <script src="src/expansion.js"></script>
 <script src="src/intelligence.js"></script>
+<script src="src/score.js"></script>
 <script src="src/audio.js"></script>
 <script src="src/touch.js"></script>
 <script src="src/meshes3d.js"></script>

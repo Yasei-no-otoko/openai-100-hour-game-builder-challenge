@@ -1,0 +1,30 @@
+RENDER title 0.0089 0.0522
+RENDER hangar 0.0119 0.1361
+RENDER interlude 0.0092 0.0549
+RENDER verdigris 0.0139 0.1365
+RENDER verdigris-boss 0.0203 0.1946
+RENDER foundry 0.0151 0.1484
+RENDER foundry-boss 0.022 0.1699
+RENDER crown 0.0113 0.153
+RENDER crown-boss 0.0192 0.1854
+RENDER tidal 0.0131 0.1228
+RENDER tidal-boss 0.0147 0.1584
+RENDER roseglass 0.0148 0.1369
+RENDER roseglass-boss 0.0185 0.1475
+RENDER horizon 0.0137 0.1363
+RENDER horizon-boss 0.0207 0.1677
+RENDER victory 0.0105 0.1171
+RENDER defeat 0.009 0.0556
+UI BEGIN desktop
+UI LOADED desktop []
+UI RENDERED desktop
+PREVIEW STATUS desktop {'cue': 'tidal', 'name': 'Tidal Memory', 'bpm': 96, 'bar': 1, 'section': 'A', 'preview': True, 'playing': True, 'voices': 7, 'retiring': 0, 'scheduledNotes': 17, 'skippedTicks': 0, 'errors': []}
+UI BEGIN portrait
+UI LOADED portrait []
+UI RENDERED portrait
+PREVIEW STATUS portrait {'cue': 'tidal', 'name': 'Tidal Memory', 'bpm': 96, 'bar': 1, 'section': 'A', 'preview': True, 'playing': True, 'voices': 7, 'retiring': 0, 'scheduledNotes': 17, 'skippedTicks': 0, 'errors': []}
+UI BEGIN small
+UI LOADED small []
+UI RENDERED small
+PREVIEW STATUS small {'cue': 'tidal', 'name': 'Tidal Memory', 'bpm': 96, 'bar': 1, 'section': 'A', 'preview': True, 'playing': True, 'voices': 7, 'retiring': 0, 'scheduledNotes': 17, 'skippedTicks': 0, 'errors': []}
+PASS 88 audio/browser checks

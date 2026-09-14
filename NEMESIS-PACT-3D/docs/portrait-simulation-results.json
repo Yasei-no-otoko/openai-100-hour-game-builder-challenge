@@ -1,9 +1,9 @@
 {
   "method": "120Hz legal-input full-state bot; no health, enemy, time or progression overrides",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "runs": [
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -172,7 +172,7 @@
       "remainingHull": 13
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -342,7 +342,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -511,7 +511,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -680,7 +680,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -850,7 +850,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1019,7 +1019,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1188,7 +1188,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1358,7 +1358,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1527,7 +1527,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1696,7 +1696,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -1866,7 +1866,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2035,7 +2035,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2204,7 +2204,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2374,7 +2374,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2543,7 +2543,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2712,7 +2712,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -2882,7 +2882,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3051,7 +3051,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3220,7 +3220,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3390,7 +3390,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3559,7 +3559,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3728,7 +3728,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -3898,7 +3898,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -4067,7 +4067,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -4236,7 +4236,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,
@@ -4406,7 +4406,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "portrait",
       "arena": {
         "width": 720,

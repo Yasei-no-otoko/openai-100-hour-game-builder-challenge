@@ -1,0 +1,450 @@
+{
+  "build": "0.4.1",
+  "htmlSha256": "e60964e54716cf41ba001d86765860b8deebc9196a6c441ff1a6507d583af320",
+  "browser": "144.0.7559.96",
+  "backend": "ANGLE / SwiftShader SOFTWARE",
+  "nativeWebGPU": "NOT EXECUTED",
+  "results": [
+    {
+      "viewport": [
+        1280,
+        800
+      ],
+      "name": "desktop",
+      "sectors": 6,
+      "frames": [
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 3,
+          "computeDispatches": 0,
+          "instances": 321,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 5,
+          "computeDispatches": 0,
+          "instances": 320,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 7,
+          "computeDispatches": 0,
+          "instances": 338,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 9,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 11,
+          "computeDispatches": 0,
+          "instances": 298,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 13,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        }
+      ],
+      "pixels": {
+        "ground": [
+          {
+            "stage": 0,
+            "meanLinearByte": 26.316113473866775
+          },
+          {
+            "stage": 1,
+            "meanLinearByte": 21.069549741127165
+          },
+          {
+            "stage": 2,
+            "meanLinearByte": 22.685358111441264
+          },
+          {
+            "stage": 3,
+            "meanLinearByte": 24.61757273176005
+          },
+          {
+            "stage": 4,
+            "meanLinearByte": 24.138190335306124
+          },
+          {
+            "stage": 5,
+            "meanLinearByte": 21.849790433920894
+          }
+        ],
+        "masks": [
+          {
+            "type": "player",
+            "pixels": 1174,
+            "maskMismatch": 0
+          },
+          {
+            "type": "harrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "prism",
+            "pixels": 460,
+            "maskMismatch": 0
+          },
+          {
+            "type": "carrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss3",
+            "pixels": 6272,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss4",
+            "pixels": 5817,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss5",
+            "pixels": 17163,
+            "maskMismatch": 0
+          }
+        ]
+      },
+      "errors": [],
+      "networkRequests": [],
+      "ui": [
+        "hangar",
+        "airframe",
+        "route",
+        "director proposal/apply",
+        "negotiation preview/sign",
+        "settings",
+        "debrief",
+        "standalone server guard"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "name": "portrait",
+      "sectors": 6,
+      "frames": [
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 3,
+          "computeDispatches": 0,
+          "instances": 321,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 5,
+          "computeDispatches": 0,
+          "instances": 320,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 7,
+          "computeDispatches": 0,
+          "instances": 338,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 9,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 11,
+          "computeDispatches": 0,
+          "instances": 298,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 13,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        }
+      ],
+      "pixels": {
+        "ground": [
+          {
+            "stage": 0,
+            "meanLinearByte": 26.316113473866775
+          },
+          {
+            "stage": 1,
+            "meanLinearByte": 21.069549741127165
+          },
+          {
+            "stage": 2,
+            "meanLinearByte": 22.685358111441264
+          },
+          {
+            "stage": 3,
+            "meanLinearByte": 24.61757273176005
+          },
+          {
+            "stage": 4,
+            "meanLinearByte": 24.138190335306124
+          },
+          {
+            "stage": 5,
+            "meanLinearByte": 21.849790433920894
+          }
+        ],
+        "masks": [
+          {
+            "type": "player",
+            "pixels": 1174,
+            "maskMismatch": 0
+          },
+          {
+            "type": "harrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "prism",
+            "pixels": 460,
+            "maskMismatch": 0
+          },
+          {
+            "type": "carrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss3",
+            "pixels": 6272,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss4",
+            "pixels": 5817,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss5",
+            "pixels": 17163,
+            "maskMismatch": 0
+          }
+        ]
+      },
+      "errors": [],
+      "networkRequests": [],
+      "ui": [
+        "hangar",
+        "airframe",
+        "route",
+        "director proposal/apply",
+        "negotiation preview/sign",
+        "settings",
+        "debrief",
+        "standalone server guard"
+      ]
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "name": "small",
+      "sectors": 6,
+      "frames": [
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 3,
+          "computeDispatches": 0,
+          "instances": 321,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 5,
+          "computeDispatches": 0,
+          "instances": 320,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 7,
+          "computeDispatches": 0,
+          "instances": 338,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 9,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 11,
+          "computeDispatches": 0,
+          "instances": 298,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        },
+        {
+          "build": "0.4.1",
+          "backend": "WEBGL2 / PBR",
+          "frames": 13,
+          "computeDispatches": 0,
+          "instances": 308,
+          "draws": 6,
+          "hdr": true,
+          "errors": []
+        }
+      ],
+      "pixels": {
+        "ground": [
+          {
+            "stage": 0,
+            "meanLinearByte": 26.316113473866775
+          },
+          {
+            "stage": 1,
+            "meanLinearByte": 21.069549741127165
+          },
+          {
+            "stage": 2,
+            "meanLinearByte": 22.685358111441264
+          },
+          {
+            "stage": 3,
+            "meanLinearByte": 24.61757273176005
+          },
+          {
+            "stage": 4,
+            "meanLinearByte": 24.138190335306124
+          },
+          {
+            "stage": 5,
+            "meanLinearByte": 21.849790433920894
+          }
+        ],
+        "masks": [
+          {
+            "type": "player",
+            "pixels": 1174,
+            "maskMismatch": 0
+          },
+          {
+            "type": "harrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "prism",
+            "pixels": 460,
+            "maskMismatch": 0
+          },
+          {
+            "type": "carrier",
+            "pixels": 990,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss3",
+            "pixels": 6272,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss4",
+            "pixels": 5817,
+            "maskMismatch": 0
+          },
+          {
+            "type": "boss5",
+            "pixels": 17163,
+            "maskMismatch": 0
+          }
+        ]
+      },
+      "errors": [],
+      "networkRequests": [],
+      "ui": [
+        "hangar",
+        "airframe",
+        "route",
+        "director proposal/apply",
+        "negotiation preview/sign",
+        "settings",
+        "debrief",
+        "standalone server guard"
+      ]
+    }
+  ]
+}

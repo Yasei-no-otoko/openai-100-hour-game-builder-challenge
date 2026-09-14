@@ -2,7 +2,7 @@
   "method": "Full-state heuristic bot; legal player inputs only; fixed 120 Hz; no combat or progression cheats",
   "runs": [
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -174,7 +174,7 @@
       "remainingHull": 12
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -344,7 +344,7 @@
       "remainingHull": 14
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -514,7 +514,7 @@
       "remainingHull": 12
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -686,7 +686,7 @@
       "remainingHull": 9
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -856,7 +856,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -1026,7 +1026,7 @@
       "remainingHull": 9
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -1198,7 +1198,7 @@
       "remainingHull": 9
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,
@@ -1368,7 +1368,7 @@
       "remainingHull": 11
     },
     {
-      "version": "0.4.0",
+      "version": "0.4.1",
       "layout": "desktop",
       "arena": {
         "width": 1280,

@@ -22,4 +22,4 @@ for(const layout of ['desktop','portrait'])for(const mode of ['expedition','gaun
  if(!['won','dead'].includes(w.phase)){console.log('STALL',JSON.stringify({stage:w.stage,wave:w.wave,p:w.p,upgrades:w.upgrades,enemies:w.enemies,plan:[w.planIndex,w.wavePlan.length],fire:w.ceasefire,pact:w.pact}));process.exitCode=1;}
 }
 result.completed=result.runs.filter(r=>r.outcome==='won').length;result.total=result.runs.length;
-fs.mkdirSync(path.join(__dirname,'../docs/validation-0.4.0'),{recursive:true});fs.writeFileSync(path.join(__dirname,'../docs/validation-0.4.0/campaign-simulations.json'),JSON.stringify(result,null,2));
+fs.mkdirSync(path.join(__dirname,'../docs/validation-0.4.1'),{recursive:true});fs.writeFileSync(path.join(__dirname,'../docs/validation-0.4.1/campaign-simulations.json'),JSON.stringify(result,null,2));

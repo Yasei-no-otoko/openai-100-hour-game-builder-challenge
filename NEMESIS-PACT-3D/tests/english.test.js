@@ -36,8 +36,9 @@ test('classic mechanics are byte-identical after undoing the two explicit virtua
   const normalized=text.replace(/  const CONTRACTS = \[[\s\S]*?  function modifiers\(/,'  function modifiers(').replace(/version:'[^']+'/g,"version:'CANONICAL'");
   assert.equal(sha(normalized),baseline.normalized_core_sha256);
 });
-test('localization leaves touch input and synthesized audio implementations unchanged',()=>{
-  for(const [name,hash] of Object.entries(baseline.unchanged_source_sha256))assert.equal(sha(read('src/'+name)),hash);
+test('touch input stays byte-identical; requested soundtrack changes are tested separately',()=>{
+  assert.equal(sha(read('src/touch.js')),baseline.unchanged_source_sha256['touch.js']);
+  assert.equal(sha(read('tests/fixtures/audio-v0.4.0.js')),baseline.unchanged_source_sha256['audio.js']);
 });
 test('English run reports retain compatible IDs and the correct build version',()=>{
   const w=new C.World('EN-REPORT');w.sign('mirror');const report=w.report();

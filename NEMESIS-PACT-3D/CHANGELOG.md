@@ -1,3 +1,13 @@
+# 0.4.1 — 2026-09-13
+
+- Replaced one repeated score with 17 distinct local music cues, including six sector themes and six boss arrangements.
+- Added 32-bar forms, seeded arrangement variations, combat-reactive stems and beat-aligned crossfades.
+- Added separate music/effects mix controls, adaptive-arrangement toggle and all-cue preview in Settings.
+- Added AudioContext-clock scheduling, bounded voice/deck lifetimes, stalled-tick handling, pause/visibility/preview handling and effects ducking.
+- Preserved old sound-effect event pitches/vocabulary and all combat/input logic. Kept regression fixtures rather than silently changing their hashes.
+- Added real OfflineAudioContext rendering checks and desktop/portrait sound UI tests. Generated a separate MP3 sampler.
+- Added technical license/provenance inventory and a separate, not-yet-submitted English form draft/storyboard pack. Live generative AI remains unverified.
+
 # 0.4.0 — Covenant Ascent — 2026-09-12
 
 Based on the retained v0.3.6.1 hotfix source, not the earlier broken black-screen build.

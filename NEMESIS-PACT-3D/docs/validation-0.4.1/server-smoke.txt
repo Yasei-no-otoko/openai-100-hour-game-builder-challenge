@@ -1,0 +1,18 @@
+
+> blast-buster-nemesis-pact@0.4.1 test:server
+> node tests/server-smoke.mjs
+
+{
+  "build": "0.4.1",
+  "node": "v22.16.0",
+  "checks": [
+    "Hosted bytes and same-origin opt-in flag",
+    "Secrets / source / unknown paths are not served",
+    "HTTP POST mock selects a mechanical contract ID",
+    "GET rejected",
+    "Non-JSON rejected",
+    "Oversize body rejected"
+  ],
+  "upstreamCalls": 0,
+  "scope": "Loopback integration, not a Vercel deployment"
+}

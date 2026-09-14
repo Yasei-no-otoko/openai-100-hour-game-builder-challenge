@@ -1,0 +1,108 @@
+{
+  "seconds": 98.8,
+  "loudness": "Preview-only loudness normalization; game mix remains independently adjustable",
+  "cues": [
+    {
+      "startSeconds": 0,
+      "cue": "title",
+      "name": "Before the First Signature",
+      "bpm": 76
+    },
+    {
+      "startSeconds": 5.8,
+      "cue": "hangar",
+      "name": "Ready the Wings",
+      "bpm": 96
+    },
+    {
+      "startSeconds": 11.6,
+      "cue": "interlude",
+      "name": "Terms in the Quiet",
+      "bpm": 84
+    },
+    {
+      "startSeconds": 17.4,
+      "cue": "verdigris",
+      "name": "Verdigris Oath",
+      "bpm": 112
+    },
+    {
+      "startSeconds": 23.2,
+      "cue": "verdigris-boss",
+      "name": "Final Clause",
+      "bpm": 132
+    },
+    {
+      "startSeconds": 29.0,
+      "cue": "foundry",
+      "name": "Foundry Pulse",
+      "bpm": 126
+    },
+    {
+      "startSeconds": 34.8,
+      "cue": "foundry-boss",
+      "name": "Dissonant Engine",
+      "bpm": 146
+    },
+    {
+      "startSeconds": 40.6,
+      "cue": "crown",
+      "name": "Crown of Dawn",
+      "bpm": 104
+    },
+    {
+      "startSeconds": 46.4,
+      "cue": "crown-boss",
+      "name": "Crownfall",
+      "bpm": 128
+    },
+    {
+      "startSeconds": 52.2,
+      "cue": "tidal",
+      "name": "Tidal Memory",
+      "bpm": 96
+    },
+    {
+      "startSeconds": 58.0,
+      "cue": "tidal-boss",
+      "name": "Undertow",
+      "bpm": 120
+    },
+    {
+      "startSeconds": 63.8,
+      "cue": "roseglass",
+      "name": "Roseglass Run",
+      "bpm": 138
+    },
+    {
+      "startSeconds": 69.6,
+      "cue": "roseglass-boss",
+      "name": "Threadbreaker",
+      "bpm": 158
+    },
+    {
+      "startSeconds": 75.4,
+      "cue": "horizon",
+      "name": "Unwritten Horizon",
+      "bpm": 118
+    },
+    {
+      "startSeconds": 81.2,
+      "cue": "horizon-boss",
+      "name": "The Last Signature",
+      "bpm": 148
+    },
+    {
+      "startSeconds": 87.0,
+      "cue": "victory",
+      "name": "A Sky Unbound",
+      "bpm": 102
+    },
+    {
+      "startSeconds": 92.8,
+      "cue": "defeat",
+      "name": "Ink in the Rain",
+      "bpm": 64
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+
+> blast-buster-nemesis-pact@0.4.1 test:simulation
+> node tests/simulate.js
+
+assist NEMESIS won 232.12 3 12 0 61
+assist PLAYTEST-02 won 228.12 3 14 0 67
+assist PLAYTEST-03 won 235.98 3 12 1 67
+standard NEMESIS won 236.06 3 9 3 57
+standard PLAYTEST-02 won 231.77 3 11 0 67
+standard PLAYTEST-03 won 236.9 3 9 1 56
+veteran NEMESIS won 249.96 3 9 1 86
+veteran PLAYTEST-02 won 241.47 3 11 2 79
+veteran PLAYTEST-03 won 255.83 3 9 1 81

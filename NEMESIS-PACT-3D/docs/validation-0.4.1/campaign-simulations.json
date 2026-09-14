@@ -1,0 +1,3788 @@
+{
+  "method": "Fixed 120Hz, full-state heuristic pilot. Only legal combat inputs and offered menu decisions. No hull, timer or progression overrides. Not a human difficulty study.",
+  "runs": [
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "assist",
+      "outcome": "won",
+      "score": 110680,
+      "seconds": 401.44,
+      "kills": 244,
+      "bosses": 6,
+      "parries": 84,
+      "grazes": 40,
+      "damageTaken": 0,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "orbit": 3,
+        "homing": 1,
+        "rapid": 3,
+        "echo": 2,
+        "hull": 2,
+        "leech": 1,
+        "razor": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 15,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 15,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 33.65,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 33.65,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 33.65,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 53.8,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 53.8,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 70.48,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 70.48,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 90.42,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 90.42,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 90.42,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 112.33,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 112.33,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 131.28,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 131.28,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 154.93,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 154.93,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 154.93,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 176.23,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 176.23,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 198.86,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 198.86,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 223.94,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 223.94,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 223.94,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 247.28,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 247.28,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 271.74,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 271.74,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 300.52,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 300.52,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 300.52,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 322.3,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 322.3,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 350.09,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 350.09,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 380.44,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 380.44,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 380.44,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 401.44,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 235,
+      "relics": [
+        "second",
+        "echo",
+        "nova",
+        "lens",
+        "needle",
+        "capacitor",
+        "razor"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 14,
+      "peakBullets": 347,
+      "peakEnemies": 4,
+      "frames": 48173
+    },
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "standard",
+      "outcome": "won",
+      "score": 107042,
+      "seconds": 403.94,
+      "kills": 245,
+      "bosses": 6,
+      "parries": 85,
+      "grazes": 41,
+      "damageTaken": 3,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "orbit": 3,
+        "homing": 1,
+        "rapid": 3,
+        "echo": 2,
+        "hull": 2,
+        "leech": 1,
+        "razor": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 14.94,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 14.94,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 33.72,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 33.72,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 33.72,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 51.58,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 51.58,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 68.4,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 68.4,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 88.43,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 88.43,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 88.43,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 111.68,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 111.68,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 131.71,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 131.71,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 155.32,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 155.32,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 155.32,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 176.76,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 176.76,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 199.37,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 199.37,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 224.38,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 224.38,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 224.38,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 247.53,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 247.53,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 271.97,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 271.97,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 300.57,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 300.57,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 300.57,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 322.48,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 322.48,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 350.07,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 350.07,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 380.43,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 380.43,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 380.43,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 403.94,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 246,
+      "relics": [
+        "second",
+        "echo",
+        "nova",
+        "lens",
+        "needle",
+        "capacitor",
+        "razor"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 11,
+      "peakBullets": 276,
+      "peakEnemies": 4,
+      "frames": 48473
+    },
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "veteran",
+      "outcome": "won",
+      "score": 107455,
+      "seconds": 439.2,
+      "kills": 253,
+      "bosses": 6,
+      "parries": 102,
+      "grazes": 41,
+      "damageTaken": 4,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "orbit": 3,
+        "homing": 1,
+        "rapid": 3,
+        "echo": 2,
+        "hull": 2,
+        "leech": 1,
+        "razor": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 16.4,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 16.4,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 35.29,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 35.29,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 35.29,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 57.51,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 57.51,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 74.96,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 74.96,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 95.19,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 95.19,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 95.19,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 127.09,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 127.09,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 146.78,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 146.78,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 169.75,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 169.75,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 169.75,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 197.56,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 197.56,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 220.56,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 220.56,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 246.47,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 246.47,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 246.47,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 275.53,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 275.53,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 299.75,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 299.75,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 328.01,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 328.01,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 328.01,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 354.4,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 354.4,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 381.16,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 381.16,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 411.61,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 411.61,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 411.61,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 439.2,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 271,
+      "relics": [
+        "second",
+        "echo",
+        "needle",
+        "nova",
+        "capacitor",
+        "lens",
+        "razor"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 11,
+      "peakBullets": 280,
+      "peakEnemies": 5,
+      "frames": 52704
+    },
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "assist",
+      "outcome": "won",
+      "score": 84041,
+      "seconds": 158.24,
+      "kills": 32,
+      "bosses": 6,
+      "parries": 103,
+      "grazes": 53,
+      "damageTaken": 1,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 1,
+        "rapid": 3,
+        "orbit": 2,
+        "echo": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 19.87,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 19.87,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 19.87,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 19.87,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 44.59,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 44.59,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 44.59,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 44.59,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 73.83,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 73.83,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 73.83,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 73.83,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 103.52,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 103.52,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 103.52,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 103.52,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 130.05,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 130.05,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 130.05,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 130.05,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 158.24,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 98,
+      "relics": [
+        "capacitor",
+        "nova"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 10,
+      "peakBullets": 270,
+      "peakEnemies": 4,
+      "frames": 18989
+    },
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "standard",
+      "outcome": "won",
+      "score": 73997,
+      "seconds": 156.59,
+      "kills": 29,
+      "bosses": 6,
+      "parries": 93,
+      "grazes": 35,
+      "damageTaken": 1,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 1,
+        "rapid": 3,
+        "orbit": 2,
+        "echo": 2
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 15.45,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 15.45,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 15.45,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 15.45,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 42.86,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 42.86,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 42.86,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 42.86,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 65.42,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 65.42,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 65.42,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 65.42,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 105.44,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 105.44,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 105.44,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 105.44,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 131.63,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 131.63,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 131.63,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 131.63,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 156.59,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 86,
+      "relics": [
+        "capacitor",
+        "echo"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 7,
+      "peakBullets": 236,
+      "peakEnemies": 4,
+      "frames": 18791
+    },
+    {
+      "version": "0.4.1",
+      "layout": "desktop",
+      "arena": {
+        "width": 1280,
+        "height": 800
+      },
+      "seed": "ASCENT-desktop",
+      "difficulty": "veteran",
+      "outcome": "won",
+      "score": 79807,
+      "seconds": 189.55,
+      "kills": 34,
+      "bosses": 6,
+      "parries": 126,
+      "grazes": 60,
+      "damageTaken": 3,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 1,
+        "rapid": 3,
+        "orbit": 3,
+        "echo": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 19.96,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 19.96,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 19.96,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 19.96,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 53.46,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 53.46,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 53.46,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 53.46,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 87.39,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 87.39,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 87.39,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 87.39,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 127.23,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 127.23,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 127.23,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 127.23,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 157.9,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 157.9,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 157.9,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 157.9,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 189.55,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 43,
+      "relics": [
+        "capacitor",
+        "lens",
+        "satellite"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 7,
+      "peakBullets": 222,
+      "peakEnemies": 3,
+      "frames": 22746
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "assist",
+      "outcome": "won",
+      "score": 102755,
+      "seconds": 407.34,
+      "kills": 246,
+      "bosses": 6,
+      "parries": 48,
+      "grazes": 11,
+      "damageTaken": 1,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "nova": 2,
+        "rapid": 3,
+        "leech": 1,
+        "homing": 1,
+        "orbit": 3,
+        "echo": 2,
+        "hull": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 14.75,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 14.75,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 33.54,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 33.54,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 33.54,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 54.18,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 54.18,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 72.36,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 72.36,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 92.32,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 92.32,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 92.32,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 120.6,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 120.6,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 140.16,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 140.16,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 163.24,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 163.24,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 163.24,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 188.48,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 188.48,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 210.9,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 210.9,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 236.37,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 236.37,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 236.37,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 257.21,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 257.21,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 280.93,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 280.93,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 308.9,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 308.9,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 308.9,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 330.92,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 330.92,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 357.75,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 357.75,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 388.17,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 388.17,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 388.17,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 407.34,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 206,
+      "relics": [
+        "second",
+        "satellite",
+        "echo",
+        "needle",
+        "nova",
+        "capacitor",
+        "lens"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 12,
+      "peakBullets": 277,
+      "peakEnemies": 3,
+      "frames": 48881
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "standard",
+      "outcome": "won",
+      "score": 103642,
+      "seconds": 406.54,
+      "kills": 247,
+      "bosses": 6,
+      "parries": 51,
+      "grazes": 15,
+      "damageTaken": 0,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "nova": 2,
+        "rapid": 3,
+        "leech": 1,
+        "homing": 1,
+        "orbit": 3,
+        "echo": 2,
+        "hull": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 14.75,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 14.75,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 33.54,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 33.54,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 33.54,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 55.47,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 55.47,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 73.12,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 73.12,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 93.11,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 93.11,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 93.11,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 122.99,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 122.99,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 141.83,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 141.83,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 164.97,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 164.97,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 164.97,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 190.12,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 190.12,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 212.1,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 212.1,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 237.56,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 237.56,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 237.56,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 256.31,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 256.31,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 280.09,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 280.09,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 308.2,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 308.2,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 308.2,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 328.88,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 328.88,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 356.19,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 356.19,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 386.52,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 386.52,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 386.52,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 406.54,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 181,
+      "relics": [
+        "second",
+        "satellite",
+        "lens",
+        "echo",
+        "needle",
+        "nova",
+        "capacitor"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 9,
+      "peakBullets": 301,
+      "peakEnemies": 3,
+      "frames": 48785
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "veteran",
+      "outcome": "won",
+      "score": 108064,
+      "seconds": 430.71,
+      "kills": 250,
+      "bosses": 6,
+      "parries": 80,
+      "grazes": 13,
+      "damageTaken": 1,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "nova": 2,
+        "rapid": 3,
+        "leech": 1,
+        "homing": 1,
+        "orbit": 3,
+        "echo": 2,
+        "hull": 1
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 0
+        },
+        {
+          "t": 15.17,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 15.17,
+          "type": "wave",
+          "stage": 0,
+          "wave": 1
+        },
+        {
+          "t": 34.15,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 34.15,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 34.15,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 54.3,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 54.3,
+          "type": "wave",
+          "stage": 1,
+          "wave": 0
+        },
+        {
+          "t": 73.73,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 73.73,
+          "type": "wave",
+          "stage": 1,
+          "wave": 1
+        },
+        {
+          "t": 93.88,
+          "type": "upgrade",
+          "id": "homing"
+        },
+        {
+          "t": 93.88,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 93.88,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 129.33,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 129.33,
+          "type": "wave",
+          "stage": 2,
+          "wave": 0
+        },
+        {
+          "t": 149.41,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 149.41,
+          "type": "wave",
+          "stage": 2,
+          "wave": 1
+        },
+        {
+          "t": 172.99,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 172.99,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 172.99,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 201.69,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 201.69,
+          "type": "wave",
+          "stage": 3,
+          "wave": 0
+        },
+        {
+          "t": 223.8,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 223.8,
+          "type": "wave",
+          "stage": 3,
+          "wave": 1
+        },
+        {
+          "t": 249.38,
+          "type": "upgrade",
+          "id": "echo"
+        },
+        {
+          "t": 249.38,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 249.38,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 271.33,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 271.33,
+          "type": "wave",
+          "stage": 4,
+          "wave": 0
+        },
+        {
+          "t": 295.29,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 295.29,
+          "type": "wave",
+          "stage": 4,
+          "wave": 1
+        },
+        {
+          "t": 323.57,
+          "type": "upgrade",
+          "id": "nova"
+        },
+        {
+          "t": 323.57,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 323.57,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 349.82,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 349.82,
+          "type": "wave",
+          "stage": 5,
+          "wave": 0
+        },
+        {
+          "t": 377.33,
+          "type": "upgrade",
+          "id": "hull"
+        },
+        {
+          "t": 377.33,
+          "type": "wave",
+          "stage": 5,
+          "wave": 1
+        },
+        {
+          "t": 407.47,
+          "type": "upgrade",
+          "id": "rapid"
+        },
+        {
+          "t": 407.47,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 407.47,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 430.71,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "expedition",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 199,
+      "relics": [
+        "second",
+        "satellite",
+        "echo",
+        "needle",
+        "nova",
+        "capacitor",
+        "lens"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 18,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 9,
+      "peakBullets": 281,
+      "peakEnemies": 4,
+      "frames": 51685
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "assist",
+      "outcome": "won",
+      "score": 80887,
+      "seconds": 197.18,
+      "kills": 39,
+      "bosses": 6,
+      "parries": 100,
+      "grazes": 48,
+      "damageTaken": 2,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "rapid": 1,
+        "leech": 1,
+        "orbit": 3
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 21.72,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 21.72,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 21.72,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 21.72,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 55.56,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 55.56,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 55.56,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 55.56,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 91.18,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 91.18,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 91.18,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 91.18,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 127.78,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 127.78,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 127.78,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 127.78,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 161.82,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 161.82,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 161.82,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 161.82,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 197.18,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 105,
+      "relics": [
+        "lens",
+        "needle"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 10,
+      "peakBullets": 281,
+      "peakEnemies": 4,
+      "frames": 23662
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "standard",
+      "outcome": "won",
+      "score": 77464,
+      "seconds": 201.28,
+      "kills": 38,
+      "bosses": 6,
+      "parries": 99,
+      "grazes": 45,
+      "damageTaken": 3,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "rapid": 1,
+        "leech": 1,
+        "orbit": 3
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 19.87,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 19.87,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 19.87,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 19.87,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 54.37,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 54.37,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 54.37,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 54.37,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 90.23,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 90.23,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 90.23,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 90.23,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 129.97,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 129.97,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 129.97,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 129.97,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 165.46,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 165.46,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 165.46,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 165.46,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 201.28,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 112,
+      "relics": [
+        "lens",
+        "needle"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 7,
+      "peakBullets": 227,
+      "peakEnemies": 3,
+      "frames": 24154
+    },
+    {
+      "version": "0.4.1",
+      "layout": "portrait",
+      "arena": {
+        "width": 720,
+        "height": 1000
+      },
+      "seed": "ASCENT-portrait",
+      "difficulty": "veteran",
+      "outcome": "won",
+      "score": 82497,
+      "seconds": 229.34,
+      "kills": 41,
+      "bosses": 6,
+      "parries": 141,
+      "grazes": 46,
+      "damageTaken": 4,
+      "breaches": 0,
+      "contracts": [
+        {
+          "stage": 0,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 1,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 2,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 3,
+          "id": "sanctuary",
+          "kept": true
+        },
+        {
+          "stage": 4,
+          "id": "mirror",
+          "kept": true
+        },
+        {
+          "stage": 5,
+          "id": "mirror",
+          "kept": true
+        }
+      ],
+      "upgrades": {
+        "rail": 2,
+        "rapid": 1,
+        "leech": 1,
+        "orbit": 3
+      },
+      "timeline": [
+        {
+          "t": 0,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "boss",
+          "stage": 0
+        },
+        {
+          "t": 0,
+          "type": "wave",
+          "stage": 0,
+          "wave": 2
+        },
+        {
+          "t": 20.62,
+          "type": "upgrade",
+          "id": "leech"
+        },
+        {
+          "t": 20.62,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 1
+        },
+        {
+          "t": 20.62,
+          "type": "boss",
+          "stage": 1
+        },
+        {
+          "t": 20.62,
+          "type": "wave",
+          "stage": 1,
+          "wave": 2
+        },
+        {
+          "t": 62.52,
+          "type": "upgrade",
+          "id": "rail"
+        },
+        {
+          "t": 62.52,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 2
+        },
+        {
+          "t": 62.52,
+          "type": "boss",
+          "stage": 2
+        },
+        {
+          "t": 62.52,
+          "type": "wave",
+          "stage": 2,
+          "wave": 2
+        },
+        {
+          "t": 98.14,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 98.14,
+          "type": "signed",
+          "id": "sanctuary",
+          "stage": 3
+        },
+        {
+          "t": 98.14,
+          "type": "boss",
+          "stage": 3
+        },
+        {
+          "t": 98.14,
+          "type": "wave",
+          "stage": 3,
+          "wave": 2
+        },
+        {
+          "t": 147.96,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 147.96,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 4
+        },
+        {
+          "t": 147.96,
+          "type": "boss",
+          "stage": 4
+        },
+        {
+          "t": 147.96,
+          "type": "wave",
+          "stage": 4,
+          "wave": 2
+        },
+        {
+          "t": 187.48,
+          "type": "upgrade",
+          "id": "orbit"
+        },
+        {
+          "t": 187.48,
+          "type": "signed",
+          "id": "mirror",
+          "stage": 5
+        },
+        {
+          "t": 187.48,
+          "type": "boss",
+          "stage": 5
+        },
+        {
+          "t": 187.48,
+          "type": "wave",
+          "stage": 5,
+          "wave": 2
+        },
+        {
+          "t": 229.34,
+          "type": "victory",
+          "ending": "keeper"
+        }
+      ],
+      "mode": "gauntlet",
+      "airframe": "vanguard",
+      "sectorCount": 6,
+      "credits": 109,
+      "relics": [
+        "lens",
+        "needle"
+      ],
+      "routes": [
+        {
+          "stage": 0,
+          "id": "refuge"
+        },
+        {
+          "stage": 1,
+          "id": "refuge"
+        },
+        {
+          "stage": 2,
+          "id": "refuge"
+        },
+        {
+          "stage": 3,
+          "id": "refuge"
+        },
+        {
+          "stage": 4,
+          "id": "refuge"
+        },
+        {
+          "stage": 5,
+          "id": "refuge"
+        }
+      ],
+      "director": "balanced",
+      "encounters": 6,
+      "chronicle": [
+        {
+          "stage": 0,
+          "text": "The Notary remembers every shot. It offers you terms because the first pilot who refuses them becomes a warning."
+        },
+        {
+          "stage": 1,
+          "text": "The Choir was built to agree. Now its voices disagree only on how you should fall."
+        },
+        {
+          "stage": 2,
+          "text": "The Sovereign guards a crown no one wears. Beyond its throne, three forbidden constellations wait."
+        },
+        {
+          "stage": 3,
+          "text": "A leviathan carries the archive on its back. The oldest record is a pilot who returned every bullet."
+        },
+        {
+          "stage": 4,
+          "text": "The Weaver cultivates futures in glass. Every reflected shot is a future it did not predict."
+        },
+        {
+          "stage": 5,
+          "text": "The final guardian has no name. It exists only to ask whether a promise matters when nobody can enforce it."
+        }
+      ],
+      "hullRemaining": 7,
+      "peakBullets": 201,
+      "peakEnemies": 3,
+      "frames": 27521
+    }
+  ],
+  "completed": 12,
+  "total": 12
+}

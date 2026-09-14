@@ -1,0 +1,32 @@
+
+> blast-buster-nemesis-pact@0.4.1 test:portrait
+> node tests/portrait-simulate.js
+
+620 assist PORTRAIT-01 won 225.42 3 13 5
+620 assist PORTRAIT-02 won 240.02 3 14 3
+620 assist PORTRAIT-03 won 238.68 3 14 0
+620 standard PORTRAIT-01 won 225.39 3 11 1
+620 standard PORTRAIT-02 won 245.48 3 11 2
+620 standard PORTRAIT-03 won 240.02 3 11 3
+620 veteran PORTRAIT-01 won 243.27 3 11 3
+620 veteran PORTRAIT-02 won 261.25 3 11 2
+620 veteran PORTRAIT-03 won 259.68 3 11 3
+900 assist PORTRAIT-01 won 243.27 3 14 0
+900 assist PORTRAIT-02 won 262.51 3 14 1
+900 assist PORTRAIT-03 won 256.3 3 14 2
+900 standard PORTRAIT-01 won 238.59 3 11 0
+900 standard PORTRAIT-02 won 257.4 3 11 1
+900 standard PORTRAIT-03 won 255.25 3 11 2
+900 veteran PORTRAIT-01 won 260.27 3 11 1
+900 veteran PORTRAIT-02 won 275.83 3 11 2
+900 veteran PORTRAIT-03 won 274.2 3 11 3
+1180 assist PORTRAIT-01 won 259.09 3 14 2
+1180 assist PORTRAIT-02 won 261.69 3 14 2
+1180 assist PORTRAIT-03 won 260.32 3 14 1
+1180 standard PORTRAIT-01 won 261.61 3 11 0
+1180 standard PORTRAIT-02 won 272.01 3 11 0
+1180 standard PORTRAIT-03 won 259.22 3 11 1
+1180 veteran PORTRAIT-01 won 265.92 3 11 1
+1180 veteran PORTRAIT-02 won 279.11 3 11 1
+1180 veteran PORTRAIT-03 won 276.57 3 11 2
+Completed 27 / 27

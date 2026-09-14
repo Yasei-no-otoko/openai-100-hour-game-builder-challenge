@@ -1,0 +1,15 @@
+/* Audio controls are deliberately contained in the existing Settings panel. */
+.sound-lab{margin:10px 0 18px;padding:18px;background:#10242b;border:1px solid #78e8d030;border-radius:8px;min-width:0}
+.sound-lab-heading{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-bottom:14px}
+.sound-lab .eyebrow{font-size:9px;letter-spacing:1px;line-height:1.5}.sound-count{font:9px monospace;white-space:nowrap;color:#91c4b7}
+.sound-lab label{display:block;font-size:13px;color:#d6e4de;margin-bottom:9px}
+.sound-lab select{width:100%;max-width:100%;min-width:0;height:44px;padding:9px;border:1px solid #78e8d05e;border-radius:4px;background:#08161d;color:#e5f2eb;font:13px Arial,sans-serif;pointer-events:auto}
+.sound-lab select:focus-visible{outline:2px solid #78e8d0;outline-offset:3px}
+.sound-lab-controls{display:flex;align-items:center;gap:14px;margin:12px 0 9px}
+.sound-lab-controls button{padding:10px 12px;min-height:44px;min-width:120px;font-size:12px;border-radius:4px}
+.sound-lab-controls p{font:10px/1.7 monospace;color:#9be6d0;overflow-wrap:anywhere}
+.sound-lab>small{display:block;font-size:10px;line-height:1.6;color:#a7b8be}
+.mobile-ui .sound-lab{padding:15px;border-radius:12px}.mobile-ui .sound-lab-heading{align-items:flex-start}
+.mobile-ui .sound-lab-controls{align-items:stretch;flex-direction:column;gap:9px}
+.mobile-ui .sound-lab-controls button{width:100%;min-height:44px}
+.mobile-ui .sound-lab select{font-size:16px}
